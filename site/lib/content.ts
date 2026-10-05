@@ -22,8 +22,12 @@ export const resources=[
 {slug:'ai-guide',title:'2026 AI 新手實戰地圖',category:'AI',kind:'PDF・20 頁',desc:'從問對問題，到完成你的第一個 AI 工作流程。',image:'/media/ai-guide.png'},
 {slug:'video-prompts',title:'AI 影片起步工具包',category:'AI',kind:'可修改提示詞・6 款',desc:'選一個題材，填好主角，就能帶走自己的提示詞。',image:'/media/hero.webp'},
 {slug:'cashflow-sheet',title:'我的一週金錢觀察表',category:'財商',kind:'可下載練習表',desc:'記錄收入與支出，找出下一個可以調整的小習慣。',image:'/media/comics/hongyuan.webp'},
-{slug:'kids-sheet',title:'零用錢的三個小罐子',category:'親子',kind:'親子學習單',desc:'儲蓄、花費、分享，陪孩子練習自己的選擇。',image:'/media/hero.webp'},
+{slug:'kids-sheet',title:'零用錢的三個小罐子',category:'親子',kind:'親子學習單',desc:'儲蓄、花費、分享，陪孩子練習自己的選擇。',image:'/media/games/jars.webp'},
 {slug:'automation-sheet',title:'我的第一個自動化流程',category:'AI',kind:'流程規劃表',desc:'寫下開始条件、處理規則與完成標準。'.replace('条件','條件'),image:'/media/ai-guide.png'}];
+export const games=[
+{slug:'island',title:'3D 存存夢想島',kind:'遊戲一・3D 小探索',desc:'轉一轉夢想島，看金幣疊上三個小罐子。',href:'/kids/#island',image:'/media/games/island.webp'},
+{slug:'jars',title:'三個小罐子任務',kind:'遊戲二・3 個生活任務',desc:'把 10 枚金幣分給存錢、花費、分享，完成三個任務。',href:'/kids/#jars',image:'/media/games/jars.webp'},
+{slug:'board',title:'存存環島大冒險',kind:'遊戲三・3D 擲骰子棋盤',desc:'繞島兩圈，每一格都是小選擇，存夠金幣買夢想禮物。',href:'/kids/#board',image:'/media/games/board.webp'}];
 export const templates=[
 {name:'晨間開場',subject:'一杯冒著熱氣的咖啡與攤開的筆記本',style:'清晨柔光、極簡生活風',action:'蒸氣緩緩上升，筆記本的頁角被微風輕輕掀起',camera:'從俯拍緩慢下降到桌面高度',seconds:6},
 {name:'Ken 財商小講堂',subject:'參考圖中的 Ken',style:'保留參考圖的漫畫線條與配色',action:'拿起一枚金幣端詳，放進存錢筒後對觀眾豎起大拇指',camera:'固定中景',seconds:6},

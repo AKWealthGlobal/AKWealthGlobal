@@ -1,0 +1,2 @@
+import Link from 'next/link';import Image from 'next/image';import {ArrowRight} from 'lucide-react';import {games} from '@/lib/content';
+export default function GameCards(){return <div className="game-grid">{games.map(g=><Link className="game-card" href={g.href} key={g.slug}><Image src={g.image} alt={g.title+'遊戲畫面'} width={640} height={480}/><div><span className="meta">{g.kind}</span><h3>{g.title}</h3><p>{g.desc}</p><span className="text-link">開始玩<ArrowRight size={17}/></span></div></Link>)}</div>}
