@@ -25,9 +25,9 @@ export const resources=[
 {slug:'kids-sheet',title:'零用錢的三個小罐子',category:'親子',kind:'親子學習單',desc:'儲蓄、花費、分享，陪孩子練習自己的選擇。',image:'/media/hero.webp'},
 {slug:'automation-sheet',title:'我的第一個自動化流程',category:'AI',kind:'流程規劃表',desc:'寫下開始条件、處理規則與完成標準。'.replace('条件','條件'),image:'/media/ai-guide.png'}];
 export const templates=[
-{name:'Alice 教學',subject:'一張任務卡',style:'海軍藍科技感',action:'三張小卡片依序排列成三個清楚的步驟',camera:'鏡頭輕微推近後停留',seconds:8},
-{name:'Ken 漫畫',subject:'參考圖中的 Ken',style:'保留參考圖的漫畫線條與配色',action:'先看向記事本，再抬頭看向觀眾並輕輕點頭',camera:'固定鏡頭',seconds:6},
-{name:'兒童財商',subject:'桌上的小豬撲滿與三枚金幣',style:'溫暖的 3D 卡通',action:'一枚金幣緩慢落入撲滿，另外兩枚留在原位',camera:'固定鏡頭',seconds:8},
-{name:'節慶祝福',subject:'窗邊的一盞手作燈籠',style:'暖金與深藍的電影感',action:'燈籠緩慢亮起，窗外的光點輕輕閃動',camera:'從中景緩慢推近燈籠',seconds:8},
-{name:'商品展示',subject:'桌面上的手作陶杯',style:'自然光、乾淨的生活攝影',action:'一隻手把陶杯輕輕放在桌面，隨後離開畫面',camera:'固定近景',seconds:6},
-{name:'生活短劇',subject:'一位準備出門的店主',style:'自然寫實、溫暖日常',action:'拿起雨傘，看向窗外，微笑後走出畫面',camera:'平視中景，固定鏡頭',seconds:8}];
+{name:'晨間開場',subject:'一杯冒著熱氣的咖啡與攤開的筆記本',style:'清晨柔光、極簡生活風',action:'蒸氣緩緩上升，筆記本的頁角被微風輕輕掀起',camera:'從俯拍緩慢下降到桌面高度',seconds:6},
+{name:'Ken 財商小講堂',subject:'參考圖中的 Ken',style:'保留參考圖的漫畫線條與配色',action:'拿起一枚金幣端詳，放進存錢筒後對觀眾豎起大拇指',camera:'固定中景',seconds:6},
+{name:'存錢罐成長',subject:'三個透明玻璃存錢罐',style:'明亮的 3D 黏土風',action:'金幣一枚一枚落入罐中，罐裡的小芽跟著慢慢長高',camera:'緩慢水平環繞',seconds:8},
+{name:'城市夜景',subject:'海港旁的城市天際線',style:'藍調時刻的電影感',action:'天色從黃昏轉成夜晚，大樓窗戶一盞一盞亮起',camera:'固定遠景，縮時感',seconds:8},
+{name:'美食特寫',subject:'剛出爐的手作麵包',style:'溫暖木質調、自然側光',action:'一雙手把麵包輕輕掰開，熱氣慢慢冒出',camera:'特寫、淺景深',seconds:6},
+{name:'雨天短劇',subject:'一位在書店躲雨的學生',style:'柔和雨天色調、日常寫實',action:'抽出一本書翻開，抬頭發現雨停了，微笑走出門',camera:'平視中景，鏡頭緩慢跟隨',seconds:8}];
