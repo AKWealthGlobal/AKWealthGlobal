@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <section className="wrap section"><p className="eyebrow">找不到這個頁面</p><h1>換一個入口，繼續學習。</h1><p>這個網址可能已經更改，先回到知識庫找找看。</p><Link className="button primary" href="/learn/">前往知識庫</Link></section>}
