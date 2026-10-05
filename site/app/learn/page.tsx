@@ -1,0 +1,1 @@
+import Knowledge from '@/components/knowledge';export const metadata={title:'學習知識庫',description:'用繁體中文學習 AI 提示詞、影片運鏡、自動化與生活財商。',alternates:{canonical:'/learn/'}};export default function Learn(){return <section className="wrap section"><p className="eyebrow">讓好奇，有一個可以開始的地方</p><h1>學習知識庫</h1><p className="lead">一次看懂一個觀念，<br/>再用一個小練習把它留下來。</p><Knowledge/></section>}
