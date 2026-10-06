@@ -28,7 +28,8 @@ export const games=[
 {slug:'island',title:'3D 存存夢想島',kind:'遊戲一・3D 小探索',desc:'轉一轉夢想島，看金幣疊上三個小罐子。',href:'/kids/#island',image:'/media/games/island.webp'},
 {slug:'jars',title:'三個小罐子任務',kind:'遊戲二・3 個生活任務',desc:'把 10 枚金幣分給存錢、花費、分享，完成三個任務。',href:'/kids/#jars',image:'/media/games/jars.webp'},
 {slug:'board',title:'存存環島大冒險',kind:'遊戲三・3D 擲骰子棋盤',desc:'繞島兩圈，每一格都是小選擇，存夠金幣買夢想禮物。',href:'/kids/#board',image:'/media/games/board.webp'},
-{slug:'quiz',title:'萬獸城財商問答',kind:'遊戲四・30 題分齡問答',desc:'5 歲到全家都能玩，在動物城市的生活故事裡學理財。',href:'/kids/#quiz',image:'/media/games/quiz.webp'}];
+{slug:'quiz',title:'萬獸城財商問答',kind:'遊戲四・30 題分齡問答',desc:'5 歲到全家都能玩，在動物城市的生活故事裡學理財。',href:'/kids/#quiz',image:'/media/games/quiz.webp'},
+{slug:'city',title:'萬獸城財商大冒險',kind:'遊戲五・24 格 3D 多人棋盤',desc:'全家輪流擲骰子，買店鋪、存銀行、答問答，比財富也比幸福。',href:'/kids/#city',image:'/media/games/city.webp'}];
 export const templates=[
 {name:'晨間開場',subject:'一杯冒著熱氣的咖啡與攤開的筆記本',style:'清晨柔光、極簡生活風',action:'蒸氣緩緩上升，筆記本的頁角被微風輕輕掀起',camera:'從俯拍緩慢下降到桌面高度',seconds:6},
 {name:'Ken 財商小講堂',subject:'參考圖中的 Ken',style:'保留參考圖的漫畫線條與配色',action:'拿起一枚金幣端詳，放進存錢筒後對觀眾豎起大拇指',camera:'固定中景',seconds:6},
