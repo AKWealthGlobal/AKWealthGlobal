@@ -1,0 +1,17 @@
+'use client';import {useMemo,useState} from 'react';import {Check,X,RotateCcw,ArrowRight,Coins} from 'lucide-react';import {quiz,levels,zoneColor,type Level} from '@/lib/animal-city-quiz';
+const shuffle=<T,>(a:T[])=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b};
+const REWARD=100;
+export default function QuizGame(){const [level,setLevel]=useState<Level|null>(null);const [round,setRound]=useState(0);const [idx,setIdx]=useState(0);const [picked,setPicked]=useState<number|null>(null);const [score,setScore]=useState(0);
+const items=useMemo(()=>level?shuffle(quiz.filter(q=>q.level===level)).map(q=>{const order=shuffle(q.options.map((_,i)=>i));return {...q,order}}):[],[level,round]);
+const start=(l:Level)=>{setLevel(l);setRound(r=>r+1);setIdx(0);setPicked(null);setScore(0)};
+if(!level)return <div className="quiz"><p className="quiz-lead">選一個等級，回答 10 道萬獸城生活題。答對一題得 {REWARD} 金幣，每題都附解說和全家可以聊的問題。</p><div className="quiz-levels">{levels.map(l=><button key={l.id} className="quiz-level" onClick={()=>start(l.id)}><span className="meta">{l.age}</span><b>{l.name}</b><span>{l.desc}</span><span className="text-link">開始挑戰<ArrowRight size={17}/></span></button>)}</div></div>;
+const lv=levels.find(l=>l.id===level)!;const done=idx>=items.length;
+if(done){const n=items.length;const badge=score===n?'萬獸城財商之星':score>=n*0.7?'財商好市民':score>=n*0.4?'努力中的探險家':'新手市民';return <div className="quiz"><div className="completion" role="status"><span className="tag">{lv.name} · 挑戰完成</span><h3>答對 {score} / {n} 題，獲得 {score*REWARD} 金幣！</h3><p>稱號：<b>{badge}</b></p><p>答錯的題目最值得聊：挑一題，請孩子用自己的話再說一次為什麼。</p><div className="quiz-actions"><button className="button primary" onClick={()=>start(level)}>同一等級再玩一次<RotateCcw size={18}/></button><button className="button secondary" onClick={()=>setLevel(null)}>換一個等級</button></div></div></div>}
+const q=items[idx];const correct=picked!==null&&picked===q.answer;
+const choose=(i:number)=>{if(picked!==null)return;setPicked(i);if(i===q.answer)setScore(s=>s+1)};
+const next=()=>{setIdx(idx+1);setPicked(null)};
+return <div className="quiz"><div className="quiz-bar"><span>{lv.name}</span><span>第 <b>{idx+1}</b> / {items.length} 題</span><span><Coins size={17}/> <b>{score*REWARD}</b> 金幣</span></div>
+<article className="quiz-card" aria-labelledby={'q'+q.id}><div className="quiz-tags"><span className="zone-tag" style={{background:zoneColor[q.zone]}}>{q.zone}</span><span className="tag">{q.topic}</span></div><h3>{q.title}</h3><p className="quiz-story">{q.story}</p><p className="quiz-q" id={'q'+q.id}>{q.q}</p>
+<div className="quiz-options">{q.order.map((oi,k)=>{const state=picked===null?'':oi===q.answer?' right':oi===picked?' wrong':' dim';return <button key={oi} className={'quiz-option'+state} onClick={()=>choose(oi)} disabled={picked!==null} aria-pressed={picked===oi}><span className="opt-key">{'ABCD'[k]}</span><span>{q.options[oi]}</span>{picked!==null&&oi===q.answer&&<Check size={20} aria-label="正確答案"/>}{picked===oi&&oi!==q.answer&&<X size={20} aria-label="你的選擇"/>}</button>})}</div>
+{picked!==null&&<div className={'quiz-feedback'+(correct?' ok':'')} role="status"><h4>{correct?`答對了！+${REWARD} 金幣`:'差一點！看看為什麼'}</h4><p>{q.explain}</p><p className="quiz-talk"><b>和家人聊聊：</b>{q.talk}</p><button className="button primary" onClick={next}>{idx+1<items.length?'下一題':'看結果'}<ArrowRight size={18}/></button></div>}</article>
+<button className="text-link quiz-exit" onClick={()=>setLevel(null)}>換一個等級</button></div>}
