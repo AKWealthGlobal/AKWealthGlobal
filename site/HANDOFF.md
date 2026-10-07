@@ -1,6 +1,6 @@
 # Codex／Claude Code 接手說明
 
-本版由 Codex 實作，另有 Codex 工作代理進行靜態檢查。Claude Code 已於 2026-10-07 完成遊戲三到五的瀏覽器測試（遊戲一、二尚未測），結果與待確認事項見 docs/verification.md 最後一節。
+本版由 Codex 實作，另有 Codex 工作代理進行靜態檢查。Claude Code 已於 2026-10-07 完成遊戲三到五的瀏覽器測試（遊戲一、二尚未測），結果與待確認事項見 docs/verification.md 最後一節（僅適用舊版 c9306f5，不代表 AK 動物都市合作版）。
 
 1. 先讀 AGENTS.md、README.md、docs/content-sources.md。
 2. 執行 npm ci、npm run build、npm run typecheck。
