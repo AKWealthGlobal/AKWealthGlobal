@@ -1,6 +1,6 @@
 # Codex／Claude Code 接手說明
 
-本版由 Codex 實作，另有 Codex 工作代理進行靜態檢查。Claude Code 尚未直接參與。
+本版由 Codex 實作，另有 Codex 工作代理進行靜態檢查。Claude Code 已於 2026-10-07 完成五個兒童遊戲的瀏覽器測試，結果與待確認事項見 docs/verification.md 最後一節。
 
 1. 先讀 AGENTS.md、README.md、docs/content-sources.md。
 2. 執行 npm ci、npm run build、npm run typecheck。
