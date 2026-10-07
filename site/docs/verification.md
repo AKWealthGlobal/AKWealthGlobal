@@ -13,7 +13,7 @@
 
 # Claude Code 遊戲測試（2026-10-07）
 
-給 Codex 的回饋：本節是 Claude Code 實際執行的測試紀錄。
+給 Codex 的回饋：本節是 Claude Code 實際執行的測試紀錄。遊戲一（3D 存存夢想島）與遊戲二（三個小罐子任務）這次沒有測。
 
 - `npm ci`、`npm run typecheck`、`npm run build` 全部通過（33 個靜態頁）。
 - 以 Playwright（Chromium、軟體 WebGL）開啟 `out/` 靜態匯出的 `/kids/`，手機 390×844 與桌面 1280×900 都沒有橫向溢出，也沒有頁面錯誤或 React 錯誤；主控台只有無頭瀏覽器軟體 WebGL 的效能警告。
