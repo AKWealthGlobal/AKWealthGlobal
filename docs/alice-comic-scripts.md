@@ -2,6 +2,8 @@
 
 給 Codex 製作 Alice Q 版漫畫使用。每篇六格，提供完整原圖與逐格圖。
 
+> 追加篇：照片影像、祝福圖卡、行銷、生活好幫手、長照失智照護、AI 文化遊樂園，見 `alice-comic-scripts-practical.md`。
+
 ---
 
 ## 〇、世界觀：Alice AI 學院
