@@ -11,6 +11,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "手持商品",
       "Nano Banana Pro",
@@ -36,6 +37,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "手持商品",
       "GPT Image 2",
@@ -61,6 +63,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "手持商品",
       "Nano Banana Pro",
@@ -86,6 +89,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "手持商品",
       "GPT Image 2",
@@ -111,6 +115,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "手持商品",
       "Nano Banana Pro",
@@ -136,6 +141,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "手持商品",
       "GPT Image 2",
@@ -161,6 +167,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "講座與課程",
       "Nano Banana Pro",
@@ -186,6 +193,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "講座與課程",
       "GPT Image 2",
@@ -211,6 +219,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "生活服務",
       "Nano Banana Pro",
@@ -236,6 +245,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "生活服務",
       "GPT Image 2",
@@ -261,6 +271,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "生活服務",
       "Nano Banana Pro",
@@ -286,6 +297,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "生活服務",
       "GPT Image 2",
@@ -311,6 +323,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "科技與 AI",
       "Nano Banana Pro",
@@ -336,6 +349,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "科技與 AI",
       "GPT Image 2",
@@ -361,6 +375,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "科技與 AI",
       "Nano Banana Pro",
@@ -386,6 +401,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "社群與個人品牌",
       "GPT Image 2",
@@ -411,6 +427,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "社群與個人品牌",
       "Nano Banana Pro",
@@ -436,6 +453,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "社群與個人品牌",
       "GPT Image 2",
@@ -461,6 +479,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "社群與個人品牌",
       "Nano Banana Pro",
@@ -486,6 +505,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "社群與個人品牌",
       "GPT Image 2",
@@ -503,7 +523,7 @@
     "slug": "prompt-43",
     "title": "唐代仕女宮廷照",
     "originalTitle": "唐代仕女宮廷照",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "漢唐風華",
     "prompt": "【主題】唐代仕女宮廷照\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】唐代宮殿迴廊，朱紅柱子與垂簾。\n【服裝造型】齊胸襦裙、披帛、簡約髮髻與步搖。\n【動作構圖】懷抱琵琶坐在廊下，指尖輕撥琴弦。\n【表情神態】低眉淺笑、神情恬靜。\n【鏡頭運鏡】坐姿七分身，廊柱形成框中框，85mm 鏡頭。\n【光線色調】午後斜陽穿過廊柱。\n【拍攝風格】形象擺拍\n【畫質要求】專業攝影師引導的形象擺拍：姿勢經過安排、構圖乾淨精緻，但肩膀與手指放鬆不僵硬，衣服有真實皺褶，像真人模特兒的實拍作品而不是電腦合成。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "古風寫真、文化節與社群換裝企劃。",
@@ -511,6 +531,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "漢唐風華",
       "Nano Banana Pro",
@@ -528,7 +549,7 @@
     "slug": "prompt-44",
     "title": "唐代文人書房",
     "originalTitle": "唐代文人書房",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "漢唐風華",
     "prompt": "【主題】唐代文人書房\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】木造書房，案上有毛筆、硯台與竹簡。\n【服裝造型】圓領袍、幞頭。\n【動作構圖】坐在案前提筆，抬頭望向窗外。\n【表情神態】若有所思地望向窗外。\n【鏡頭運鏡】側面輪廓構圖，窗光勾勒臉部線條，85mm 鏡頭。\n【光線色調】窗紙透進的柔光。\n【拍攝風格】形象擺拍\n【畫質要求】專業攝影師引導的形象擺拍：姿勢經過安排、構圖乾淨精緻，但肩膀與手指放鬆不僵硬，衣服有真實皺褶，像真人模特兒的實拍作品而不是電腦合成。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "書法課、國學講座與文創宣傳。",
@@ -536,6 +557,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "漢唐風華",
       "GPT Image 2",
@@ -553,7 +575,7 @@
     "slug": "prompt-45",
     "title": "宋代茶席",
     "originalTitle": "宋代茶席",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "宋明雅致",
     "prompt": "【主題】宋代茶席\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】宋式茶室，竹簾與青瓷茶具。\n【服裝造型】淡青色褙子、素雅髮簪。\n【動作構圖】雙手奉茶，神情安靜。\n【表情神態】安靜專注，嘴角微揚。\n【鏡頭運鏡】45 度俯角拍茶席與雙手，人物臉部同時入鏡，50mm 鏡頭。\n【光線色調】竹簾後的柔和自然光。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "茶道、茶飲品牌與節氣活動。",
@@ -561,6 +583,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "宋明雅致",
       "Nano Banana Pro",
@@ -578,7 +601,7 @@
     "slug": "prompt-46",
     "title": "明代書生遊園",
     "originalTitle": "明代書生遊園",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "宋明雅致",
     "prompt": "【主題】明代書生遊園\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】江南園林，石橋與池塘。\n【服裝造型】明制道袍、方巾。\n【動作構圖】手拿摺扇站在石橋上。\n【表情神態】悠然自得地看向池塘。\n【鏡頭運鏡】遠景人物與石橋倒影，70-200mm 長焦。\n【光線色調】清晨薄霧與柔光。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "古風旅遊、園林導覽與文化推廣。",
@@ -586,6 +609,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "宋明雅致",
       "GPT Image 2",
@@ -603,7 +627,7 @@
     "slug": "prompt-47",
     "title": "民初女學生",
     "originalTitle": "民初女學生",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "清末民初",
     "prompt": "【主題】民初女學生\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】老式校舍走廊，木窗與黑板。\n【服裝造型】藍色短襖、黑色長裙。\n【動作構圖】抱著書本站在走廊微笑。\n【表情神態】和畫面外同學說話時忍不住笑出來。\n【鏡頭運鏡】走廊縱深構圖，35mm 鏡頭。\n【光線色調】老照片般的柔光，但色彩自然不偏黃。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "教育主題、校慶與懷舊企劃。",
@@ -611,6 +635,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "清末民初",
       "Nano Banana Pro",
@@ -628,7 +653,7 @@
     "slug": "prompt-48",
     "title": "民初報社記者",
     "originalTitle": "民初報社記者",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "清末民初",
     "prompt": "【主題】民初報社記者\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】老報社排字房，鉛字架與紙張。\n【服裝造型】長袍馬褂外加圓框眼鏡（若照片中有眼鏡則保留原款）。\n【動作構圖】手拿報紙站在排字架前。\n【表情神態】讀到新聞時驚訝地挑眉。\n【鏡頭運鏡】前景鉛字架模糊，85mm 鏡頭。\n【光線色調】窗光與燈泡暖光，色溫平衡。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "媒體識讀、歷史講座與文化節。",
@@ -636,6 +661,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "清末民初",
       "GPT Image 2",
@@ -653,7 +679,7 @@
     "slug": "prompt-49",
     "title": "清代宮廷格格",
     "originalTitle": "清代宮廷格格",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "宮廷華服",
     "prompt": "【主題】清代宮廷格格\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】紫禁城風格宮牆與紅色宮門。\n【服裝造型】旗裝、旗頭與花朵頭飾。\n【動作構圖】雙手交疊站在宮門前，端莊微笑。\n【表情神態】端莊含蓄的淺笑。\n【鏡頭運鏡】全身對稱置中構圖，宮門線條引導視線，35mm 鏡頭。\n【光線色調】陰天柔光，避免過度飽和。\n【拍攝風格】形象擺拍\n【畫質要求】專業攝影師引導的形象擺拍：姿勢經過安排、構圖乾淨精緻，但肩膀與手指放鬆不僵硬，衣服有真實皺褶，像真人模特兒的實拍作品而不是電腦合成。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "宮廷劇風格寫真與節慶活動。",
@@ -661,6 +687,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "宮廷華服",
       "Nano Banana Pro",
@@ -678,7 +705,7 @@
     "slug": "prompt-50",
     "title": "古代將軍出征",
     "originalTitle": "古代將軍出征",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "宮廷華服",
     "prompt": "【主題】古代將軍出征\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】古城門前，旗幟飄揚。\n【服裝造型】鎧甲與披風。\n【動作構圖】手扶佩劍站立，眼神堅定。\n【表情神態】眼神堅定、下巴微收。\n【鏡頭運鏡】低角度仰拍，旗幟在身後飄揚，35mm 鏡頭。\n【光線色調】黃昏逆光，輪廓清楚。\n【拍攝風格】形象擺拍\n【畫質要求】專業攝影師引導的形象擺拍：姿勢經過安排、構圖乾淨精緻，但肩膀與手指放鬆不僵硬，衣服有真實皺褶，像真人模特兒的實拍作品而不是電腦合成。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "歷史劇風格海報與遊戲換裝。",
@@ -686,6 +713,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "宮廷華服",
       "GPT Image 2",
@@ -703,7 +731,7 @@
     "slug": "prompt-51",
     "title": "竹林俠女",
     "originalTitle": "竹林俠女",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "俠客江湖",
     "prompt": "【主題】竹林俠女\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】竹林小徑，地上有落葉。\n【服裝造型】素白俠客服、腰帶與長劍。\n【動作構圖】單手持劍回身，衣角微微飄起。\n【表情神態】凌厲專注的眼神。\n【鏡頭運鏡】斜角構圖帶出動態感，高速快門凝結衣角，35mm 鏡頭。\n【光線色調】竹林間的斑駁光影。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "武俠風格寫真、短影音封面。",
@@ -711,6 +739,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "俠客江湖",
       "Nano Banana Pro",
@@ -728,7 +757,7 @@
     "slug": "prompt-52",
     "title": "客棧說書人",
     "originalTitle": "客棧說書人",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "俠客江湖",
     "prompt": "【主題】客棧說書人\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】古代客棧，木桌與茶碗。\n【服裝造型】粗布長衫。\n【動作構圖】坐在桌邊比手勢說故事，旁人以背影呈現。\n【表情神態】說到精彩處眉飛色舞。\n【鏡頭運鏡】從客棧角落長焦抓拍，85mm 鏡頭。\n【光線色調】油燈般暖光搭配窗外冷光。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "說書、故事行銷與活動主持人形象。",
@@ -736,6 +765,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "俠客江湖",
       "GPT Image 2",
@@ -753,7 +783,7 @@
     "slug": "prompt-53",
     "title": "日本平安時代貴族",
     "originalTitle": "日本平安時代貴族",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "東亞古風",
     "prompt": "【主題】日本平安時代貴族\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】日式木造廊道與庭園。\n【服裝造型】十二單風格層疊和服（簡化款）。\n【動作構圖】坐在廊下看向庭院。\n【表情神態】安靜望向庭院、神情柔和。\n【鏡頭運鏡】從庭院往廊下拍，前景是模糊花枝，85mm 鏡頭。\n【光線色調】柔和陰天光。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "日本文化主題與動漫展企劃。",
@@ -761,6 +791,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "東亞古風",
       "Nano Banana Pro",
@@ -778,7 +809,7 @@
     "slug": "prompt-54",
     "title": "朝鮮時代學者",
     "originalTitle": "朝鮮時代學者",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "東亞古風",
     "prompt": "【主題】朝鮮時代學者\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】韓式傳統宅院，瓦屋頂與木門。\n【服裝造型】朝鮮士人道袍與黑色笠帽。\n【動作構圖】站在院中手持書卷。\n【表情神態】沉穩自信。\n【鏡頭運鏡】全身站姿，院門形成框中框，50mm 鏡頭。\n【光線色調】清晨自然光。\n【拍攝風格】形象擺拍\n【畫質要求】專業攝影師引導的形象擺拍：姿勢經過安排、構圖乾淨精緻，但肩膀與手指放鬆不僵硬，衣服有真實皺褶，像真人模特兒的實拍作品而不是電腦合成。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "韓國文化主題與語言課程宣傳。",
@@ -786,6 +817,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "東亞古風",
       "GPT Image 2",
@@ -803,7 +835,7 @@
     "slug": "prompt-55",
     "title": "漢代絲路女商人",
     "originalTitle": "漢代絲路女商人",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "市井生活",
     "prompt": "【主題】漢代絲路女商人\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】沙漠綠洲驛站，駱駝商隊與貨物。\n【服裝造型】漢服曲裾外搭旅行斗篷。\n【動作構圖】在攤位上攤開一匹絲綢，向客人介紹。\n【表情神態】熱情招呼客人的笑容。\n【鏡頭運鏡】中景，前景是飄動的絲綢，50mm 鏡頭。\n【光線色調】沙漠午後暖光，色溫自然。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "絲路歷史、國際貿易與商業課程。",
@@ -811,6 +843,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "市井生活",
       "Nano Banana Pro",
@@ -828,7 +861,7 @@
     "slug": "prompt-56",
     "title": "宋代夜市小吃攤",
     "originalTitle": "宋代夜市小吃攤",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "市井生活",
     "prompt": "【主題】宋代夜市小吃攤\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】宋代汴京夜市，燈籠街與人潮。\n【服裝造型】粗布短褐、頭巾。\n【動作構圖】在攤前翻炒小吃，鍋中冒出蒸氣與火光。\n【表情神態】專心翻炒、被熱氣蒸得微微瞇眼。\n【鏡頭運鏡】側面近景，爐火照亮臉部，35mm 鏡頭。\n【光線色調】夜市燈籠暖光與爐火。\n【拍攝風格】自然抓拍\n【畫質要求】像真實拍攝的生活照，不是棚拍式擺拍：肢體放鬆自然、手指姿勢自然、衣服有自然皺褶，環境光真實，可保留些微動態模糊與自然顆粒。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "美食品牌、夜市文化與餐飲創業。",
@@ -836,6 +869,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "市井生活",
       "GPT Image 2",
@@ -853,7 +887,7 @@
     "slug": "prompt-57",
     "title": "古風家族合影",
     "originalTitle": "古風家族合影",
-    "category": "古裝與歷史造型",
+    "category": "古風與歷史人物",
     "subcategory": "市井生活",
     "prompt": "【主題】古風家族合影\n【人物】以上傳照片作為唯一身份參考，只沿用臉部身份：臉型、五官比例、膚色、年齡感、髮型與眼鏡款式（若有）。不沿用參考照的背景、服裝、光線、構圖或多視角排版；輸出單張照片，主角在畫面中只出現一次，其他配角或路人不要長得像主角。不要變年輕、變瘦或美顏。\n【場景】古代宅院正廳。\n【服裝造型】明制服裝。\n【動作構圖】坐在正中央，旁邊長輩與孩子以模糊背影呈現。\n【表情神態】溫和莊重的微笑。\n【鏡頭運鏡】正面平視對稱構圖，35mm 鏡頭。\n【光線色調】柔和室內光。\n【拍攝風格】形象擺拍\n【畫質要求】專業攝影師引導的形象擺拍：姿勢經過安排、構圖乾淨精緻，但肩膀與手指放鬆不僵硬，衣服有真實皺褶，像真人模特兒的實拍作品而不是電腦合成。真實攝影質感：保留自然毛孔、細紋、膚色細微不均與真實髮絲；不磨皮、不美顏、沒有塑膠感。色溫自然中性，膚色健康、不偏黃、不偏灰。對焦清楚落在眼睛。數位電影般的成像：高光柔和不過曝、陰影層次清楚、飽和度克制。\n【注意事項】畫面中不要出現任何文字、Logo 或浮水印。服裝與場景請尊重當地文化，不使用宗教神聖服飾或儀式用品。\n【避免】臉部走樣、與參考照不像、塑膠皮膚、過度磨皮、蠟黃膚色、僵硬假笑、多餘或黏在一起的手指、重複人物、肢體比例錯誤、廣角變形、文字、浮水印。\n【比例】3:4 直式",
     "description": "家族活動、節慶與家庭主題貼文。",
@@ -861,6 +895,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "市井生活",
       "Nano Banana Pro",
@@ -886,6 +921,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "東亞",
       "GPT Image 2",
@@ -911,6 +947,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "東亞",
       "Nano Banana Pro",
@@ -936,6 +973,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "東亞",
       "GPT Image 2",
@@ -961,6 +999,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "東亞",
       "Nano Banana Pro",
@@ -986,6 +1025,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "東南亞",
       "GPT Image 2",
@@ -1011,6 +1051,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "東南亞",
       "Nano Banana Pro",
@@ -1036,6 +1077,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "東南亞",
       "GPT Image 2",
@@ -1061,6 +1103,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "東南亞",
       "Nano Banana Pro",
@@ -1086,6 +1129,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "南亞與中東",
       "GPT Image 2",
@@ -1111,6 +1155,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "南亞與中東",
       "Nano Banana Pro",
@@ -1136,6 +1181,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "歐洲",
       "GPT Image 2",
@@ -1161,6 +1207,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "歐洲",
       "Nano Banana Pro",
@@ -1186,6 +1233,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "歐洲",
       "GPT Image 2",
@@ -1211,6 +1259,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "歐洲",
       "Nano Banana Pro",
@@ -1236,6 +1285,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "美洲與大洋洲",
       "GPT Image 2",
@@ -1261,6 +1311,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "美洲與大洋洲",
       "Nano Banana Pro",
@@ -1286,6 +1337,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "美洲與大洋洲",
       "GPT Image 2",
@@ -1311,6 +1363,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "台灣在地",
       "Nano Banana Pro",
@@ -1336,6 +1389,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "台灣在地",
       "GPT Image 2",
@@ -1361,6 +1415,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "歐洲",
       "Nano Banana Pro",
@@ -1386,6 +1441,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "日本",
       "GPT Image 2",
@@ -1411,6 +1467,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "日本",
       "Nano Banana Pro",
@@ -1436,6 +1493,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "日本",
       "GPT Image 2",
@@ -1461,6 +1519,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "韓國",
       "Nano Banana Pro",
@@ -1486,6 +1545,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "東南亞",
       "GPT Image 2",
@@ -1511,6 +1571,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "東南亞",
       "Nano Banana Pro",
@@ -1536,6 +1597,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "歐洲",
       "GPT Image 2",
@@ -1561,6 +1623,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "歐洲",
       "Nano Banana Pro",
@@ -1586,6 +1649,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "歐洲",
       "GPT Image 2",
@@ -1611,6 +1675,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "歐洲",
       "Nano Banana Pro",
@@ -1636,6 +1701,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "歐洲",
       "GPT Image 2",
@@ -1661,6 +1727,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "歐洲",
       "Nano Banana Pro",
@@ -1686,6 +1753,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "美洲",
       "GPT Image 2",
@@ -1711,6 +1779,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "美洲",
       "Nano Banana Pro",
@@ -1736,6 +1805,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "美洲",
       "GPT Image 2",
@@ -1761,6 +1831,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "大洋洲",
       "Nano Banana Pro",
@@ -1786,6 +1857,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "大洋洲",
       "GPT Image 2",
@@ -1811,6 +1883,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "中東與非洲",
       "Nano Banana Pro",
@@ -1836,6 +1909,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "中東與非洲",
       "GPT Image 2",
@@ -1861,6 +1935,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "中東與非洲",
       "Nano Banana Pro",
@@ -1886,6 +1961,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "北台灣",
       "GPT Image 2",
@@ -1911,6 +1987,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "北台灣",
       "Nano Banana Pro",
@@ -1936,6 +2013,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "北台灣",
       "GPT Image 2",
@@ -1961,6 +2039,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "中台灣",
       "Nano Banana Pro",
@@ -1986,6 +2065,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "中台灣",
       "GPT Image 2",
@@ -2011,6 +2091,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "南台灣",
       "Nano Banana Pro",
@@ -2036,6 +2117,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "南台灣",
       "GPT Image 2",
@@ -2061,6 +2143,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "南台灣",
       "Nano Banana Pro",
@@ -2086,6 +2169,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "南台灣",
       "GPT Image 2",
@@ -2111,6 +2195,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "離島",
       "Nano Banana Pro",
@@ -2136,6 +2221,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "早期年代",
       "GPT Image 2",
@@ -2161,6 +2247,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "早期年代",
       "Nano Banana Pro",
@@ -2186,6 +2273,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "早期年代",
       "GPT Image 2",
@@ -2211,6 +2299,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "早期年代",
       "Nano Banana Pro",
@@ -2236,6 +2325,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "經濟起飛",
       "GPT Image 2",
@@ -2261,6 +2351,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "經濟起飛",
       "Nano Banana Pro",
@@ -2286,6 +2377,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "經濟起飛",
       "GPT Image 2",
@@ -2311,6 +2403,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "經濟起飛",
       "Nano Banana Pro",
@@ -2336,6 +2429,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "經濟起飛",
       "GPT Image 2",
@@ -2361,6 +2455,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "九零與千禧",
       "Nano Banana Pro",
@@ -2386,6 +2481,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "九零與千禧",
       "GPT Image 2",
@@ -2411,6 +2507,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "九零與千禧",
       "Nano Banana Pro",
@@ -2436,6 +2533,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "九零與千禧",
       "GPT Image 2",
@@ -2461,6 +2559,7 @@
     "model": "Nano Banana Pro",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "Nano Banana Pro",
     "tags": [
       "未來想像",
       "Nano Banana Pro",
@@ -2486,6 +2585,7 @@
     "model": "GPT Image 2",
     "requiresReference": true,
     "source": "AK Wealth Global 原創提示詞",
+    "imageModel": "GPT Image 2.5",
     "tags": [
       "未來想像",
       "GPT Image 2",

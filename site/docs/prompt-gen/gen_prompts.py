@@ -1,6 +1,6 @@
 import json, sys, re
 # (主要分類, 細分類, 標題, 人物A/K, 場景, 服裝造型, 動作與構圖, 光線, Maslow, PESTLE, 一句說明)
-C1, C2, C3, C4, C5, C6 = '品牌行銷與產品', '古裝與歷史造型', '世界傳統服飾', '世界旅遊打卡', '台灣景點打卡', '年代造型'
+C1, C2, C3, C4, C5, C6 = '品牌行銷與產品', '古風與歷史人物', '世界傳統服飾', '世界旅遊打卡', '台灣景點打卡', '年代造型'
 S = [
 # ---------- 品牌行銷與產品 20 ----------
 (C1,'手持商品','早晨咖啡品牌形象照','A','台北巷弄裡的獨立咖啡店吧台，木頭桌面與手沖器具','米白針織上衣、簡單耳環','雙手捧著一杯冒著熱氣的拿鐵，看向鏡頭自然微笑，杯身留白方便後製放 Logo','清晨側窗自然光，柔和陰影','生理需求','社會','適合咖啡店、飲品品牌的社群主視覺。'),
@@ -151,7 +151,7 @@ for i,(cat,sub,title,who,scene,outfit,action,light,maslow,pestle,desc) in enumer
         '【比例】3:4 直式'])
     entries.append({'slug':f'prompt-{i:02d}','title':title,'originalTitle':title,'category':cat,'subcategory':sub,'prompt':prompt,
         'description':desc,'image':f'/media/prompt-examples/example-{i:02d}.webp','model':model,'requiresReference':True,
-        'source':'AK Wealth Global 原創提示詞','tags':[sub,model,'形象擺拍' if posed else '自然抓拍','3:4',f'馬斯洛：{maslow}',f'PESTLE：{pestle}'],
+        'source':'AK Wealth Global 原創提示詞','imageModel':'Nano Banana Pro' if model=='Nano Banana Pro' else 'GPT Image 2.5','tags':[sub,model,'形象擺拍' if posed else '自然抓拍','3:4',f'馬斯洛：{maslow}',f'PESTLE：{pestle}'],
         'style':'posed' if posed else 'candid','maslow':maslow,'pestle':pestle,'person':'alice' if who=='A' else 'ken'})
 json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
 from collections import Counter
