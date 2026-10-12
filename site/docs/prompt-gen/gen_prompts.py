@@ -133,7 +133,7 @@ cp=cs=pp=0
 for i,(cat,sub,title,who,scene,outfit,action,light,maslow,pestle,desc) in enumerate(S, start=23):
     model='Nano Banana Pro' if i%2 else 'GPT Image 2'
     if i in SWAP:
-        o=SWAP[i]; title=o.get('title',title); scene=o.get('scene',scene); outfit=o.get('outfit',outfit); action=o.get('action',action); light=o.get('light',light); sub=o.get('sub',sub); desc=o.get('desc',desc)
+        o=SWAP[i]; title=o.get('title',title); scene=o.get('scene',scene); outfit=o.get('outfit',outfit); action=o.get('action',action); light=o.get('light',light); sub=o.get('sub',sub); desc=o.get('desc',desc); maslow=o.get('maslow',maslow); pestle=o.get('pestle',pestle)
     st,shot,face=PLAN[i]; posed=st=='P'
     prompt='\n'.join([
         f'【主題】{title}',
