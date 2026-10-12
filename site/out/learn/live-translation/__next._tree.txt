@@ -1,4 +1,0 @@
-:HL["/_next/static/css/c52b1e9909d7cd16.css","style"]
-:HL["/_next/static/css/7dc6f351bc514d18.css","style"]
-:HL["/media/alice/alice-live-translation.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"learn","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"live-translation","siblings":["answers-with-sources"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"l0SWs9Tqn99il9QhSgAqE"}

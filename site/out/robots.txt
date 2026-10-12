@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://ak-wealth-global.vercel.app/sitemap.xml
