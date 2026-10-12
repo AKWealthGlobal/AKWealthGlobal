@@ -340,7 +340,8 @@
     "lesson": "美國司法部資料指出，OneCoin 以多層次行銷方式推廣，受害者在2014至2019年間投入逾40億美元；共同創辦人 Karl Sebastian Greenwood 已認罪並被判刑。",
     "question": "一項投資若主要靠招募新成員維持，你會先追問什麼？",
     "source": [
-      "onecoin"
+      "onecoin",
+      "onecoinSentencing"
     ],
     "editorialNote": "案件金額、涉案人及司法進度以司法部原始資料為準；避免將所有參與者一概描述為知情共犯。"
   },
