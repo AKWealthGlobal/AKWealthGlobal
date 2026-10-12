@@ -55,14 +55,14 @@ npm.cmd ci
 
 ## 3. 參考圖（每張都要一起給生圖模型）
 
-- Ken：`site/public/media/characters/ken-ip.webp`＋畫風範本 `site/public/media/ken/comic-01.png`、`comic-04.png`、`comic-13.png`
+- Ken：`site/public/media/characters/ken-ip.webp`（網站擁有者也有一張更清晰的版本，如有提供請優先使用）＋畫風範本 `site/public/media/ken/comic-01.png`、`comic-04.png`、`comic-13.png`
 - Alice：`site/public/media/characters/alice-ip.webp`（網站擁有者也有一張更清晰的 1254×1254 版本，如有提供請優先使用）＋畫風範本 `site/public/media/alice/alice-ai-and-my-job.jpg`、`alice-senior-voice-input.jpg`
 - 小光（AI 小幫手）：`site/public/media/characters/ai-buddy.webp`
 
 每張完成後檢查：
 1. 角色長相和參考圖一致：
    - **Alice**：及胸深棕長直髮、旁分，深棕眼睛，露齒笑，左臉頰眼下有一顆小痣，珍珠耳釘，深藍西裝外套配米白 V 領上衣，常拿深藍筆或筆記本。
-   - **Ken**：刺短黑髮、細方框眼鏡、黑 Polo。
+   - **Ken**：往上抓的刺短黑髮（帶一點棕色挑染）、圓臉、細金屬方框眼鏡、溫和微笑、三顆扣黑色短袖 Polo，有時拿著金邊深藍精裝書。
 2. 繁體字沒有錯字或亂碼，對白和下面腳本**一字不差**。
 3. 畫面中沒有額外文字、真實品牌 Logo 或浮水印。
 
@@ -87,7 +87,7 @@ npm.cmd ci
 
 ```text
 Create a NEW four-panel educational comic page in EXACTLY the same art style and layout as the reference Ken comics (site/public/media/ken/comic-01.png, comic-04.png and comic-13.png): warm hand-painted watercolor-and-ink chibi (Q-version) comic, soft warm light, cream paper background, big decorative bold Traditional Chinese title banner at the top, 2x2 panels with rounded dark-brown borders, large white speech bubbles (speaker name, full-width colon, line), and a bottom plaque with an open-book icon reading 「Ken財商教室」. Portrait 2:3, final size 1024x1536.
-Ken must match site/public/media/characters/ken-ip.webp drawn as the same chibi Ken used in comics 1–35: short spiky black hair, thin rectangular dark-framed glasses, black polo shirt, friendly smile. Identical in every panel.
+Ken must match site/public/media/characters/ken-ip.webp drawn as the same chibi Ken used in comics 1–35: short spiky black hair styled upward with slight brown highlights, round friendly face, thin rectangular dark metal-framed glasses, dark-brown eyes, gentle closed-mouth smile, black short-sleeve polo shirt with three buttons; sometimes holding a navy hardcover book with a gold border. Identical in every panel.
 Children-friendly, cute animal characters drawn in the same watercolor chibi style as comic-01 to comic-04 (NOT flat thick-outline cartoon). No real logos, nothing scary, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
 Setting: a sunny kindergarten playground, then a rainy afternoon; cute animal kids (piglet, puppy, bunny).
@@ -115,7 +115,7 @@ Panel 4 (bottom-right): 一家人和小豬一起把硬幣放進預備金罐，�
 
 ```text
 Create a NEW four-panel educational comic page in EXACTLY the same art style and layout as the reference Ken comics (site/public/media/ken/comic-01.png, comic-04.png and comic-13.png): warm hand-painted watercolor-and-ink chibi (Q-version) comic, soft warm light, cream paper background, big decorative bold Traditional Chinese title banner at the top, 2x2 panels with rounded dark-brown borders, large white speech bubbles (speaker name, full-width colon, line), and a bottom plaque with an open-book icon reading 「Ken財商教室」. Portrait 2:3, final size 1024x1536.
-Ken must match site/public/media/characters/ken-ip.webp drawn as the same chibi Ken used in comics 1–35: short spiky black hair, thin rectangular dark-framed glasses, black polo shirt, friendly smile. Identical in every panel.
+Ken must match site/public/media/characters/ken-ip.webp drawn as the same chibi Ken used in comics 1–35: short spiky black hair styled upward with slight brown highlights, round friendly face, thin rectangular dark metal-framed glasses, dark-brown eyes, gentle closed-mouth smile, black short-sleeve polo shirt with three buttons; sometimes holding a navy hardcover book with a gold border. Identical in every panel.
 Children-friendly, cute animal characters drawn in the same watercolor chibi style as comic-01 to comic-04 (NOT flat thick-outline cartoon). No real logos, nothing scary, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
 Setting: a warm farm kitchen and yard; cute animal kids (chick, duckling, piglet); nothing scary.
@@ -143,7 +143,7 @@ Panel 4 (bottom-right): Ken 指著三個籃子，小雞和小鴨小心地分提�
 
 ```text
 Create a NEW four-panel educational comic page in EXACTLY the same art style and layout as the reference Ken comics (site/public/media/ken/comic-01.png, comic-04.png and comic-13.png): warm hand-painted watercolor-and-ink chibi (Q-version) comic, soft warm light, cream paper background, big decorative bold Traditional Chinese title banner at the top, 2x2 panels with rounded dark-brown borders, large white speech bubbles (speaker name, full-width colon, line), and a bottom plaque with an open-book icon reading 「Ken財商教室」. Portrait 2:3, final size 1024x1536.
-Ken must match site/public/media/characters/ken-ip.webp drawn as the same chibi Ken used in comics 1–35: short spiky black hair, thin rectangular dark-framed glasses, black polo shirt, friendly smile. Identical in every panel.
+Ken must match site/public/media/characters/ken-ip.webp drawn as the same chibi Ken used in comics 1–35: short spiky black hair styled upward with slight brown highlights, round friendly face, thin rectangular dark metal-framed glasses, dark-brown eyes, gentle closed-mouth smile, black short-sleeve polo shirt with three buttons; sometimes holding a navy hardcover book with a gold border. Identical in every panel.
 Children-friendly, cute animal characters drawn in the same watercolor chibi style as comic-01 to comic-04 (NOT flat thick-outline cartoon). No real logos, nothing scary, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
 Setting: a primary-school playground and classroom; cute animal classmates (bunny, puppy, elephant, piglet); nobody gets hurt.
