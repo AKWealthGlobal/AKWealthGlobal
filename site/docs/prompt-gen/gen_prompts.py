@@ -150,8 +150,8 @@ for i,(cat,sub,title,who,scene,outfit,action,light,maslow,pestle,desc) in enumer
         f'【避免】{AVOID}',
         '【比例】3:4 直式'])
     entries.append({'slug':f'prompt-{i:02d}','title':title,'originalTitle':title,'category':cat,'subcategory':sub,'prompt':prompt,
-        'description':desc,'image':f'/media/prompt-examples/example-{i:02d}.webp','model':model,'requiresReference':True,
-        'source':'AK Wealth Global 原創提示詞','imageModel':'Nano Banana Pro' if model=='Nano Banana Pro' else 'GPT Image 2.5','tags':[sub,model,'形象擺拍' if posed else '自然抓拍','3:4',f'馬斯洛：{maslow}',f'PESTLE：{pestle}'],
+        'description':desc,'image':f'/media/prompt-examples/example-{i:02d}.jpg','model':model,'requiresReference':True,
+        'source':'AK Wealth Global 原創提示詞','imageModel':'Nano Banana 2' if model=='Nano Banana Pro' else 'GPT Image 2.5','tags':[sub,model,'形象擺拍' if posed else '自然抓拍','3:4',f'馬斯洛：{maslow}',f'PESTLE：{pestle}'],
         'style':'posed' if posed else 'candid','maslow':maslow,'pestle':pestle,'person':'alice' if who=='A' else 'ken'})
 json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
 from collections import Counter
