@@ -56,11 +56,13 @@ npm.cmd ci
 ## 3. 參考圖（每張都要一起給生圖模型）
 
 - Ken：`site/public/media/characters/ken-ip.webp`＋畫風範本 `site/public/media/ken/comic-01.png`、`comic-04.png`、`comic-13.png`
-- Alice：`site/public/media/characters/alice-ip.webp`＋畫風範本 `site/public/media/alice/alice-ai-and-my-job.jpg`、`alice-senior-voice-input.jpg`
+- Alice：`site/public/media/characters/alice-ip.webp`（網站擁有者也有一張更清晰的 1254×1254 版本，如有提供請優先使用）＋畫風範本 `site/public/media/alice/alice-ai-and-my-job.jpg`、`alice-senior-voice-input.jpg`
 - 小光（AI 小幫手）：`site/public/media/characters/ai-buddy.webp`
 
 每張完成後檢查：
-1. 角色長相和參考圖一致：Alice 長直髮、深藍西裝外套；Ken 刺短髮、方框眼鏡、黑 Polo。
+1. 角色長相和參考圖一致：
+   - **Alice**：及胸深棕長直髮、旁分，深棕眼睛，露齒笑，左臉頰眼下有一顆小痣，珍珠耳釘，深藍西裝外套配米白 V 領上衣，常拿深藍筆或筆記本。
+   - **Ken**：刺短黑髮、細方框眼鏡、黑 Polo。
 2. 繁體字沒有錯字或亂碼，對白和下面腳本**一字不差**。
 3. 畫面中沒有額外文字、真實品牌 Logo 或浮水印。
 
@@ -262,7 +264,7 @@ Panel 4 (bottom-right): Ken 用三張圖卡說明「保費」「保障範圍」�
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -294,7 +296,7 @@ Panel ⑥ — 全家貼上發現徽章. Text (exact, one bubble/caption per line
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -326,7 +328,7 @@ Panel ⑥ — 社區活動中展示相片. Text (exact, one bubble/caption per l
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -358,7 +360,7 @@ Panel ⑥ — 清明節，陳奶奶和女兒在墓前唸信. Text (exact, one bu
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -390,7 +392,7 @@ Panel ⑥ — 陳奶奶和社區朋友跳舞. Text (exact, one bubble/caption pe
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -422,7 +424,7 @@ Panel ⑥ — 想像中的未來婚禮，孫女聽錄音；阿公以回憶畫面
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -454,7 +456,7 @@ Panel ⑥ — 教室貼滿夢想照，也寫著每個人的真實故事. Text (e
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
@@ -486,7 +488,7 @@ Panel ⑥ — 社區活動中心，朋友們圍著手機唱歌、打拍子. Text
 
 ```text
 Create a NEW six-panel educational comic page in EXACTLY the same art style and layout as the existing Alice comics (site/public/media/alice/alice-ai-and-my-job.jpg and alice-senior-voice-input.jpg): soft, warm, clean hand-drawn anime chibi style, bright natural light, 2 columns x 3 rows of panels with rounded borders and small numbered circles ①–⑥ in the top-left corner of each panel, white rounded speech bubbles, Traditional Chinese text. Portrait 2:3, final size 1024x1536.
-ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the shoulders, gentle smile, navy-blue blazer over a white top, small stud earrings; often holding a pen or a notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
+ALICE must match site/public/media/characters/alice-ip.webp exactly, drawn as the same chibi Alice used in the existing Alice comics: long straight dark-brown hair past the chest with a soft side part, warm dark-brown eyes, bright friendly smile showing teeth, a small beauty mark on the left cheek below the eye, small pearl stud earrings, navy-blue tailored blazer over a cream V-neck top; often holding a dark-blue pen or a navy notebook. Keep Alice identical in every panel she appears in. Do NOT draw Alice with short hair, a bob, or a green/teal cardigan.
 小光 is the AI helper robot from site/public/media/characters/ai-buddy.webp (white-and-navy round robot with a glowing blue face screen); draw it small, appearing on a phone/tablet screen or floating beside the user.
 Narration lines (旁白) go in a rectangular caption box, not a speech bubble. No real logos or real people, no extra text, no watermark. Render all Chinese text crisply in Traditional Chinese exactly as given.
 
