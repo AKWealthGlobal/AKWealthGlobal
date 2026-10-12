@@ -110,5 +110,9 @@
   "covidCrash": {
     "name": "聖路易聯準銀行：COVID-19期間的股市表現",
     "url": "https://www.stlouisfed.org/on-the-economy/2021/march/covid19-impacted-stock-performance-industry"
+  },
+  "onecoinSentencing": {
+    "name": "美國司法部：OneCoin 案共同創辦人被判刑",
+    "url": "https://www.justice.gov/usao-sdny/pr/co-founder-multibillion-dollar-cryptocurrency-scheme-onecoin-sentenced-20-years-prison"
   }
 }
