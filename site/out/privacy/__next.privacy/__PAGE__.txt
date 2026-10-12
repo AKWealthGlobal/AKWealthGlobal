@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[679,[],"OutletBoundary"]
+3:"$Sreact.suspense"
+7:I[679,[],"ViewportBoundary"]
+8:I[679,[],"MetadataBoundary"]
+a:I[238,[],""]
+b:I[1604,[],""]
+e:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"Header"]
+f:I[4355,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","974","static/chunks/app/page-e6d41b956f4141ec.js"],""]
+10:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"Footer"]
+11:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"BottomNav"]
+:HL["/_next/static/css/c52b1e9909d7cd16.css","style"]
+6:X
+d:X
+d:C
+0:{"buildId":"l0SWs9Tqn99il9QhSgAqE","data":[{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"wrap section detail-wrap","children":[["$","h1",null,{"children":"隱私說明"}],["$","p",null,{"className":"meta","children":"更新日期：2026 年 10 月 7 日"}],["$","article",null,{"className":"reader-surface","children":[["$","h2",null,{"children":"這個版本如何使用資料"}],["$","p",null,{"children":"本站不提供會員註冊，不要求電子郵件，也沒有安裝廣告追蹤或第三方分析程式。網站搜尋在目前頁面中處理。"}],["$","h2",null,{"children":"兒童學習區"}],["$","p",null,{"children":"遊戲不要求姓名、生日、電子郵件或付款資訊。分齡模式由家人自行選擇，不用填寫實際年齡。金幣是遊戲代幣，不涉及真實交易。"}],["$","h2",null,{"children":"同裝置與跨裝置遊戲"}],["$","p",null,{"children":"同裝置模式的進度留在目前頁面，重新整理後重設。跨裝置功能啟用後，選擇建立或加入房間時，Supabase 後端會處理房號、所選模式、角色席位、遊戲選擇與共同進度，以便不同裝置同步。"}],["$","p",null,{"children":"房間自建立起有效 6 小時，到期即無法存取。資料會由排程或後續請求清理，到期不等於立即從服務備份中消失。遊戲不提供永久雲端存檔。"}],["$","p",null,{"children":"瀏覽器本機儲存隨機產生的角色憑證和房號，讓您重新開啟頁面後恢復自己的席位。後端只保存憑證的雜湊值。請勿將角色憑證分享給他人；房號只分享給一起玩的家人。清除瀏覽器網站資料會失去恢復席位的能力。"}],["$","h2",null,{"children":"服務運作與外部連結"}],["$","p",null,{"children":"網站託管與連線服務可能保留必要的連線與安全紀錄。房間服務會使用短期 IP 雜湊計數限制過量請求，不建立玩家個人檔案。外部連結的資料處理由對方的隱私政策規範。"}],["$","h2",null,{"children":"內容與聯繫"}],["$","p",null,{"children":["若對內容或資料處理有疑問，可透過 ",["$","a",null,{"href":"https://line.me/ti/p/rzae5wUvRm","target":"_blank","rel":"noreferrer","children":"Ken 的 LINE"}],"聯繫。"]}]]}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":"$@5","staleTime":"$6","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L7",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L8",null,{"children":["$","$3",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"隱私說明｜AK Wealth Global"}],["$","meta","1",{"name":"description","content":"AI 實作、財商學習與提示詞資料庫。繁體中文文章、實用AI工具資源，從一個可完成的練習開始。"}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://ak-wealth-global.vercel.app/privacy/"}],["$","meta","4",{"property":"og:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","5",{"property":"og:description","content":"從一個小練習開始，免費探索 AI 與財商。"}],["$","meta","6",{"property":"og:locale","content":"zh_TW"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary"}],["$","meta","9",{"name":"twitter:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","10",{"name":"twitter:description","content":"從一個小練習開始，免費探索 AI 與財商。"}]]}]}]}],null]}],"isPartial":"$@9","staleTime":"$6","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"isPartial":"$@c","staleTime":"$6","varyParams":"$d"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c52b1e9909d7cd16.css","precedence":"next"}]],["$","html",null,{"lang":"zh-Hant","children":["$","body",null,{"children":[["$","a",null,{"href":"#main","className":"skip-link","children":"跳到主要內容"}],["$","$Le",null,{}],["$","main",null,{"id":"main","children":["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}],"notFound":[["$","section",null,{"className":"wrap section","children":[["$","p",null,{"className":"eyebrow","children":"找不到這個頁面"}],["$","h1",null,{"children":"換一個入口，繼續學習。"}],["$","p",null,{"children":"這個網址可能已經更改，先回到知識庫找找看。"}],["$","$Lf",null,{"className":"button primary","href":"/learn/","children":"前往知識庫"}]]}],[]]}]}],["$","$L10",null,{}],["$","$L11",null,{}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"AK Wealth Global\",\"description\":\"繁體中文 AI 與財商教育\",\"url\":\"https://ak-wealth-global.vercel.app\"}"}}]]}]}]]}],"isPartial":"$@12","staleTime":"$6","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@13","rootVaryParams":null,"needsRuntimeRequest":"$@14"}
+4:null
+6:300
+14:true
+6:C
+13:0
+9:"$undefined"
+c:"$undefined"
+12:"$undefined"
+5:"$undefined"

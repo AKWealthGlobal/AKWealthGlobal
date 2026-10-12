@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:I[4355,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","39","static/chunks/39-8ac613934f023d2c.js","828","static/chunks/app/kids/city/page-3202f7731e46396e.js"],""]
+3:I[5039,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","39","static/chunks/39-8ac613934f023d2c.js","828","static/chunks/app/kids/city/page-3202f7731e46396e.js"],"default"]
+4:I[679,[],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[679,[],"ViewportBoundary"]
+a:I[679,[],"MetadataBoundary"]
+c:I[238,[],""]
+d:I[1604,[],""]
+11:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"Header"]
+12:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"Footer"]
+13:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"BottomNav"]
+:HL["/_next/static/css/c52b1e9909d7cd16.css","style"]
+8:X
+f:X
+f:C
+0:{"buildId":"l0SWs9Tqn99il9QhSgAqE","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"wrap section","children":[["$","$L2",null,{"className":"text-link","href":"/kids/","children":"← 返回親子遊戲"}],["$","h1",null,{"children":"AK 動物都市"}],["$","p",null,{"className":"lead","children":"全家一起做選擇，建造更好的城市。"}],["$","$L3",null,{}],["$","section",null,{"className":"reader-surface","children":[["$","h2",null,{"children":"家長陪玩，讓孩子說說自己的想法"}],["$","p",null,{"children":"先看共同目標，輪流讀情境。孩子選好後，問一句「你為什麼這樣想？」。最後選一個能帶回生活的小習慣。"}],["$","div",null,{"aria-labelledby":"family-worksheet-title","children":[["$","h3",null,{"id":"family-worksheet-title","children":"家庭學習單"}],["$","p",null,{"children":"遊戲結束後，和孩子一起聊聊以下問題："}],["$","ol",null,{"children":[["$","li",null,{"children":"今天玩的模式是什麼？"}],["$","li",null,{"children":"我們一起完成了哪些公共建設？"}],["$","li",null,{"children":"起始現金、最後現金與最後備用金各是多少？"}],["$","li",null,{"children":"最喜歡哪一次選擇？為什麼？"}],["$","li",null,{"children":"有哪一次選擇想重新試試？"}],["$","li",null,{"children":"今天討論了哪些金錢觀念？"}],["$","li",null,{"children":"本週想實行哪一個小習慣？"}]]}],["$","p",null,{"children":[["$","strong",null,{"children":"家長提醒："}],"不比較家庭財富，不要求孩子透露個人資料。題目不是能力或職涯測驗。"]}]]}]]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"AK 動物都市｜3D 親子財商大富翁｜AK Wealth Global"}],["$","meta","1",{"name":"description","content":"2–4 位家人合作探索 24 格立體城市，依幼兒、兒童及進階模式練習預算、儲蓄、公共建設與防詐。免登入。"}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://ak-wealth-global.vercel.app/kids/city/"}],["$","meta","4",{"property":"og:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","5",{"property":"og:description","content":"從一個小練習開始，免費探索 AI 與財商。"}],["$","meta","6",{"property":"og:locale","content":"zh_TW"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary"}],["$","meta","9",{"name":"twitter:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","10",{"name":"twitter:description","content":"從一個小練習開始，免費探索 AI 與財商。"}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$8","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$8","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@10","staleTime":"$8","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c52b1e9909d7cd16.css","precedence":"next"}]],["$","html",null,{"lang":"zh-Hant","children":["$","body",null,{"children":[["$","a",null,{"href":"#main","className":"skip-link","children":"跳到主要內容"}],["$","$L11",null,{}],["$","main",null,{"id":"main","children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","section",null,{"className":"wrap section","children":[["$","p",null,{"className":"eyebrow","children":"找不到這個頁面"}],["$","h1",null,{"children":"換一個入口，繼續學習。"}],["$","p",null,{"children":"這個網址可能已經更改，先回到知識庫找找看。"}],["$","$L2",null,{"className":"button primary","href":"/learn/","children":"前往知識庫"}]]}],[]]}]}],["$","$L12",null,{}],["$","$L13",null,{}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"AK Wealth Global\",\"description\":\"繁體中文 AI 與財商教育\",\"url\":\"https://ak-wealth-global.vercel.app\"}"}}]]}]}]]}],"isPartial":"$@14","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+6:null
+8:300
+16:true
+8:C
+15:0
+b:"$undefined"
+e:"$undefined"
+10:"$undefined"
+14:"$undefined"
+7:"$undefined"

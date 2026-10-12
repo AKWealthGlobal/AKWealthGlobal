@@ -1,0 +1,75 @@
+1:"$Sreact.fragment"
+2:I[4355,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","856","static/chunks/856-43586c1d3383d0e3.js","526","static/chunks/app/prompts/%5Bslug%5D/page-e2a43342559d75db.js"],""]
+3:I[2052,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","856","static/chunks/856-43586c1d3383d0e3.js","526","static/chunks/app/prompts/%5Bslug%5D/page-e2a43342559d75db.js"],"Image"]
+4:I[4475,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","856","static/chunks/856-43586c1d3383d0e3.js","526","static/chunks/app/prompts/%5Bslug%5D/page-e2a43342559d75db.js"],"CopyButton"]
+:HL["/media/prompt-examples/example-03.png","image"]
+5:Td78,在野生動物公園拍攝的超逼真手機抓拍自拍，捕捉上傳參考圖片中的男子與一隻大型成年孟加拉虎之間自然且罕見的親密互動。男子以手臂伸直的自然自拍姿勢手持手機，直視鏡頭並露出真誠放鬆的微笑。他的表情應感覺完全自發且未擺拍，彷彿有人意外捕捉到他與老虎之間的有趣瞬間。
+
+一隻大型成年孟加拉虎極度靠近男子，前腿自然地環繞在他的肩膀和上半身，呈現出看似玩耍的擁抱姿態。老虎的頭部靠在男子的頭部旁邊並略高於其頭頂。它的臉部分轉向鏡頭，具有逼真的琥珀色眼睛、細節豐富的黑橙條紋皮毛、臉頰和口鼻周圍的白色皮毛、長而獨立的鬍鬚、逼真的鼻子質感以及自然的動物解剖結構。與男子相比，老虎應顯得體型巨大。
+
+老虎的爪子和前肢自然地搭在男子的肩膀和胸部。保留逼真的重量感、解剖結構、皮毛壓縮效果以及老虎與男子衣物之間的接觸。這種互動看起來應像是一張真實的照片，而非擺拍的合成圖。
+
+男子身穿一件簡單的黑色短袖 Polo 衫，具有細微的自然織物紋理，袖口/胸前區域有小巧低調的橙色細節。當老虎的身體和爪子接觸時，男子的衣物應顯得略微被壓迫。
+
+構圖：極近距離的垂直自拍，比例約為 9:16。男子的臉部佔據畫面的中下/右側部分，而老虎則主導左上和左側區域。老虎巨大的身體和爪子部分填滿前景。取景應感覺略有不完美，就像一張真實的手持手機照片，而非專業構圖的野生動物攝影作品。在右側和主體後方保留部分周圍環境可見。
+
+背景：一個位於溫暖半乾旱環境中的真實乾燥野生動物公園圍欄區。沙質橙棕色土壤、散落的枯葉、枝條細長且葉片稀疏的成熟樹木、遠處隱約可見的簡單圍欄，以及自然的開闊林地環境。由於近距離自拍視角，背景應保持略微柔和，但需保留足夠的細節以使地點可信。
+
+光照：來自上方並略在主體後方的溫暖自然午後日光。強烈但逼真的陽光在老虎的橙色皮毛和男子的皮膚上形成溫暖的高光，同時樹木在沙地上投下不規則的軟至中等陰影。場景應具有略帶金色和塵埃感的氛圍，但不應顯得過於電影化。歡迎自然的曝光變化。
+
+色彩與氛圍：溫暖的大地色調、柔和的橙棕色土壤、金色的老虎皮毛、條紋和襯衫中的深邃自然黑色、略帶溫暖的膚色、塵土飛揚的林地色彩。圖像應感覺像是一張真實的老式智慧型手機旅行照片，而非精緻的專業野生動物攝影作品。
+
+攝影技術：使用現代智慧型手機拍攝，等效焦距約為 24–26 mm 廣角鏡頭，手持前置相機，垂直 9:16 構圖，自然 HDR，逼真的手機動態範圍，輕微的計算攝影特徵，邊緣處有細微的鏡頭柔焦，逼真的曝光，自然的運動瑕疵，真實的皮膚毛孔和細小面部毛髮，高度細節化的老虎皮毛。
+
+重要寫實性：保留逼真的比例、解剖結構、物理特性、皮毛質感、光照、陰影、反射、深度以及老虎與男子之間的接觸。老虎必須看起來像一隻真實的活體孟加拉虎，而不是 CGI 動物或過大的家貓。男子的臉部必須保持完全自然，並與上傳的參考圖片保持一致。6:Td78,在野生動物公園拍攝的超逼真手機抓拍自拍，捕捉上傳參考圖片中的男子與一隻大型成年孟加拉虎之間自然且罕見的親密互動。男子以手臂伸直的自然自拍姿勢手持手機，直視鏡頭並露出真誠放鬆的微笑。他的表情應感覺完全自發且未擺拍，彷彿有人意外捕捉到他與老虎之間的有趣瞬間。
+
+一隻大型成年孟加拉虎極度靠近男子，前腿自然地環繞在他的肩膀和上半身，呈現出看似玩耍的擁抱姿態。老虎的頭部靠在男子的頭部旁邊並略高於其頭頂。它的臉部分轉向鏡頭，具有逼真的琥珀色眼睛、細節豐富的黑橙條紋皮毛、臉頰和口鼻周圍的白色皮毛、長而獨立的鬍鬚、逼真的鼻子質感以及自然的動物解剖結構。與男子相比，老虎應顯得體型巨大。
+
+老虎的爪子和前肢自然地搭在男子的肩膀和胸部。保留逼真的重量感、解剖結構、皮毛壓縮效果以及老虎與男子衣物之間的接觸。這種互動看起來應像是一張真實的照片，而非擺拍的合成圖。
+
+男子身穿一件簡單的黑色短袖 Polo 衫，具有細微的自然織物紋理，袖口/胸前區域有小巧低調的橙色細節。當老虎的身體和爪子接觸時，男子的衣物應顯得略微被壓迫。
+
+構圖：極近距離的垂直自拍，比例約為 9:16。男子的臉部佔據畫面的中下/右側部分，而老虎則主導左上和左側區域。老虎巨大的身體和爪子部分填滿前景。取景應感覺略有不完美，就像一張真實的手持手機照片，而非專業構圖的野生動物攝影作品。在右側和主體後方保留部分周圍環境可見。
+
+背景：一個位於溫暖半乾旱環境中的真實乾燥野生動物公園圍欄區。沙質橙棕色土壤、散落的枯葉、枝條細長且葉片稀疏的成熟樹木、遠處隱約可見的簡單圍欄，以及自然的開闊林地環境。由於近距離自拍視角，背景應保持略微柔和，但需保留足夠的細節以使地點可信。
+
+光照：來自上方並略在主體後方的溫暖自然午後日光。強烈但逼真的陽光在老虎的橙色皮毛和男子的皮膚上形成溫暖的高光，同時樹木在沙地上投下不規則的軟至中等陰影。場景應具有略帶金色和塵埃感的氛圍，但不應顯得過於電影化。歡迎自然的曝光變化。
+
+色彩與氛圍：溫暖的大地色調、柔和的橙棕色土壤、金色的老虎皮毛、條紋和襯衫中的深邃自然黑色、略帶溫暖的膚色、塵土飛揚的林地色彩。圖像應感覺像是一張真實的老式智慧型手機旅行照片，而非精緻的專業野生動物攝影作品。
+
+攝影技術：使用現代智慧型手機拍攝，等效焦距約為 24–26 mm 廣角鏡頭，手持前置相機，垂直 9:16 構圖，自然 HDR，逼真的手機動態範圍，輕微的計算攝影特徵，邊緣處有細微的鏡頭柔焦，逼真的曝光，自然的運動瑕疵，真實的皮膚毛孔和細小面部毛髮，高度細節化的老虎皮毛。
+
+重要寫實性：保留逼真的比例、解剖結構、物理特性、皮毛質感、光照、陰影、反射、深度以及老虎與男子之間的接觸。老虎必須看起來像一隻真實的活體孟加拉虎，而不是 CGI 動物或過大的家貓。男子的臉部必須保持完全自然，並與上傳的參考圖片保持一致。d:X
+12:X
+12:C
+0:{"buildId":"l0SWs9Tqn99il9QhSgAqE","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"wrap section example-library example-detail","children":[["$","$L2",null,{"className":"example-back","href":"/prompts/","children":"← 回提示詞資料庫"}],["$","p",null,{"className":"eyebrow gold","children":["寫實人像攝影"," / ","動物互動自拍"]}],["$","h1",null,{"children":"逼真的老虎自拍生成"}],["$","p",null,{"className":"lead","children":"為 nano-banana-pro 設計的詳細提示詞，用於生成一名男子在野生動物公園與孟加拉虎合影的超逼真自拍，強調自然光線與真實的身體互動。"}],["$","aside",null,{"className":"ai-buddy-note","aria-label":"AI 使用提醒","children":[["$","$L3",null,{"src":"/media/characters/ai-buddy.webp","alt":"可愛的 AI 小夥伴","width":96,"height":96}],["$","p",null,{"children":[["$","strong",null,{"children":"AI 小夥伴提醒"}],["$","span",null,{"children":"AI 可以協助整理想法，重要資訊記得核對來源。"}]]}]]}],["$","div",null,{"className":"example-tags","children":[["$","span",null,{"children":["原文件標註：","Nano Banana Pro"]}],["$","span",null,{"children":"需準備參考照片"}]]}],["$","section",null,{"className":"example-image","children":[["$","h2",null,{"children":"示範圖片"}],["$","p",null,{"children":"點擊查看完整圖片。"}],["$","a",null,{"href":"/media/prompt-examples/example-03.png","target":"_blank","rel":"noopener noreferrer","children":["$","img",null,{"src":"/media/prompt-examples/example-03.png","alt":"逼真的老虎自拍生成的示範圖片"}]}]]}],["$","section",null,{"className":"example-prompt","children":[["$","h2",null,{"children":"完整提示詞"}],["$","$L4",null,{"text":"$5"}],["$","pre",null,{"tabIndex":0,"children":"$6"}],"$L7"]}],"$L8","$L9"]}],["$La"],"$Lb"]}],"isPartial":"$@c","staleTime":"$d","varyParams":null},{"rsc":"$Le","isPartial":"$@f","staleTime":"$d","varyParams":null},{"rsc":"$L10","isPartial":"$@11","staleTime":"$d","varyParams":"$12"},{"rsc":"$L13","isPartial":"$@14","staleTime":"$d","varyParams":"$12"},{"rsc":"$L15","isPartial":"$@16","staleTime":"$d","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@17","rootVaryParams":null,"needsRuntimeRequest":"$@18"}
+19:I[679,[],"OutletBoundary"]
+1a:"$Sreact.suspense"
+1c:I[679,[],"ViewportBoundary"]
+1d:I[679,[],"MetadataBoundary"]
+1e:I[238,[],""]
+1f:I[1604,[],""]
+20:I[4475,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","856","static/chunks/856-43586c1d3383d0e3.js","526","static/chunks/app/prompts/%5Bslug%5D/page-e2a43342559d75db.js"],"Header"]
+21:I[4475,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","856","static/chunks/856-43586c1d3383d0e3.js","526","static/chunks/app/prompts/%5Bslug%5D/page-e2a43342559d75db.js"],"Footer"]
+22:I[4475,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","856","static/chunks/856-43586c1d3383d0e3.js","526","static/chunks/app/prompts/%5Bslug%5D/page-e2a43342559d75db.js"],"BottomNav"]
+:HL["/_next/static/css/098b1b215da68c5b.css","style"]
+:HL["/_next/static/css/c52b1e9909d7cd16.css","style"]
+7:["$","p",null,{"children":"先準備提示詞要求的照片，再調整人物、場景、文字與比例。模型名稱依原文件標註，實際結果可能不同。"}]
+8:["$","section",null,{"className":"example-related","children":[["$","h2",null,{"children":"同類提示詞"}],[["$","$L2","prompt-05",{"href":"/prompts/prompt-05/","children":["奢華時尚雜誌風格自拍"," →"]}],["$","$L2","prompt-11",{"href":"/prompts/prompt-11/","children":["豪華時尚編輯：運動型轎車主題"," →"]}]]]}]
+9:["$","p",null,{"className":"example-note","children":"來源：使用者提供的提示詞與示範圖整理。原文中的技術描述與風格參數屬創作指示，不代表已驗證的模型規格。"}]
+a:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/098b1b215da68c5b.css","precedence":"next"}]
+b:["$","$L19",null,{"children":["$","$1a",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]
+e:["$","$1","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L1d",null,{"children":["$","$1a",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"逼真的老虎自拍生成 · 提示詞資料庫｜AK Wealth Global"}],["$","meta","1",{"name":"description","content":"寫實人像攝影／動物互動自拍：查看原文件示範圖片與完整提示詞，複製後按需求調整。"}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://ak-wealth-global.vercel.app/prompts/prompt-03/"}],["$","meta","4",{"property":"og:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","5",{"property":"og:description","content":"從一個小練習開始，免費探索 AI 與財商。"}],["$","meta","6",{"property":"og:locale","content":"zh_TW"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary"}],["$","meta","9",{"name":"twitter:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","10",{"name":"twitter:description","content":"從一個小練習開始，免費探索 AI 與財商。"}]]}]}]}],null]}]
+10:["$","$1","c",{"children":[null,["$","$L1e",null,{"parallelRouterKey":"children","template":["$","$L1f",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L1e",null,{"parallelRouterKey":"children","template":["$","$L1f",null,{}]}]]}]
+15:["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c52b1e9909d7cd16.css","precedence":"next"}]],["$","html",null,{"lang":"zh-Hant","children":["$","body",null,{"children":[["$","a",null,{"href":"#main","className":"skip-link","children":"跳到主要內容"}],["$","$L20",null,{}],["$","main",null,{"id":"main","children":["$","$L1e",null,{"parallelRouterKey":"children","template":["$","$L1f",null,{}],"notFound":[["$","section",null,{"className":"wrap section","children":[["$","p",null,{"className":"eyebrow","children":"找不到這個頁面"}],["$","h1",null,{"children":"換一個入口，繼續學習。"}],["$","p",null,{"children":"這個網址可能已經更改，先回到知識庫找找看。"}],["$","$L2",null,{"className":"button primary","href":"/learn/","children":"前往知識庫"}]]}],[]]}]}],["$","$L21",null,{}],["$","$L22",null,{}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"AK Wealth Global\",\"description\":\"繁體中文 AI 與財商教育\",\"url\":\"https://ak-wealth-global.vercel.app\"}"}}]]}]}]]}]
+1b:null
+18:true
+d:300
+d:C
+17:0
+f:"$undefined"
+11:"$undefined"
+14:"$undefined"
+16:"$undefined"
+c:"$undefined"

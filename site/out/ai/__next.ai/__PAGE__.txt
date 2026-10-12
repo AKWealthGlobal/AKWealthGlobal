@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:I[4355,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","141","static/chunks/app/ai/page-2cde88a9ee8317e6.js"],""]
+3:I[2052,["355","static/chunks/355-80fa537783fecb45.js","52","static/chunks/52-1a5ee50854b65493.js","141","static/chunks/app/ai/page-2cde88a9ee8317e6.js"],"Image"]
+4:I[679,[],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[679,[],"ViewportBoundary"]
+a:I[679,[],"MetadataBoundary"]
+c:I[238,[],""]
+d:I[1604,[],""]
+10:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"Header"]
+11:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"Footer"]
+12:I[4475,["355","static/chunks/355-80fa537783fecb45.js","856","static/chunks/856-43586c1d3383d0e3.js","177","static/chunks/app/layout-e6dd627e62052845.js"],"BottomNav"]
+:HL["/_next/static/css/c52b1e9909d7cd16.css","style"]
+8:X
+f:X
+f:C
+0:{"buildId":"l0SWs9Tqn99il9QhSgAqE","data":[{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"wrap section ai-academy-hero","children":[["$","div",null,{"className":"ai-academy-copy","children":[["$","p",null,{"className":"eyebrow gold","children":"Alice · 漫畫學 AI"}],["$","h1",null,{"children":"Alice AI學院"}],["$","p",null,{"className":"lead","children":"從 AI 入門、創作到生活應用，依年齡與需求找到適合自己的學習主題。"}],["$","p",null,{"className":"ai-academy-count","children":["完整收錄 ",["$","strong",null,{"children":105}]," 個學習主題，持續上架漫畫與實作內容。"]}],["$","$L2",null,{"className":"button primary","href":"/learn/","children":["瀏覽全部主題 ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}],["$","aside",null,{"className":"ai-buddy-note compact","aria-label":"AI 使用提醒","children":[["$","$L3",null,{"src":"/media/characters/ai-buddy.webp","alt":"可愛的 AI 小夥伴","width":78,"height":78}],["$","p",null,{"children":[["$","strong",null,{"children":"AI 小夥伴提醒"}],["$","span",null,{"children":"AI 可以協助整理想法，重要資訊記得核對來源。"}]]}]]}]]}],["$","div",null,{"className":"ai-academy-art","children":["$","$L3",null,{"src":"/media/characters/alice-ip.webp","alt":"Alice AI學院角色形象","width":620,"height":700,"priority":true}]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Alice AI學院｜AK Wealth Global"}],["$","meta","1",{"name":"description","content":"瀏覽 105 個 AI 入門、創作與生活實作主題，閱讀 Alice 六格漫畫。"}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://ak-wealth-global.vercel.app/ai/"}],["$","meta","4",{"property":"og:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","5",{"property":"og:description","content":"從一個小練習開始，免費探索 AI 與財商。"}],["$","meta","6",{"property":"og:locale","content":"zh_TW"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary"}],["$","meta","9",{"name":"twitter:title","content":"AK Wealth Global｜學 AI，懂金錢"}],["$","meta","10",{"name":"twitter:description","content":"從一個小練習開始，免費探索 AI 與財商。"}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$8","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$8","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c52b1e9909d7cd16.css","precedence":"next"}]],["$","html",null,{"lang":"zh-Hant","children":["$","body",null,{"children":[["$","a",null,{"href":"#main","className":"skip-link","children":"跳到主要內容"}],["$","$L10",null,{}],["$","main",null,{"id":"main","children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","section",null,{"className":"wrap section","children":[["$","p",null,{"className":"eyebrow","children":"找不到這個頁面"}],["$","h1",null,{"children":"換一個入口，繼續學習。"}],["$","p",null,{"children":"這個網址可能已經更改，先回到知識庫找找看。"}],["$","$L2",null,{"className":"button primary","href":"/learn/","children":"前往知識庫"}]]}],[]]}]}],["$","$L11",null,{}],["$","$L12",null,{}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"AK Wealth Global\",\"description\":\"繁體中文 AI 與財商教育\",\"url\":\"https://ak-wealth-global.vercel.app\"}"}}]]}]}]]}],"isPartial":"$@13","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
+6:null
+8:300
+15:true
+8:C
+14:0
+b:"$undefined"
+e:"$undefined"
+13:"$undefined"
+7:"$undefined"
