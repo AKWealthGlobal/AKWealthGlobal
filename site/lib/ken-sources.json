@@ -1,0 +1,114 @@
+{
+  "inflation": {
+    "name": "美國勞工統計局：購買力",
+    "url": "https://www.bls.gov/cpi/factsheets/purchasing-power-constant-dollars.htm"
+  },
+  "policy": {
+    "name": "聯準會：貨幣政策如何影響通膨",
+    "url": "https://www.federalreserve.gov/faqs/money_12856.htm"
+  },
+  "gold": {
+    "name": "世界黃金協會：風險與挑戰（產業組織資料）",
+    "url": "https://www.gold.org/goldhub/research/relevance-of-gold-as-a-strategic-asset/risks-challenges"
+  },
+  "stocks": {
+    "name": "SEC Investor.gov：股票",
+    "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks"
+  },
+  "allocation": {
+    "name": "SEC Investor.gov：配置與分散",
+    "url": "https://www.investor.gov/introduction-investing/getting-started/asset-allocation"
+  },
+  "index": {
+    "name": "S&P Dow Jones Indices：S&P 500",
+    "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/"
+  },
+  "funds": {
+    "name": "SEC Investor.gov：指數基金",
+    "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4"
+  },
+  "history": {
+    "name": "聯準會歷史：1971年停止美元兌金",
+    "url": "https://www.federalreservehistory.org/essays/gold-convertibility-ends"
+  },
+  "goldConvertibility": {
+    "name": "聯準會歷史：1971年停止美元兌金",
+    "url": "https://www.federalreservehistory.org/essays/gold-convertibility-ends"
+  },
+  "hongyuan": {
+    "name": "臺灣高等檢察署：鴻源案與投資吸金",
+    "url": "https://www.tph.moj.gov.tw/media/187506/%E7%9A%87%E8%8F%AF%E8%87%BA%E5%8C%97-%E9%91%A0%E6%B3%95%E8%96%AA%E5%82%B3-006-%E9%87%8D%E6%A1%88%E7%B4%80%E8%A6%81-002.pdf"
+  },
+  "madoff": {
+    "name": "美國司法部：Madoff 龐氏騙局判刑資料",
+    "url": "https://www.justice.gov/usao-sdny/pr/us-attorney-announces-distribution-over-158-million-nearly-25000-victims-madoff-ponzi"
+  },
+  "onecoin": {
+    "name": "美國司法部：OneCoin 案共同創辦人認罪",
+    "url": "https://www.justice.gov/usao-sdny/pr/co-founder-multi-billion-dollar-cryptocurrency-pyramid-scheme-onecoin-pleads-guilty"
+  },
+  "ftx": {
+    "name": "美國司法部：FTX 創辦人判刑公告",
+    "url": "https://www.justice.gov/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes"
+  },
+  "terra": {
+    "name": "美國證券交易委員會：Terraform 案與 UST 脫鉤",
+    "url": "https://www.sec.gov/newsroom/press-releases/2023-32"
+  },
+  "imb": {
+    "name": "最高法院：im.B 平台案件判決資料",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C114%2C%E5%8F%B0%E4%B8%8A%2C4674%2C20251230%2C1"
+  },
+  "jpex": {
+    "name": "香港警務處：JPEX 網上投資騙案案例",
+    "url": "https://www.police.gov.hk/offbeat120/scam/common-online-investment-scams.html"
+  },
+  "crash1929": {
+    "name": "Federal Reserve History：1929年股災",
+    "url": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1929"
+  },
+  "japanBubble": {
+    "name": "日本銀行：1980年代資產價格泡沫研究",
+    "url": "https://www.imes.boj.or.jp/research/papers/english/me19-s1-14.pdf"
+  },
+  "asia1997": {
+    "name": "國際貨幣基金：亞洲金融危機回顧",
+    "url": "https://www.imf.org/en/blogs/articles/2017/07/13/what-we-have-seen-and-learned-20-years-after-the-asian-financial-crisis"
+  },
+  "fcic": {
+    "name": "金融危機調查委員會：最終報告資料庫",
+    "url": "https://fcic.law.stanford.edu/"
+  },
+  "oil1970s": {
+    "name": "美聯儲歷史：1970年代能源與通膨背景",
+    "url": "https://www.federalreservehistory.org/essays/oil-shock-of-1973-74"
+  },
+  "goldPrice": {
+    "name": "世界黃金協會：黃金歷史價格資料",
+    "url": "https://www.gold.org/goldhub/data/gold-prices"
+  },
+  "centralBankGold": {
+    "name": "世界黃金協會：央行黃金儲備調查（產業組織資料）",
+    "url": "https://www.gold.org/goldhub/research/central-bank-gold-reserves-survey-2025"
+  },
+  "imfReserves": {
+    "name": "IMF：國際金融統計與官方儲備資料",
+    "url": "https://data.imf.org/"
+  },
+  "inflationCPI": {
+    "name": "美國勞工統計局：消費者物價指數與購買力",
+    "url": "https://www.bls.gov/cpi/factsheets/purchasing-power-constant-dollars.htm"
+  },
+  "goldDollar": {
+    "name": "世界黃金協會：美元、利率與黃金市場因素（產業組織資料）",
+    "url": "https://www.gold.org/goldhub/research/relevance-of-gold-as-a-strategic-asset/risks-challenges"
+  },
+  "dotcomBubble": {
+    "name": "美國證券交易委員會：網路泡沫與市場變化",
+    "url": "https://www.sec.gov/newsroom/speeches-statements/090903tswhd-testimony-implementation-sarbanes-oxley-act-2002"
+  },
+  "covidCrash": {
+    "name": "聖路易聯準銀行：COVID-19期間的股市表現",
+    "url": "https://www.stlouisfed.org/on-the-economy/2021/march/covid19-impacted-stock-performance-industry"
+  }
+}

@@ -1,0 +1,7 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const entries=require('../lib/prompt-examples.json');assert.equal(entries.length,22);assert.equal(new Set(entries.map(e=>e.slug)).size,22);assert.equal(new Set(entries.map(e=>e.category)).size,7);
+const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#x27;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
+const index=decode(fs.readFileSync('out/prompts/index.html','utf8'));const sitemap=fs.readFileSync('out/sitemap.xml','utf8');
+const raw=fs.readFileSync('C:/Users/user/Desktop/Markdown/提示詞.md','utf8');const refs=new Map([...raw.matchAll(/^\[(image\d+)\]:\s*<?data:image\/(\w+);base64,([^\s>]+)/gm)].map(m=>[m[1],Buffer.from(m[3],'base64')]));
+for(const [i,e] of entries.entries()){assert(e.prompt.trim().length>40,e.slug);assert(!e.prompt.includes('data:image'));assert(index.includes(e.title));assert(index.includes(e.category));const html=decode(fs.readFileSync(`out/prompts/${e.slug}/index.html`,'utf8'));assert(html.includes(e.prompt),e.slug);assert(html.includes(e.image));assert(sitemap.includes(`/prompts/${e.slug}/`));const bytes=fs.readFileSync('out'+e.image);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),crypto.createHash('sha256').update(refs.get(`image${i+1}`)).digest('hex'));}
+console.log('PASS: 22 full prompts, 7 categories, 22 matched original images, unique routes and sitemap');

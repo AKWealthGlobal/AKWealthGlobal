@@ -1,16 +1,22 @@
-import Link from 'next/link';import GameCards from '@/components/game-cards';
+import Link from 'next/link';
 import Image from 'next/image';
 import {ArrowRight,ChevronRight,Clapperboard,BookOpen,Sparkles,Download,Compass} from 'lucide-react';
-import {faq,articles} from '@/lib/content';
-import ResourceGrid from '@/components/resource-grid';
+import {faq} from '@/lib/content';
+import BrandMethod from '@/components/brand-method';
+import topics from '@/lib/alice-topics.json';
+import {kenComics} from '@/lib/ken-comics';
 export default function Home(){return <>
-<section className="hero wrap"><div className="hero-copy"><p className="eyebrow"><span/> 每一次學習，都向前一點</p><h1>學 <em>AI</em>，<br/>懂<span className="gold">金錢。</span></h1><p className="hero-sub">從一個小練習開始。<span className="desktop-only"><br/>把未來的能力，帶進今天的生活。</span></p><Link className="button primary desktop-only" href="/resources/">探索免費工具包<ArrowRight size={20}/></Link></div><div className="hero-art"><Image src="/media/hero.webp" alt="青色玻璃播放球與金色軌道，象徵 AI 與財商學習" fill sizes="(max-width: 700px) 56vw, 600px" priority/></div></section>
-<section className="gateways wrap" aria-label="選擇學習方向"><Link href="/ai/" className="gateway cyan"><div className="gateway-icon"><Clapperboard size={38}/></div><div><p className="eyebrow">把想法，做成作品</p><h2><em>Alice</em> AI 學院</h2><p>做出你的第一支 AI 影片</p></div><ChevronRight/></Link><Link href="/money/" className="gateway amber"><Image className="ken-avatar" src="/media/ken.webp" width={85} height={96} alt="Ken 季秉澤漫畫形象"/><div><p className="eyebrow">把故事，變成判斷力</p><h2><span className="gold">Ken</span> 財商教室</h2><p>用漫畫看懂錢與風險</p></div><ChevronRight/></Link></section>
-<section className="quick-kit wrap"><div><span className="tag">免費工具包</span><h2>AI 新手實戰地圖</h2><p>20 頁，把「想學」變成「開始做」。</p><Link className="button primary" href="/resources/ai-guide/">預覽並免費下載<Download size={20}/></Link><Link className="text-link gold" href="/kids/">和孩子一起學財商<ArrowRight size={17}/></Link></div><Image src="/media/ai-guide.png" width={142} height={200} alt="2026 AI 新手實戰地圖實際封面"/></section>
-<section className="section wrap"><div className="section-heading"><div><p className="eyebrow">先拿一份，試著做</p><h2>免費工具包</h2></div><Link className="text-link" href="/resources/">查看全部<ArrowRight size={18}/></Link></div><ResourceGrid compact/></section>
-<section className="section wrap editorial"><div className="editorial-copy"><p className="eyebrow">Ken 財商漫畫 · 六格故事</p><h2>前面真的有領到錢，<br/><span className="gold">為什麼還要小心？</span></h2><p>跟著鴻源案的故事，練習分辨「有人賺到」與「風險看懂了」之間的距離。</p><Link className="button primary" href="/money/hongyuan/">開始逐格閱讀<BookOpen size={20}/></Link></div><Link href="/money/hongyuan/" className="comic-feature"><Image src="/media/comics/hongyuan-1.webp" width={615} height={404} alt="鴻源案漫畫第一格：大家都在賺，只有我沒上車？"/></Link></section>
-<section className="section wrap"><div className="section-heading"><div><p className="eyebrow">Alice 的創作練習</p><h2>有想法，就從這裡開始</h2></div></div><div className="article-grid">{articles.filter(a=>['camera','first-video','story'].includes(a.slug)).map((a,i)=><Link className="article-card" href={'/learn/'+a.slug+'/'} key={a.slug}><span className="article-num">0{i+1}</span><span className="tag">{a.category} · {a.time}</span><h3>{a.title}</h3><p>{a.description}</p><span className="text-link">跟著練習<ArrowRight size={18}/></span></Link>)}</div></section>
-<section className="kids-banner with-games wrap"><div className="kids-banner-head"><div><p className="eyebrow gold"><Compass size={17}/> 親子財商 · 五個小遊戲</p><h2>和孩子一起，<br/>把錢弄懂。</h2><p>從 3D 夢想島到全家一起玩的萬獸城多人棋盤，<br/>選一個，今天就開始玩。</p></div><Link className="button gold-button" href="/kids/">進入親子財商<ArrowRight size={20}/></Link></div><GameCards/><small>免登入 · 不收集孩子的個人資料 · 只用虛擬金幣</small></section>
+<section className="hero wrap"><div className="hero-copy"><p className="eyebrow"><span/> 每一次學習，都向前一點</p><h1>學 <em>AI</em>，<br/>懂<span className="gold">金錢。</span></h1><p className="hero-sub">從一個小練習開始。<span className="desktop-only"><br/>把未來的能力，帶進今天的生活。</span></p><Link className="button primary desktop-only" href="/learn/">探索Alice AI學院<ArrowRight size={20}/></Link></div><div className="hero-art"><Image src="/media/hero.webp" alt="青色玻璃播放球與金色軌道，象徵 AI 與財商學習" fill sizes="(max-width: 700px) 56vw, 600px" priority/></div></section>
+<section className="gateways wrap" aria-label="選擇學習方向"><Link href="/ai/" className="gateway cyan"><Image className="ken-avatar ip-avatar" src="/media/characters/alice-ip.webp" width={85} height={96} alt="Alice AI學院 Q 版形象"/><div><p className="eyebrow">把想法，做成作品</p><h2><em>Alice</em> AI 學院</h2><p>{topics.length} 個主題 · 漫畫與生活實作</p></div><ChevronRight/></Link><Link href="/money/" className="gateway amber"><Image className="ken-avatar ip-avatar" src="/media/characters/ken-ip.webp" width={85} height={96} alt="Ken 季秉澤 Q 版形象"/><div><p className="eyebrow">把故事，變成判斷力</p><h2><span className="gold">Ken 季秉澤</span> · 財商教室</h2><p>{kenComics.length} 篇漫畫 · 親子與成人共讀</p></div><ChevronRight/></Link></section><BrandMethod/>
+
+
+
+<section className="section wrap"><p className="eyebrow">Alice AI學院</p><h2>{topics.length} 個主題，從 AI 入門到生活實作</h2><p>依年齡與需求瀏覽完整主題與已上架的六格漫畫。</p><Link className="button primary" href="/learn/">瀏覽 Alice AI學院<ArrowRight size={20}/></Link></section>
+<section className="kids-banner wrap"><div><p className="eyebrow gold"><Compass size={17}/> 全家一起探索</p><h2>和孩子一起，<br/>把錢弄懂。</h2><p>一起探索四區動物都市。<br/>選擇分齡模式，練習預算與生活取捨。</p><Link className="button gold-button" href="/kids/">開始合作冒險<ArrowRight size={20}/></Link><small>免登入 · 不收集孩子的個人資料</small></div><div className="kids-number" aria-hidden="true">24<span>格冒險<br/>全家一起選擇</span></div></section>
 <section className="section wrap about-strip"><Sparkles size={30}/><div><h2>認識 Alice 與 Ken</h2><p>從 AI 創作到財商思考，陪你把學到的用出來。</p></div><Link href="/about/" className="icon-button" aria-label="認識 Alice 與 Ken"><ArrowRight/></Link></section>
 <section className="section wrap faq"><p className="eyebrow">開始之前，你可能想問</p><h2>常見問題</h2>{faq.map(f=><details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</section><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))})}}/>
 </>}
+
+
+
+

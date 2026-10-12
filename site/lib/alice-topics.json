@@ -1,0 +1,1052 @@
+[
+  {
+    "key": "core-k1",
+    "code": "K1",
+    "group": "5–8 歲｜魔法學院",
+    "title": "AI 是什麼？",
+    "focus": "AI 是會學習的工具，不是魔法也不是人",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-what-is-ai/"
+  },
+  {
+    "key": "core-k2",
+    "code": "K2",
+    "group": "5–8 歲｜魔法學院",
+    "title": "說清楚，AI 才聽得懂",
+    "focus": "描述顏色、大小、數量",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-say-it-clearly/"
+  },
+  {
+    "key": "core-k3",
+    "code": "K3",
+    "group": "5–8 歲｜魔法學院",
+    "title": "AI 也會說錯話",
+    "focus": "有疑問就問大人",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-ai-can-be-wrong/"
+  },
+  {
+    "key": "core-k4",
+    "code": "K4",
+    "group": "5–8 歲｜魔法學院",
+    "title": "我的秘密不告訴 AI",
+    "focus": "名字、地址、學校不輸入",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-keep-secrets/"
+  },
+  {
+    "key": "core-k5",
+    "code": "K5",
+    "group": "5–8 歲｜魔法學院",
+    "title": "這張圖是真的嗎？",
+    "focus": "AI 會畫出不存在的東西",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-is-it-real/"
+  },
+  {
+    "key": "core-k6",
+    "code": "K6",
+    "group": "5–8 歲｜魔法學院",
+    "title": "我的夢想動物",
+    "focus": "點子是自己的，AI 幫忙畫",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-dream-animal/"
+  },
+  {
+    "key": "core-k7",
+    "code": "K7",
+    "group": "5–8 歲｜魔法學院",
+    "title": "時間到，說再見",
+    "focus": "用 AI 也要遵守螢幕時間",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-time-to-stop/"
+  },
+  {
+    "key": "core-k8",
+    "code": "K8",
+    "group": "5–8 歲｜魔法學院",
+    "title": "圖書館的貓頭鷹精靈",
+    "focus": "AI 可以換語氣、換方式說故事",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-owl-storyteller/"
+  },
+  {
+    "key": "core-p1",
+    "code": "P1",
+    "group": "9–12 歲｜冒險公會",
+    "title": "提示詞五個空格",
+    "focus": "任務、對象、目的、限制、格式",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-five-blanks/"
+  },
+  {
+    "key": "core-p2",
+    "code": "P2",
+    "group": "9–12 歲｜冒險公會",
+    "title": "AI 是家教，不是代寫",
+    "focus": "用 AI 學懂，而不是抄答案",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-tutor-not-ghostwriter/"
+  },
+  {
+    "key": "core-p3",
+    "code": "P3",
+    "group": "9–12 歲｜冒險公會",
+    "title": "查證三步驟",
+    "focus": "看來源、看日期、多比對",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-fact-check/"
+  },
+  {
+    "key": "core-p4",
+    "code": "P4",
+    "group": "9–12 歲｜冒險公會",
+    "title": "媽媽的聲音是假的？",
+    "focus": "認識深偽與詐騙訊息",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-deepfake-call/"
+  },
+  {
+    "key": "core-p5",
+    "code": "P5",
+    "group": "9–12 歲｜冒險公會",
+    "title": "科展海報一起做",
+    "focus": "AI 協作的完整流程",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-science-poster/"
+  },
+  {
+    "key": "core-p6",
+    "code": "P6",
+    "group": "9–12 歲｜冒險公會",
+    "title": "別人的作品不能隨便用",
+    "focus": "版權與標示來源",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-respect-copyright/"
+  },
+  {
+    "key": "core-p7",
+    "code": "P7",
+    "group": "9–12 歲｜冒險公會",
+    "title": "為什麼科學家都長一樣？",
+    "focus": "認識 AI 偏見",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-ai-bias/"
+  },
+  {
+    "key": "core-p8",
+    "code": "P8",
+    "group": "9–12 歲｜冒險公會",
+    "title": "我是小小導演",
+    "focus": "用 AI 做音樂與動畫，創意由自己決定",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/tweens-little-director/"
+  },
+  {
+    "key": "core-w0",
+    "code": "W0",
+    "group": "成年人｜上班族",
+    "title": "五十頁報告的夜視鏡",
+    "focus": "用 AI 摘要長文件，再核對數據",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/work-long-report/"
+  },
+  {
+    "key": "core-w1",
+    "code": "W1",
+    "group": "成年人｜上班族",
+    "title": "三分鐘寫好一封信",
+    "focus": "用 AI 寫文案與信件",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/work-email/"
+  },
+  {
+    "key": "core-w2",
+    "code": "W2",
+    "group": "成年人｜上班族",
+    "title": "會議紀錄不再熬夜",
+    "focus": "用 AI 整理資料與待辦",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/work-meeting-notes/"
+  },
+  {
+    "key": "core-w3",
+    "code": "W3",
+    "group": "成年人｜上班族",
+    "title": "簡報先有骨架",
+    "focus": "用 AI 做簡報大綱",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/work-slides-outline/"
+  },
+  {
+    "key": "core-w4",
+    "code": "W4",
+    "group": "成年人｜上班族",
+    "title": "公司機密不外貼",
+    "focus": "資料保密習慣",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/work-data-safety/"
+  },
+  {
+    "key": "core-f1",
+    "code": "F1",
+    "group": "成年人｜自由工作者",
+    "title": "一週內容一次排好",
+    "focus": "用 AI 規劃內容行事曆",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/freelance-content-calendar/"
+  },
+  {
+    "key": "core-f2",
+    "code": "F2",
+    "group": "成年人｜自由工作者",
+    "title": "客戶意見變成修改清單",
+    "focus": "加快修改與交付",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/freelance-feedback-list/"
+  },
+  {
+    "key": "core-f3",
+    "code": "F3",
+    "group": "成年人｜自由工作者",
+    "title": "我的風格，我來把關",
+    "focus": "保留個人風格與原創",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/freelance-own-style/"
+  },
+  {
+    "key": "core-f4",
+    "code": "F4",
+    "group": "成年人｜自由工作者",
+    "title": "三個案子同一天交",
+    "focus": "把繁瑣工作交給 AI，專注在溝通與創意",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/freelance-three-deadlines/"
+  },
+  {
+    "key": "core-s1",
+    "code": "S1",
+    "group": "成年人｜小商家",
+    "title": "商品故事寫出來",
+    "focus": "商品文案與貼文",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/shop-product-story/"
+  },
+  {
+    "key": "core-s2",
+    "code": "S2",
+    "group": "成年人｜小商家",
+    "title": "一張照片，三種貼文",
+    "focus": "一份素材多平台使用",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/shop-one-photo-three-posts/"
+  },
+  {
+    "key": "core-s3",
+    "code": "S3",
+    "group": "成年人｜小商家",
+    "title": "留言回覆有溫度",
+    "focus": "顧客回覆範本",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/shop-reply-comments/"
+  },
+  {
+    "key": "core-s4",
+    "code": "S4",
+    "group": "成年人｜小商家",
+    "title": "深夜的 AI 小店長",
+    "focus": "AI 常見問答助理，人工接手的界線",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/shop-night-assistant/"
+  },
+  {
+    "key": "core-b1",
+    "code": "B1",
+    "group": "成年人｜AI 新手",
+    "title": "第一次跟 AI 說話",
+    "focus": "基本操作與開口第一句",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/beginner-first-chat/"
+  },
+  {
+    "key": "core-b2",
+    "code": "B2",
+    "group": "成年人｜AI 新手",
+    "title": "不滿意？再說一次",
+    "focus": "追問與修改",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/beginner-ask-again/"
+  },
+  {
+    "key": "core-b3",
+    "code": "B3",
+    "group": "成年人｜AI 新手",
+    "title": "我的第一張祝福卡",
+    "focus": "完成第一個作品",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/beginner-first-card/"
+  },
+  {
+    "key": "core-b4",
+    "code": "B4",
+    "group": "成年人｜AI 新手",
+    "title": "不用學程式也能用 AI",
+    "focus": "用日常口語寫出得體的信",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/beginner-plain-words/"
+  },
+  {
+    "key": "core-b5",
+    "code": "B5",
+    "group": "成年人｜AI 新手",
+    "title": "一個下午做出作品集",
+    "focus": "一步步對話，完成個人網頁",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/beginner-portfolio-page/"
+  },
+  {
+    "key": "core-e1",
+    "code": "E1",
+    "group": "中老年人｜樂齡學堂",
+    "title": "不用打字，用說的就好",
+    "focus": "語音輸入與朗讀",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-voice-input/"
+  },
+  {
+    "key": "core-e2",
+    "code": "E2",
+    "group": "中老年人｜樂齡學堂",
+    "title": "群組傳來的健康祕方",
+    "focus": "健康訊息先查證",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-health-rumor/"
+  },
+  {
+    "key": "core-e3",
+    "code": "E3",
+    "group": "中老年人｜樂齡學堂",
+    "title": "「保證獲利」的投資老師",
+    "focus": "認識 AI 時代的投資詐騙",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-investment-scam/"
+  },
+  {
+    "key": "core-e4",
+    "code": "E4",
+    "group": "中老年人｜樂齡學堂",
+    "title": "看診前，先把問題寫下來",
+    "focus": "整理要問醫生的問題",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-doctor-questions/"
+  },
+  {
+    "key": "core-e5",
+    "code": "E5",
+    "group": "中老年人｜樂齡學堂",
+    "title": "老照片裡的故事",
+    "focus": "整理家族回憶錄",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-photo-memories/"
+  },
+  {
+    "key": "core-e6",
+    "code": "E6",
+    "group": "中老年人｜樂齡學堂",
+    "title": "說走就走的慢旅行",
+    "focus": "規劃適合自己的行程",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-slow-travel/"
+  },
+  {
+    "key": "core-e7",
+    "code": "E7",
+    "group": "中老年人｜樂齡學堂",
+    "title": "阿公阿嬤也是 AI 學生",
+    "focus": "祖孫一起學、一起玩",
+    "source": "主題系列",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-learn-with-grandkids/"
+  },
+  {
+    "key": "practical-a1",
+    "code": "A1",
+    "group": "照片與影像",
+    "title": "刮傷的全家福變清楚了",
+    "focus": "照片修復，修完和原圖對照",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/photo-restore/"
+  },
+  {
+    "key": "practical-a2",
+    "code": "A2",
+    "group": "照片與影像",
+    "title": "阿公在照片裡笑了",
+    "focus": "讓舊照片動起來，要先徵得同意",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/photo-animate/"
+  },
+  {
+    "key": "practical-a3",
+    "code": "A3",
+    "group": "照片與影像",
+    "title": "回到二十歲的我",
+    "focus": "年輕樣貌影片，好玩但別拿去騙人",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/photo-younger/"
+  },
+  {
+    "key": "practical-a4",
+    "code": "A4",
+    "group": "照片與影像",
+    "title": "一鍵換上旗袍",
+    "focus": "換裝影片，只用自己的照片",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/outfit-change/"
+  },
+  {
+    "key": "practical-a5",
+    "code": "A5",
+    "group": "照片與影像",
+    "title": "黑白電影裡的老街",
+    "focus": "復古影片，描述年代特徵",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/retro-video/"
+  },
+  {
+    "key": "practical-a6",
+    "code": "A6",
+    "group": "照片與影像",
+    "title": "我家的小電影",
+    "focus": "電影感影片：鏡頭、光線、音樂",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/cinematic-video/"
+  },
+  {
+    "key": "practical-b1",
+    "code": "B1",
+    "group": "祝福圖卡",
+    "title": "早安圖自己做",
+    "focus": "不轉傳來路不明的圖",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/card-good-morning/"
+  },
+  {
+    "key": "practical-b2",
+    "code": "B2",
+    "group": "祝福圖卡",
+    "title": "給孫女的生日圖",
+    "focus": "圖不放字，祝福另外加",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/card-birthday/"
+  },
+  {
+    "key": "practical-b3",
+    "code": "B3",
+    "group": "祝福圖卡",
+    "title": "中秋節的月亮圖",
+    "focus": "節日元素要正確",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/card-festival/"
+  },
+  {
+    "key": "practical-b4",
+    "code": "B4",
+    "group": "祝福圖卡",
+    "title": "會說話的祝福影片",
+    "focus": "用自己的聲音祝福",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/blessing-video/"
+  },
+  {
+    "key": "practical-c1",
+    "code": "C1",
+    "group": "行銷與內容",
+    "title": "三十秒麵包店廣告",
+    "focus": "行銷影片：一個重點、三個鏡頭",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/marketing-video/"
+  },
+  {
+    "key": "practical-c2",
+    "code": "C2",
+    "group": "行銷與內容",
+    "title": "掃一下就認識我",
+    "focus": "電子名片與 QR Code",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/digital-card/"
+  },
+  {
+    "key": "practical-c3",
+    "code": "C3",
+    "group": "行銷與內容",
+    "title": "阿嬤代言人",
+    "focus": "長輩形象行銷要本人同意、不造假",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/senior-spokesperson/"
+  },
+  {
+    "key": "practical-c4",
+    "code": "C4",
+    "group": "行銷與內容",
+    "title": "剪片上字幕不用熬夜",
+    "focus": "自動剪輯與自動字幕",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/auto-edit-subtitles/"
+  },
+  {
+    "key": "practical-c5",
+    "code": "C5",
+    "group": "行銷與內容",
+    "title": "讓外國客人也看得懂",
+    "focus": "自動翻譯字幕",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/subtitle-translation/"
+  },
+  {
+    "key": "practical-d1",
+    "code": "D1",
+    "group": "生活好幫手",
+    "title": "AI 說的有根據嗎？",
+    "focus": "聯網搜尋＋附來源＋自己核對",
+    "source": "實用技能",
+    "status": "已上架",
+    "href": "/learn/answers-with-sources/"
+  },
+  {
+    "key": "practical-d2",
+    "code": "D2",
+    "group": "生活好幫手",
+    "title": "拍一下，唸給我聽",
+    "focus": "看圖讀文字",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/read-image-aloud/"
+  },
+  {
+    "key": "practical-d3",
+    "code": "D3",
+    "group": "生活好幫手",
+    "title": "出國看不懂菜單",
+    "focus": "即時翻譯",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/live-translation/"
+  },
+  {
+    "key": "practical-d4",
+    "code": "D4",
+    "group": "生活好幫手",
+    "title": "說一聲就辦好",
+    "focus": "語音下指令",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/voice-commands/"
+  },
+  {
+    "key": "practical-e1",
+    "code": "E1",
+    "group": "長照照護",
+    "title": "「媽，該吃藥囉」",
+    "focus": "語音提醒、打電話、廣播吃藥",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/care-voice-reminder/"
+  },
+  {
+    "key": "practical-e2",
+    "code": "E2",
+    "group": "長照照護",
+    "title": "照顧日誌用說的",
+    "focus": "口述日誌→就醫摘要＋提問清單",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/care-voice-journal/"
+  },
+  {
+    "key": "practical-e3",
+    "code": "E3",
+    "group": "長照照護",
+    "title": "刷牙的六張小卡",
+    "focus": "步驟圖卡",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/care-step-cards/"
+  },
+  {
+    "key": "practical-e4",
+    "code": "E4",
+    "group": "長照照護",
+    "title": "阿嬤的回憶相簿",
+    "focus": "回憶相簿與懷舊聊天",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/care-memory-album/"
+  },
+  {
+    "key": "practical-e5",
+    "code": "E5",
+    "group": "長照照護",
+    "title": "跟 Siti 說說話",
+    "focus": "雙語溝通卡",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/care-bilingual-cards/"
+  },
+  {
+    "key": "practical-e6",
+    "code": "E6",
+    "group": "長照照護",
+    "title": "全家共用一本行事曆",
+    "focus": "共用行事曆與提醒",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/care-shared-calendar/"
+  },
+  {
+    "key": "practical-f1",
+    "code": "F1",
+    "group": "文化遊樂園",
+    "title": "夢見掉牙齒？",
+    "focus": "周公解夢：把夢當成心情日記",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/fun-dream/"
+  },
+  {
+    "key": "practical-f2",
+    "code": "F2",
+    "group": "文化遊樂園",
+    "title": "星座說我今天會發財？",
+    "focus": "生肖星座與占星：娛樂不等於投資建議",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/fun-zodiac-astrology/"
+  },
+  {
+    "key": "practical-f3",
+    "code": "F3",
+    "group": "文化遊樂園",
+    "title": "易經卦辭，AI 會背錯？",
+    "focus": "易經占卜：原典要查證",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/fun-iching/"
+  },
+  {
+    "key": "practical-f4",
+    "code": "F4",
+    "group": "文化遊樂園",
+    "title": "幫孫子取名字",
+    "focus": "姓名學：筆畫自己再數一次",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/fun-name-strokes/"
+  },
+  {
+    "key": "practical-f5",
+    "code": "F5",
+    "group": "文化遊樂園",
+    "title": "塔羅牌與花錢改運",
+    "focus": "塔羅：自我對話工具，花錢改運要小心",
+    "source": "實用技能",
+    "status": "漫畫已完成",
+    "href": "/learn/fun-tarot-scam/"
+  },
+  {
+    "key": "inflation-m1",
+    "code": "M1",
+    "group": "5–8 歲｜魔法學院",
+    "title": "我的錢被施了縮小魔法？",
+    "focus": "通膨讓同樣的錢買到的東西變少。",
+    "source": "錢的縮小魔法",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-inflation-shrink-magic/"
+  },
+  {
+    "key": "inflation-m2",
+    "code": "M2",
+    "group": "5–8 歲｜魔法學院",
+    "title": "為什麼東西會變貴？",
+    "focus": "需求增加和生產成本上升都可能推高價格。",
+    "source": "錢的縮小魔法",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-inflation-why/"
+  },
+  {
+    "key": "inflation-m3",
+    "code": "M3",
+    "group": "5–8 歲｜魔法學院",
+    "title": "怎麼對抗縮小魔法？",
+    "focus": "比價、分辨需要與想要，並為儲蓄設定目標。",
+    "source": "錢的縮小魔法",
+    "status": "漫畫已完成",
+    "href": "/learn/kids-inflation-what-to-do/"
+  },
+  {
+    "key": "expansion-n19",
+    "code": "N19",
+    "group": "9–12 歲｜冒險公會",
+    "title": "森林裡的耳朵",
+    "focus": "聲音辨識可提供巡守提醒，仍需人員確認並依安全程序處理。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/forest-ears/"
+  },
+  {
+    "key": "expansion-n25",
+    "code": "N25",
+    "group": "成年人｜AI 公民課",
+    "title": "候選人真的說過這句話嗎？",
+    "focus": "看到選舉影片先停、查來源、找官方澄清與可信查核，不急著轉傳。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/election-video-check/"
+  },
+  {
+    "key": "expansion-n28",
+    "code": "N28",
+    "group": "成年人｜AI 公民課",
+    "title": "銀行的 AI 守門員",
+    "focus": "不出借帳戶、提款卡、密碼或驗證碼；遇到可疑收款要求先向銀行與警方求證。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/bank-ai-gatekeeper/"
+  },
+  {
+    "key": "expansion-n01",
+    "code": "N01",
+    "group": "成年人｜心靈小站",
+    "title": "心裡的天氣預報：換個角度想",
+    "focus": "把自責的念頭寫下來，練習找出更公平的說法；AI 不是心理師。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/mind-weather/"
+  },
+  {
+    "key": "expansion-n10",
+    "code": "N10",
+    "group": "成年人｜人生沙盤",
+    "title": "最難搞的面試官",
+    "focus": "用 AI 模擬面試練習回答，經歷與公司資訊都要自己核實。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/tough-interviewer/"
+  },
+  {
+    "key": "expansion-n15",
+    "code": "N15",
+    "group": "成年人｜生活管家",
+    "title": "一週菜單，預算三千",
+    "focus": "用預算和家庭偏好草擬一週菜單，價格、份量與營養需求需自行確認。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/weekly-menu-budget/"
+  },
+  {
+    "key": "expansion-n02",
+    "code": "N02",
+    "group": "成年人｜心靈小站",
+    "title": "寫一封信給小時候的我",
+    "focus": "以溫和書寫整理心情；AI 可協助提問，不是心理師。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/letter-to-younger-self/"
+  },
+  {
+    "key": "expansion-n03",
+    "code": "N03",
+    "group": "成年人｜心靈小站",
+    "title": "樹洞真的會保密嗎？",
+    "focus": "和 AI 對話前先去除姓名、地址等識別資訊，並查看服務的隱私設定。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/ai-privacy-treehole/"
+  },
+  {
+    "key": "expansion-n04",
+    "code": "N04",
+    "group": "9–12 歲｜冒險公會",
+    "title": "吵架之後，怎麼開口？",
+    "focus": "用「我覺得……因為……」練習表達，最後由自己和朋友面對面溝通。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/friendship-after-argument/"
+  },
+  {
+    "key": "expansion-n05",
+    "code": "N05",
+    "group": "中老年人｜心靈小站",
+    "title": "每天陪我聊天的 AI",
+    "focus": "AI 可以聊天，但不能取代親友、社區活動與真人支持。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/ai-chat-community/"
+  },
+  {
+    "key": "expansion-n06",
+    "code": "N06",
+    "group": "9–12 歲｜冒險公會",
+    "title": "比賽前睡不著",
+    "focus": "用簡單呼吸和待辦清單整理緊張，睡眠困擾持續時告訴大人。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/competition-night-calm/"
+  },
+  {
+    "key": "expansion-n07",
+    "code": "N07",
+    "group": "9–12 歲｜冒險公會",
+    "title": "如果唐三藏有手機",
+    "focus": "用公版古典故事當靈感，AI 協助發想，結局由孩子創作。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/journey-west-phone/"
+  },
+  {
+    "key": "expansion-n08",
+    "code": "N08",
+    "group": "成年人｜靈感工作室",
+    "title": "寫一首我的歌",
+    "focus": "把自己的故事寫成歌詞草稿，用曲風描述創作，不模仿特定歌手。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/write-my-song/"
+  },
+  {
+    "key": "expansion-n09",
+    "code": "N09",
+    "group": "成年人｜靈感工作室",
+    "title": "「畫得像某位畫家」可以嗎？",
+    "focus": "避免指定在世創作者姓名；用畫面元素和媒材描述自己的創作方向。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/artist-style-ai/"
+  },
+  {
+    "key": "expansion-n11",
+    "code": "N11",
+    "group": "成年人｜人生沙盤",
+    "title": "加薪談判彩排",
+    "focus": "用具體工作成果準備加薪對話，練習清楚表達，不操控對方。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/raise-negotiation-rehearsal/"
+  },
+  {
+    "key": "expansion-n12",
+    "code": "N12",
+    "group": "成年人｜人生沙盤",
+    "title": "我該辭職創業嗎？",
+    "focus": "請 AI 從反方整理風險和待查問題，最後由自己依家庭與財務狀況決定。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/quit-job-startup/"
+  },
+  {
+    "key": "expansion-n13",
+    "code": "N13",
+    "group": "9–12 歲｜冒險公會",
+    "title": "古人智囊團",
+    "focus": "用歷史人物視角討論選擇，確認名言出處並記得 AI 模擬不是本人發言。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/historical-wisdom-panel/"
+  },
+  {
+    "key": "expansion-n14",
+    "code": "N14",
+    "group": "9–12 歲｜冒險公會",
+    "title": "班會辯論賽",
+    "focus": "請 AI 同時整理正反理由，練習聆聽與提出有根據的看法。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/class-debate-ai/"
+  },
+  {
+    "key": "expansion-n16",
+    "code": "N16",
+    "group": "成年人｜生活管家",
+    "title": "寶特瓶健身房",
+    "focus": "用日常物品安排簡單活動，先暖身並依身體狀況調整。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/bottle-home-workout/"
+  },
+  {
+    "key": "expansion-n17",
+    "code": "N17",
+    "group": "成年人｜生活管家",
+    "title": "租屋合約看不懂",
+    "focus": "請 AI 用白話整理條款與疑問，再對照內政部範本或詢問專業人士。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/rental-contract-reader/"
+  },
+  {
+    "key": "expansion-n18",
+    "code": "N18",
+    "group": "成年人｜生活管家",
+    "title": "衣櫃換季大作戰",
+    "focus": "整理衣物去向並用 AI 草擬商品描述，售況和捐贈方式自行確認。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/closet-season-sort/"
+  },
+  {
+    "key": "expansion-n20",
+    "code": "N20",
+    "group": "9–12 歲｜冒險公會",
+    "title": "大雨來之前",
+    "focus": "AI 可整理天氣資訊，防災行動以中央氣象署和地方政府警報為準。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/before-heavy-rain/"
+  },
+  {
+    "key": "expansion-n21",
+    "code": "N21",
+    "group": "9–12 歲｜冒險公會",
+    "title": "鯨魚在說什麼？",
+    "focus": "AI 能協助研究者分類鯨魚聲音模式，目前不代表已能翻譯成語言。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/whale-sound-patterns/"
+  },
+  {
+    "key": "expansion-n22",
+    "code": "N22",
+    "group": "成年人｜生活管家",
+    "title": "拍一下，就知道葉子生病了",
+    "focus": "AI 可協助辨認作物葉片異常，農民仍要請農業專家確認。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/plant-leaf-check/"
+  },
+  {
+    "key": "expansion-n23",
+    "code": "N23",
+    "group": "9–12 歲｜冒險公會",
+    "title": "地圖上的飢餓警報",
+    "focus": "資料地圖可協助看見糧食風險，資源如何分配仍需專業人員確認。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/food-security-map/"
+  },
+  {
+    "key": "expansion-n24",
+    "code": "N24",
+    "group": "成年人｜生活管家",
+    "title": "村子裡的手機醫生",
+    "focus": "AI 可協助初步篩檢與整理影像，結果仍需醫療人員評估，不能代替診斷。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/village-mobile-screening/"
+  },
+  {
+    "key": "expansion-n26",
+    "code": "N26",
+    "group": "9–12 歲｜冒險公會",
+    "title": "模擬聯合國的翻譯耳機",
+    "focus": "AI 協助跨語言溝通，但字面翻譯不一定傳達文化與語氣。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/model-un-translation/"
+  },
+  {
+    "key": "expansion-n27",
+    "code": "N27",
+    "group": "成年人｜未來職場",
+    "title": "塞港了，我的麵粉怎麼辦？",
+    "focus": "讓 AI 整理物流消息與備案，來源、到貨時間和替代供應都要核實。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/supply-chain-delay/"
+  },
+  {
+    "key": "expansion-n29",
+    "code": "N29",
+    "group": "成年人｜未來職場",
+    "title": "AI 會搶走我的工作嗎？",
+    "focus": "盤點 AI 可協助的工作與人類經驗，選擇一項技能逐步學習。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/ai-and-my-job/"
+  },
+  {
+    "key": "expansion-n30",
+    "code": "N30",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "AI 也會口渴？",
+    "focus": "AI 運算會使用電力，資料中心散熱與供電也可能涉及水資源。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/ai-resource-footprint/"
+  },
+  {
+    "key": "expansion-n31",
+    "code": "N31",
+    "group": "成年人｜AI 公民課",
+    "title": "這是 AI 做的，要說嗎？",
+    "focus": "交作業、交案子或發布內容前，先看學校、公司與平台的 AI 使用規定。",
+    "source": "擴充主題",
+    "status": "漫畫已完成",
+    "href": "/learn/disclose-ai-use/"
+  }
+]
