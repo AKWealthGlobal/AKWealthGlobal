@@ -136,6 +136,7 @@ Alice 的分享時刻|A:穿著淺色洋裝|在台上輕鬆地拿著麥克風與�
 Alice 的早晨|A:穿著居家針織衫|在陽光灑入的廚房，手捧馬克杯望向窗外|平視近景|早晨逆光|生|社|每天都有新的靈感。
 Alice 的合影邀請|A:穿著白色外套|伸手對著鏡頭比出歡迎的手勢，背景是明亮的教室|低角度近景|明亮自然光|愛|社|歡迎加入我們。
 '''
+REDO={938,948,986,998,1026}  # 原圖出現上下重複或白邊，改用 GPT 滿版重生成（-v2 檔名）
 entries=[];sub=None;k=0
 for line in RAW.strip().splitlines():
     if line.startswith('#'): sub=line[1:]; continue
@@ -146,10 +147,12 @@ for line in RAW.strip().splitlines():
     if who=='K': subj=KEN+subj[2:]
     if who=='A': subj=ALICE+subj[2:]
     n=929+k
-    model='Nano Banana Pro' if k%2 else 'GPT Image 2'
+    gpt=not k%2 or n in REDO
+    model='GPT Image 2' if gpt else 'Nano Banana Pro'
+    if n in REDO: story='單一完整滿版畫面，沒有白邊或色帶，留白區以畫面內的自然背景呈現，'+story
     prompt='\n'.join([f'【主題】{title}',f'【主角】{subj}',f'【動作構圖】{story}。',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【拍攝風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
     entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':'文案概念：'+copy,
-      'image':f'/media/prompt-examples/example-{n}.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':bool(who),
+      'image':f'/media/prompt-examples/example-{n}'+('-v2' if n in REDO else '')+'.jpg','model':model,'imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':bool(who),
       'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','行銷海報']+(['Ken'] if who=='K' else ['Alice'] if who=='A' else []),'maslow':M[m],'pestle':P[p],'_ref':who})
     k+=1
 from collections import Counter
