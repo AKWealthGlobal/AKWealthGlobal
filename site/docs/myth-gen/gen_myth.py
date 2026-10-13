@@ -320,43 +320,53 @@ Q 版年畫門神|兩位 Q 版門神|抱著元寶對著鏡頭笑|正面|喜氣�
 媽祖與海巡|媽祖|站在海巡船頭，與海巡人員一起望向大海|低角度|海上晨光|安|政|海上安全。
 八仙騎單車|八仙|騎著單車沿河堤一字排開|側面遠景|夕陽|愛|環|綠色交通。
 #玩家Cosplay與AI創作生活
-漫展猴王 Cosplay|一位台灣年輕男生，穿著原創設計的猴王造型服|在漫展會場擺出持棍姿勢，粉絲圍著拍照|中景|會場燈光|尊|社|Cosplay 文化。
+Ken 的齊天大聖 Cosplay|K:穿著原創設計的猴王戰甲、頭戴金箍，手持金箍棒|在漫展會場擺出持棍亮相姿勢，粉絲圍著拍照|中景|會場燈光|尊|社|Cosplay 文化。
 小小哪吒|一位穿著哪吒造型服的小男孩|在公園拿著紙做的乾坤圈奔跑|動態中景|午後陽光|愛|社|親子 Cosplay。
-玩家的房間|一位年輕玩家|坐在擺滿神話角色公仔的房間裡打遊戲|背後中景|螢幕光與暖色燈條|自|技|玩家的生活。
-AI 創作者的神將|一位年輕女生|在筆電上用 AI 生成神話角色圖，螢幕上是一尊金甲神將|越肩鏡頭|檯燈暖光|自|技|學習生成式 AI。
-古建築旅拍|一位背著相機的年輕旅人|站在古廟木構斗拱下仰望|低角度|午後側光|自|社|走訪古建築取景地。
-摩崖石刻前|一位年輕玩家|在大型摩崖石刻造像前合掌致意|遠景|陰天柔光|自|社|文化朝聖。
-沙漠飛天旅拍|一位穿著飛天造型漢服的女生|在沙漠中甩起長長的彩帶|動態中景|黃昏|尊|環|文旅經濟。
+Ken 的玩家房間|K:穿著黑色 T 恤|坐在擺滿神話角色公仔的房間裡打動作遊戲，手握手把、神情專注|背後中景|螢幕光與暖色燈條|自|技|玩家的生活。
+Ken 的 AI 神將創作|K:穿著黑色 T 恤|在筆電上用 AI 生成神話角色圖，螢幕上是一尊金甲神將，他滿意地微笑|越肩鏡頭|檯燈暖光|自|技|學習生成式 AI。
+Ken 的古建築旅拍|K:背著相機、穿著輕便戶外外套|站在古廟木構斗拱下仰望|低角度|午後側光|自|社|走訪古建築取景地。
+Alice 的白素貞 Cosplay|A:身穿白衣、撐著油紙傘的白素貞造型|站在煙雨中的湖畔石橋上回眸微笑|中景|細雨朦朧的柔光|愛|社|經典女角 Cosplay 旅拍。
+Alice 的敦煌飛天旅拍|A:穿著飛天造型漢服、戴著精緻頭飾|在沙漠中甩起長長的彩帶|動態中景|黃昏|尊|環|文旅經濟。
 皮影戲體驗課|一群小學生|在皮影戲工坊裡操作孫悟空皮影|中景|布幕後暖光|自|社|傳統文化教育。
-京劇後台|一位京劇演員|在後台對著鏡子勾畫臉譜|越肩鏡頭|化妝鏡燈泡光|尊|社|傳統藝術。
+Ken 的關公扮相|K:穿上綠袍、戴上長髯，正在變身關公|在京劇後台對著鏡子勾畫紅色臉譜，眼鏡放在化妝桌上|越肩鏡頭|化妝鏡燈泡光|尊|社|傳統藝術。
 年畫工坊|一位老師傅|在木版年畫工坊刷印門神年畫|近景|窗光|自|經|手藝傳承。
-父子共玩|一位父親與兒子|坐在沙發上一起玩神話動作遊戲，兒子興奮大叫|中景|客廳電視光|愛|社|家庭共玩。
+Ken 父子共玩|K:與他約 10 歲的兒子|坐在沙發上一起玩神話動作遊戲，兒子興奮大叫，Ken 開懷大笑|中景|客廳電視光|愛|社|家庭共玩。
 阿公 cos 老君|一位七十歲的阿公，穿著太上老君造型|在社區活動中與孫子合照|中景|戶外陽光|愛|社|跨世代的樂趣。
-手作金箍棒|一位年輕人|在工作桌上用泡棉與噴漆製作金箍棒道具|俯角近景|工作燈|自|經|Cosplay 道具製作。
-VR 神話體驗|一位戴著 VR 頭盔的女生|伸手觸碰眼前虛擬的鳳凰光影|中景|藍紫光|自|技|沉浸式科技。
-博物館的青銅鼎|一位大學生|在博物館展櫃前觀察青銅鼎上的獸面紋並寫筆記|側面中景|展櫃聚光|自|社|文物與世界觀。
-神話劇本殺|一群朋友|穿著古裝在劇本殺店圍桌推理|群像中景|燭光氛圍燈|愛|經|沉浸式娛樂。
-短劇片場|一個短劇劇組|在綠幕前拍攝仙俠打鬥戲，演員吊著威亞|遠景|片場燈光|自|經|短劇產業。
-遊戲概念美術師|一位概念美術設計師|在繪圖板上畫出一位東方神將，牆上貼滿參考圖|越肩鏡頭|工作室光|自|技|遊戲美術職涯。
-星空神話婚紗|一對新人|穿著牛郎織女造型在星空下的草原拍婚紗|中景|星空與暖燈|愛|社|主題婚紗。
-漫展後的熱炒|一群還穿著神話角色服裝的朋友|在熱炒店舉杯慶祝|群像中景|熱炒店暖光|愛|社|同好的歸屬感。
+Ken 手作金箍棒|K:戴著工作手套|在工作桌上用泡棉與噴漆製作金箍棒道具|俯角近景|工作燈|自|經|Cosplay 道具製作。
+Alice 的嫦娥 Cosplay|A:身穿白色廣袖仙衣的嫦娥造型，懷抱一隻雪白小兔|在攝影棚的巨大月亮布景前仰望，衣帶被風扇吹起|中景|冷藍月光燈與暖色輪廓光|自|技|攝影棚 Cosplay 寫真。
+Alice 的九尾狐 Cosplay|A:穿著華麗紅白宮裝、背後是九條蓬鬆狐尾道具、頭戴狐耳髮飾|在漫展會場中優雅回眸，攝影師們舉起相機|中景|會場燈光與柔和補光|尊|社|女性神話角色 Cosplay。
+Ken 扮諸葛亮的劇本殺|K:羽扇綸巾、身穿諸葛亮造型古裝|與一群穿古裝的朋友在劇本殺店圍桌推理，他輕搖羽扇、胸有成竹|群像中景|燭光氛圍燈|愛|經|沉浸式娛樂。
+Ken 的二郎神短劇片場|K:身穿銀甲白袍的二郎神戲服，手持三尖兩刃刀道具|在綠幕前吊著威亞拍攝打鬥戲，劇組在一旁拍攝|遠景|片場燈光|自|經|短劇產業。
+Alice 的黛玉葬花 Cosplay|A:身穿淡雅古裝、手持花鋤、背著花囊的林黛玉造型|在落花紛飛的庭園中低頭葬花|中景|柔和春光|愛|社|紅樓夢女角 Cosplay。
+Ken 與 Alice 的牛郎織女婚紗|KA:Ken 穿著牛郎的素色古裝，Alice 穿著織女的雲錦仙衣|兩人在星空下的草原牽手相望拍婚紗|中景|星空與暖燈|愛|社|主題婚紗。
+Ken 的鍾馗 cos 慶功宴|K:還穿著鍾馗造型服、戴著虯髯|與一群穿著神話角色服裝的朋友在熱炒店舉杯慶祝|群像中景|熱炒店暖光|愛|社|同好的歸屬感。
 '''
+KEN='Ken：以上傳的 Ken 照片作為唯一臉部身份參考，約 40 歲的台灣男性，保留同一張臉的臉型、五官比例、短黑髮與細金屬方框眼鏡，'
+ALICE='Alice：以上傳的 Alice 照片作為唯一臉部身份參考，約 30 歲的台灣女性，保留同一張臉的臉型、五官比例、溫暖笑容與烏黑長直髮，'
+KEN_MEDIA='5b929d1b-9aa2-421f-a43e-21962cd26987'
+ALICE_MEDIA='05a0c7df-587c-45da-85db-cb2e8cf5774d'
 entries=[];sub=None;k=0
 for line in RAW.strip().splitlines():
     if line.startswith('#'): sub=line[1:]; continue
     f=line.split('|'); assert len(f) in (8,9), line
     title,pet,story,shot,light,m,p,desc=f[:8]
+    who=next((w for w in ('KA','K','A') if pet.startswith(w+':')),'')
+    rest=pet[len(who)+1:] if who else pet
+    pet={'K':KEN+rest,'A':ALICE+rest,'KA':KEN.rstrip('，')+'；'+ALICE.rstrip('，')+'。'+rest,'':pet}[who]
+    ken=bool(who)
     style,qual=STYLE[sub]
     if len(f)==9: style=f[8]
     n=629+k
     model='Nano Banana Pro' if k%2 else 'GPT Image 2'
     prompt='\n'.join([f'【主題】{title}',f'【主角】{pet}',f'【動作構圖】{story}。',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【拍攝風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
     entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':desc,
-      'image':f'/media/prompt-examples/example-{n}.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':False,
-      'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','神話'],'maslow':M[m],'pestle':P[p]})
+      'image':f'/media/prompt-examples/example-{n}.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':ken,
+      'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','神話']+[x for x,c in (('Ken','K'),('Alice','A')) if c in who],'maslow':M[m],'pestle':P[p],'_ref':[m for m,c in ((KEN_MEDIA,'K'),(ALICE_MEDIA,'A')) if c in who]})
     k+=1
 from collections import Counter
 assert len(entries)==300, len(entries)
 dup=[t for t,c in Counter(e['title'] for e in entries).items() if c>1]; assert not dup, dup
+refs={e['slug']:e.pop('_ref') for e in entries}
+json.dump(refs,open(sys.argv[1].replace('.json','-refs.json'),'w'),indent=1)
 json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
 print(Counter(e['subcategory'] for e in entries)); print(Counter(e['maslow'] for e in entries)); print(Counter(e['pestle'] for e in entries))
