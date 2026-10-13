@@ -16,7 +16,7 @@
       "GPT Image 2",
       "4:5"
     ],
-    "imageBytes": 320424
+    "imageBytes": 465379
   },
   {
     "slug": "prompt-02",
@@ -34,7 +34,7 @@
       "人物金句卡",
       "Nano Banana Pro"
     ],
-    "imageBytes": 231574
+    "imageBytes": 129485
   },
   {
     "slug": "prompt-03",
@@ -53,7 +53,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 404906
+    "imageBytes": 372672
   },
   {
     "slug": "prompt-04",
@@ -71,7 +71,7 @@
       "3D旅遊角色",
       "Nano Banana Pro"
     ],
-    "imageBytes": 263940
+    "imageBytes": 312832
   },
   {
     "slug": "prompt-05",
@@ -89,7 +89,7 @@
       "時尚棚拍",
       "Nano Banana Pro"
     ],
-    "imageBytes": 90687
+    "imageBytes": 220302
   },
   {
     "slug": "prompt-06",
@@ -107,7 +107,7 @@
       "漢服與團扇",
       "GPT Image 2"
     ],
-    "imageBytes": 174898
+    "imageBytes": 241964
   },
   {
     "slug": "prompt-07",
@@ -125,7 +125,7 @@
       "櫻花古風",
       "GPT Image 2"
     ],
-    "imageBytes": 323866
+    "imageBytes": 263565
   },
   {
     "slug": "prompt-08",
@@ -143,7 +143,7 @@
       "面紗與珠寶",
       "GPT Image 2"
     ],
-    "imageBytes": 185175
+    "imageBytes": 298543
   },
   {
     "slug": "prompt-09",
@@ -161,7 +161,7 @@
       "鳳冠與宮廷",
       "GPT Image 2"
     ],
-    "imageBytes": 249154
+    "imageBytes": 344658
   },
   {
     "slug": "prompt-10",
@@ -179,7 +179,7 @@
       "三世婚紗",
       "GPT Image 2"
     ],
-    "imageBytes": 194662
+    "imageBytes": 223843
   },
   {
     "slug": "prompt-11",
@@ -198,7 +198,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 385045
+    "imageBytes": 227093
   },
   {
     "slug": "prompt-12",
@@ -217,7 +217,7 @@
       "GPT Image 2",
       "9:16"
     ],
-    "imageBytes": 211519
+    "imageBytes": 220450
   },
   {
     "slug": "prompt-13",
@@ -236,7 +236,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 421781
+    "imageBytes": 299605
   },
   {
     "slug": "prompt-14",
@@ -254,7 +254,7 @@
       "跨朝代人物圖鑑",
       "GPT Image 2"
     ],
-    "imageBytes": 112386
+    "imageBytes": 258667
   },
   {
     "slug": "prompt-15",
@@ -274,7 +274,7 @@
       "9:16",
       "4:5"
     ],
-    "imageBytes": 217973
+    "imageBytes": 246451
   },
   {
     "slug": "prompt-16",
@@ -292,7 +292,7 @@
       "髮型分析",
       "GPT Image 2"
     ],
-    "imageBytes": 402111
+    "imageBytes": 301025
   },
   {
     "slug": "prompt-17",
@@ -310,7 +310,7 @@
       "穿搭分析",
       "GPT Image 2"
     ],
-    "imageBytes": 81688
+    "imageBytes": 309057
   },
   {
     "slug": "prompt-18",
@@ -328,7 +328,7 @@
       "穿搭分析",
       "GPT Image 2"
     ],
-    "imageBytes": 93868
+    "imageBytes": 357911
   },
   {
     "slug": "prompt-19",
@@ -346,7 +346,7 @@
       "穿搭分析",
       "GPT Image 2"
     ],
-    "imageBytes": 243906
+    "imageBytes": 274428
   },
   {
     "slug": "prompt-20",
@@ -364,7 +364,7 @@
       "自我肯定海報",
       "GPT Image 2"
     ],
-    "imageBytes": 229743
+    "imageBytes": 176947
   },
   {
     "slug": "prompt-21",
@@ -382,7 +382,7 @@
       "職業似顏繪貼圖",
       "GPT Image 2"
     ],
-    "imageBytes": 243913
+    "imageBytes": 448437
   },
   {
     "slug": "prompt-22",
@@ -400,7 +400,7 @@
       "表情貼圖",
       "GPT Image 2"
     ],
-    "imageBytes": 212166
+    "imageBytes": 343383
   },
   {
     "slug": "prompt-23",
@@ -3119,7 +3119,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 121130
+    "imageBytes": 251650
   },
   {
     "slug": "prompt-124",
@@ -3138,7 +3138,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 280157
+    "imageBytes": 304092
   },
   {
     "slug": "prompt-125",
@@ -3157,7 +3157,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 213193
+    "imageBytes": 362155
   },
   {
     "slug": "prompt-126",
@@ -3176,7 +3176,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 211681
+    "imageBytes": 191755
   },
   {
     "slug": "prompt-127",
@@ -3195,7 +3195,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 272372
+    "imageBytes": 377744
   },
   {
     "slug": "prompt-128",
@@ -3213,6 +3213,6 @@
       "黑白復古攝影",
       "Nano Banana Pro"
     ],
-    "imageBytes": 197275
+    "imageBytes": 212141
   }
 ]
