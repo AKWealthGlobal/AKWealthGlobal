@@ -13,6 +13,7 @@ STYLE={
 '科技未來與奇幻':('科幻奇幻概念藝術','概念藝術級的細節與光影，材質質感清楚，保留寵物的品種輪廓與毛色特徵，畫面具故事感。'),
 '永續手作與紀念療癒':('手作工藝與紀念影像','材質質感真實（羊毛氈、鉤織、紙藝、木作等），溫暖療癒的氛圍，保留寵物的品種特徵。'),
 }
+NOTE='畫面中不要出現任何文字、Logo 或浮水印；服裝與道具需安全舒適，不讓動物受傷或受驚嚇。'
 AVOID='多格拼貼、上下重複兩張畫面、五官或肢體變形、多出來的腳或尾巴、恐怖或悲傷過頭的表情、可讀的亂碼文字、品牌商標、浮水印。'
 # (細分類, 標題, 主角, 情節與造型, 鏡頭, 光線, 馬斯洛, PESTLE, 說明)
 S=[
@@ -232,10 +233,10 @@ for k,(sub,title,pet,story,shot,light,maslow,pestle,desc) in enumerate(S):
     n=429+k
     style,qual=STYLE[sub]
     model='Nano Banana Pro' if k%2 else 'GPT Image 2'
-    prompt='\n'.join([f'【主題】{title}',f'【主角】{pet}',f'【情節與造型】{story}。',f'【風格】{style}',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【畫質要求】{qual}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
+    prompt='\n'.join([f'【主題】{title}',f'【主角】{pet}',f'【動作構圖】{story}。',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【拍攝風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
     entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':desc,
       'image':f'/media/prompt-examples/example-{n}.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':False,
-      'source':'AK Wealth Global 原創提示詞','tags':[sub,model,'9:16',f'馬斯洛：{maslow}',f'PESTLE：{pestle}','寵物'],'maslow':maslow,'pestle':pestle})
+      'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{maslow}',f'PESTLE：{pestle}','寵物'],'maslow':maslow,'pestle':pestle})
 from collections import Counter
 assert len(entries)==200, len(entries)
 dup=[t for t,c in Counter(e['title'] for e in entries).items() if c>1]; assert not dup, dup
