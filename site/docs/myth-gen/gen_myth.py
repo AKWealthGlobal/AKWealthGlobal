@@ -345,6 +345,8 @@ KEN='Ken：以上傳的 Ken 照片作為唯一臉部身份參考，約 40 歲的
 ALICE='Alice：以上傳的 Alice 照片作為唯一臉部身份參考，約 30 歲的台灣女性，保留同一張臉的臉型、五官比例、溫暖笑容與烏黑長直髮，'
 KEN_MEDIA='5b929d1b-9aa2-421f-a43e-21962cd26987'
 ALICE_MEDIA='05a0c7df-587c-45da-85db-cb2e8cf5774d'
+REDO={719,724,728,758,826,890}  # 原圖出現上下重複畫面或招牌商標，改用 GPT 重生成（-v2 檔名）
+FIX={890:'店面沒有任何招牌、色帶或商標，',}
 entries=[];sub=None;k=0
 for line in RAW.strip().splitlines():
     if line.startswith('#'): sub=line[1:]; continue
@@ -357,10 +359,13 @@ for line in RAW.strip().splitlines():
     style,qual=STYLE[sub]
     if len(f)==9: style=f[8]
     n=629+k
-    model='Nano Banana Pro' if k%2 else 'GPT Image 2'
+    gpt=not k%2 or n in REDO
+    model='GPT Image 2' if gpt else 'Nano Banana Pro'
+    if n in FIX: story=FIX[n]+story
+    if n in REDO: story='單一完整畫面，'+story
     prompt='\n'.join([f'【主題】{title}',f'【主角】{pet}',f'【動作構圖】{story}。',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【拍攝風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
     entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':desc,
-      'image':f'/media/prompt-examples/example-{n}.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':ken,
+      'image':f'/media/prompt-examples/example-{n}'+('-v2' if n in REDO else '')+'.jpg','model':model,'imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':ken,
       'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','神話']+[x for x,c in (('Ken','K'),('Alice','A')) if c in who],'maslow':M[m],'pestle':P[p],'_ref':[m for m,c in ((KEN_MEDIA,'K'),(ALICE_MEDIA,'A')) if c in who]})
     k+=1
 from collections import Counter
