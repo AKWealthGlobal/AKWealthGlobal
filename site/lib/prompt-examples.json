@@ -23656,7 +23656,8 @@
       "Alice"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 141445
   },
   {
     "slug": "prompt-930",
@@ -23682,7 +23683,8 @@
       "Alice"
     ],
     "maslow": "自我實現",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 172740
   },
   {
     "slug": "prompt-931",
@@ -23708,7 +23710,8 @@
       "Alice"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 164384
   },
   {
     "slug": "prompt-932",
@@ -23734,7 +23737,8 @@
       "Alice"
     ],
     "maslow": "自我實現",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 192907
   },
   {
     "slug": "prompt-933",
@@ -23760,7 +23764,8 @@
       "Alice"
     ],
     "maslow": "尊重需求",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 168523
   },
   {
     "slug": "prompt-934",
@@ -23786,7 +23791,8 @@
       "Alice"
     ],
     "maslow": "自我實現",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 179218
   },
   {
     "slug": "prompt-935",
@@ -23812,7 +23818,8 @@
       "Alice"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 154040
   },
   {
     "slug": "prompt-936",
@@ -23838,7 +23845,8 @@
       "Ken"
     ],
     "maslow": "尊重需求",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 220127
   },
   {
     "slug": "prompt-937",
@@ -23864,7 +23872,8 @@
       "Ken"
     ],
     "maslow": "尊重需求",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 162290
   },
   {
     "slug": "prompt-938",
@@ -23890,7 +23899,8 @@
       "Ken"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 189729
   },
   {
     "slug": "prompt-939",
@@ -23916,7 +23926,8 @@
       "Ken"
     ],
     "maslow": "安全需求",
-    "pestle": "經濟"
+    "pestle": "經濟",
+    "imageBytes": 188624
   },
   {
     "slug": "prompt-940",
@@ -23942,7 +23953,8 @@
       "Ken"
     ],
     "maslow": "尊重需求",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 167705
   },
   {
     "slug": "prompt-941",
@@ -23968,7 +23980,8 @@
       "Ken"
     ],
     "maslow": "自我實現",
-    "pestle": "經濟"
+    "pestle": "經濟",
+    "imageBytes": 190583
   },
   {
     "slug": "prompt-942",
@@ -23994,7 +24007,8 @@
       "Ken"
     ],
     "maslow": "自我實現",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 175378
   },
   {
     "slug": "prompt-943",
@@ -24021,7 +24035,8 @@
       "Alice"
     ],
     "maslow": "尊重需求",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 169175
   },
   {
     "slug": "prompt-944",
@@ -24048,7 +24063,8 @@
       "Alice"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 161487
   },
   {
     "slug": "prompt-945",
@@ -24075,7 +24091,8 @@
       "Alice"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 187596
   },
   {
     "slug": "prompt-946",
@@ -24102,7 +24119,8 @@
       "Alice"
     ],
     "maslow": "愛與歸屬",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 176235
   },
   {
     "slug": "prompt-947",
@@ -24129,7 +24147,8 @@
       "Alice"
     ],
     "maslow": "尊重需求",
-    "pestle": "科技"
+    "pestle": "科技",
+    "imageBytes": 178506
   },
   {
     "slug": "prompt-948",
@@ -24156,6 +24175,7 @@
       "Alice"
     ],
     "maslow": "尊重需求",
-    "pestle": "社會"
+    "pestle": "社會",
+    "imageBytes": 196488
   }
 ]
