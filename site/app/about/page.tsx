@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
@@ -90,6 +91,7 @@ export default function About() {
         <h2>關於 Ken 與 Alice</h2>
         <div className="bio-grid">
           <article className="bio">
+            <div className="about-ip"><Image src="/media/characters/ken-ip.webp" alt="Ken 季秉澤 Q 版 IP 形象" width={160} height={160} /></div>
             <span className="tag">Ken 季秉澤 · 財商認知與資產配置思考者</span>
             <h3>讓故事成為判斷的練習</h3>
             <ul className="about-list">
@@ -98,6 +100,7 @@ export default function About() {
             <Link className="text-link" href="/money/">進入 Ken 財商教室 →</Link>
           </article>
           <article className="bio">
+            <div className="about-ip"><Image src="/media/characters/alice-ip.webp" alt="Alice Q 版 IP 形象" width={160} height={160} /></div>
             <span className="tag">Alice Q 郭芷錡 · AI 實戰流程自動化顧問</span>
             <h3>讓你的想法有畫面，也能落地</h3>
             <ul className="about-list">
