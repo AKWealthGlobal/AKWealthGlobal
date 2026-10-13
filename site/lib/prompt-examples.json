@@ -28630,7 +28630,7 @@
     ],
     "maslow": "自我實現",
     "pestle": "科技",
-    "imageBytes": 60000
+    "imageBytes": 147210
   },
   {
     "slug": "prompt-1117",
@@ -28655,7 +28655,7 @@
     ],
     "maslow": "安全需求",
     "pestle": "科技",
-    "imageBytes": 60000
+    "imageBytes": 144677
   },
   {
     "slug": "prompt-1118",
@@ -28680,7 +28680,7 @@
     ],
     "maslow": "自我實現",
     "pestle": "社會",
-    "imageBytes": 60000
+    "imageBytes": 142350
   },
   {
     "slug": "prompt-1119",
@@ -28705,6 +28705,6 @@
     ],
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "imageBytes": 60000
+    "imageBytes": 146640
   }
 ]
