@@ -220,7 +220,7 @@ S=[
 ('永續手作與紀念療癒','黏土掌心寵物','一隻捏在手掌心的迷你黏土貓','雙手捧著它','微距','柔和自然光','愛與歸屬','經濟','黏土手作。'),
 ('永續手作與紀念療癒','刺繡寵物肖像','一幅刺繡框裡的柴犬肖像','針線還插在布上','近景','窗邊自然光','自我實現','經濟','刺繡手作。'),
 ('永續手作與紀念療癒','植物盆栽兔','一個兔子造型的陶盆','長出綠色多肉植物當作兔子的毛','近景','明亮自然光','自我實現','環境','植栽手作。'),
-('永續手作與紀念療癒','水彩寵物日記','一本攤開的手繪水彩日記，畫著一隻橘貓的日常','旁邊有水彩筆與顏料','俯角','柔和檯燈','愛與歸屬','社會','手繪寵物日記。'),
+('永續手作與紀念療癒','水彩寵物日記','一本攤開的手繪水彩日記，畫著一隻橘貓的日常','單一畫面、只有一本日記，頁面上只有插圖沒有任何文字，旁邊有水彩筆與顏料','俯角','柔和檯燈','愛與歸屬','社會','手繪寵物日記。'),
 ('永續手作與紀念療癒','星空下的思念','一位女孩與一隻由星光組成的狗狗輪廓','女孩坐在山丘上，星光狗狗依偎在她身旁','背影中景','銀河星光','愛與歸屬','社會','思念與陪伴。'),
 ('永續手作與紀念療癒','玻璃罐裡的毛','一個小玻璃罐裝著寵物的毛與一條小緞帶','放在窗台上','近景','柔和自然光','愛與歸屬','社會','紀念小物。'),
 ('永續手作與紀念療癒','蠟燭紀念角落','一個溫馨的紀念角落','擺著兔子照片、燭光與牠最愛的胡蘿蔔玩具','中景','溫暖燭光','愛與歸屬','社會','追思紀念。'),
@@ -228,14 +228,16 @@ S=[
 ('永續手作與紀念療癒','皮革項圈手作','一條手工皮革項圈','刻著小骨頭圖案，放在木桌上','微距','自然光','尊重需求','經濟','皮革手作。'),
 ('永續手作與紀念療癒','種下紀念樹','一位男子與一隻柴犬幼犬','在院子種下一棵小樹，旁邊放著老狗的照片','中景','清晨陽光','自我實現','環境','生命延續與紀念。'),
 ]
+REDO={622}  # Nano Banana 出現上下兩張重複畫面，改用 GPT 重生成（-v2 檔名）
 entries=[]
 for k,(sub,title,pet,story,shot,light,maslow,pestle,desc) in enumerate(S):
     n=429+k
     style,qual=STYLE[sub]
-    model='Nano Banana Pro' if k%2 else 'GPT Image 2'
+    gpt=not k%2 or n in REDO
+    model='GPT Image 2' if gpt else 'Nano Banana Pro'
     prompt='\n'.join([f'【主題】{title}',f'【主角】{pet}',f'【動作構圖】{story}。',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【拍攝風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
     entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':desc,
-      'image':f'/media/prompt-examples/example-{n}.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':False,
+      'image':f'/media/prompt-examples/example-{n}'+('-v2' if n in REDO else '')+'.jpg','model':model,'imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':False,
       'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{maslow}',f'PESTLE：{pestle}','寵物'],'maslow':maslow,'pestle':pestle})
 from collections import Counter
 assert len(entries)==200, len(entries)
