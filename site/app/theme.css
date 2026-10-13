@@ -40,7 +40,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .example-card,.example-prompt{box-shadow:0 10px 30px rgba(90,70,30,.08)}
 .example-filters button,.example-back{background:rgba(255,255,255,.4)}
 @media(max-width:700px){.bottom-nav{background:rgba(226,217,196,.96)}}
-.hero-art img{border-radius:28px}
 .alice-track-heading{background:#2b261b}
-@media(max-width:700px){.hero-art{inset:0 -15px 0 52%}.hero-art img{border-radius:20px}}
-.hero{grid-template-columns:1fr;min-height:0}.hero-copy{max-width:760px}
+.hero-art{inset:0 0 0 52%}.hero-art img{object-fit:contain;border-radius:0}
+@media(max-width:700px){.hero-art{inset:0 -10px 0 56%}.hero-art img{object-fit:contain}}
