@@ -114,5 +114,13 @@
   "onecoinSentencing": {
     "name": "美國司法部：OneCoin 案共同創辦人被判刑",
     "url": "https://www.justice.gov/usao-sdny/pr/co-founder-multibillion-dollar-cryptocurrency-scheme-onecoin-sentenced-20-years-prison"
+  },
+  "emergencyFund": {
+    "name": "美國消費者金融保護局：建立緊急預備金指南",
+    "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+  },
+  "insuranceBasics": {
+    "name": "美國密蘇里州保險局：如何讀懂保單（保障與除外條款）",
+    "url": "https://insurance.mo.gov/understanding-your-automobile-insurance-policy"
   }
 }
