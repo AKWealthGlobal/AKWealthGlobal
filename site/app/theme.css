@@ -62,3 +62,5 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .alice-learning-track .alice-track-heading{background:rgba(246,240,226,.85);border:1px solid var(--line);border-left:5px solid #b88a2e;box-shadow:0 8px 22px rgba(90,70,30,.08)}
 .alice-learning-track .alice-track-heading h2{color:#17160f}.alice-learning-track .alice-track-heading .eyebrow{color:#6f4f12}.alice-learning-track .alice-track-heading p:last-child{color:#4b4739}.alice-learning-track .alice-track-heading>span{color:#6f4f12}
 em{color:#0a5a48}.eyebrow.gold{color:#5c4010}
+.learn-resources-entry{display:flex;align-items:center;gap:24px;margin:40px 0 0;padding:24px 28px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(246,240,226,.85);box-shadow:0 10px 30px rgba(90,70,30,.08)}.learn-resources-entry img{flex:0 0 auto;width:96px;height:auto}.learn-resources-entry h2{font-size:26px;margin:0 0 6px}.learn-resources-entry p{margin:0 0 14px;color:var(--muted)}.learn-resources-entry .eyebrow{margin-bottom:6px}
+@media(max-width:700px){.learn-resources-entry{flex-direction:column;align-items:flex-start;padding:22px}.learn-resources-entry img{width:80px}}
