@@ -1,5 +1,5 @@
 # 行銷海報影像 100 組提示詞產生器（房地產、飲料、各國美食、零食、餐廳、口紅、植萃居家好物、課程、Ken／Alice IP 形象）
-# 海報畫面不放任何文字（AI 容易產生亂碼），標題區留白供後製；文案概念寫在說明欄。
+# 成品海報：含完整版面設計與繁體中文文案（主標、副標、三賣點、行動呼籲、品牌／資訊列）。品牌名稱為虛構示範，可自行替換。
 import json, sys
 C='行銷海報影像'
 M={'生':'生理需求','安':'安全需求','愛':'愛與歸屬','尊':'尊重需求','自':'自我實現'}
@@ -18,8 +18,8 @@ STYLE={
 'Ken IP 形象':('個人品牌形象攝影','以上傳的 Ken 照片作為唯一臉部身份參考，保留同一張臉的臉型、五官比例、短黑髮與細金屬方框眼鏡；'+REAL),
 'Alice IP 形象':('個人品牌形象攝影','以上傳的 Alice 照片作為唯一臉部身份參考，保留同一張臉的臉型、五官比例、溫暖笑容與烏黑長直髮；'+REAL),
 }
-NOTE='畫面中不要出現任何文字、Logo、商標或浮水印；產品包裝使用素面無標籤設計；上方或下方預留乾淨的留白區，供後製加入標題文案。'
-AVOID='多格拼貼、上下重複兩張畫面、五官或肢體變形、多出來的手指、塑膠蠟黃皮膚、過度磨皮、可讀的亂碼文字、品牌商標、浮水印。'
+NOTE='文字必須清晰銳利、字距均勻、沒有錯字或亂碼，並與背景有足夠對比；除指定文字外，不要加入其他文字、電話、網址或二維碼；品牌名稱為虛構示範，可自行替換。'
+AVOID='多格拼貼、上下重複兩張畫面、錯字與亂碼文字、文字被切掉、五官或肢體變形、多出來的手指、塑膠蠟黃皮膚、過度磨皮、真實知名品牌商標、浮水印。'
 KEN='Ken：約 40 歲的台灣男性，專業、創新、導師氣質，'
 ALICE='Alice：約 30 歲的台灣女性，親和、創意、陪伴者氣質，'
 # 每行：標題|主角|動作構圖|鏡頭視角|光線|馬斯洛|PESTLE|文案概念
@@ -28,7 +28,7 @@ RAW='''
 吉隆坡天際線|吉隆坡核心商圈的雙子塔與周邊摩天大樓|無人機高空俯拍，街道車流如光河穿過高樓之間|無人機俯拍，上帝視角|黃金時刻的暖色逆光灑在玻璃帷幕上|安|經|跨越國界，築建財富護城河。吉隆坡核心，您的下一個高增值版圖。
 黃昏的雙子塔倒影|雙子塔與前方公園的人工湖|湖面清楚倒映塔身，岸邊有散步的居民剪影|低角度廣角|日落後的藍橙漸層天空|尊|經|地標級資產，彰顯國際投資人的眼光。
 雲端泳池|一座高層公寓的無邊際泳池|池水邊緣與吉隆坡天際線連成一線，躺椅上放著一杯飲料與一本書|平視中景|傍晚金黃光與泳池水光|尊|社|把度假式生活，變成每天的日常。
-租金回報的第一個鑰匙|一位台灣投資人的手|在新公寓門口接過一把銅色鑰匙，背景是明亮走廊|特寫，淺景深|窗光自然|安|經|匯率優勢與穩定租金回報。
+租金回報的第一把鑰匙|一位台灣投資人的手|在新公寓門口接過一把銅色鑰匙，背景是明亮走廊|特寫，淺景深|窗光自然|安|經|匯率優勢與穩定租金回報。
 展示單位的看房日|一對年輕夫妻與房仲|在明亮的樣品屋客廳裡討論，窗外是城市景色|中景平視|午後自然光|愛|社|為下一代，提前佈局。
 雙語家庭的書房|一間舒適的公寓書房|桌上擺著筆電、地球儀與咖啡，窗外是熱帶綠意|側面中景|早晨柔和側光|自|技|遠距工作者的海外基地。
 熱帶綠意的社區花園|一個高層住宅社區的空中花園|棕櫚樹與步道，老人帶著孫子散步|廣角平視|清晨薄霧中的光束|愛|環|綠意與安全，讓家人安心居住。
@@ -137,28 +137,47 @@ Alice 的早晨|A:穿著居家針織衫|在陽光灑入的廚房，手捧馬克�
 Alice 的合影邀請|A:穿著白色外套|伸手對著鏡頭比出歡迎的手勢，背景是明亮的教室|低角度近景|明亮自然光|愛|社|歡迎加入我們。
 '''
 REDO={938,948,986,998,1026}  # 原圖出現上下重複或白邊，改用 GPT 滿版重生成（-v2 檔名）
+LAYOUT={
+'馬來西亞海外房地產':'全版建築或生活攝影為主視覺；左上角為品牌文字；上方偏左放大標題（白色或深色，與背景對比清楚），其下為副標題；下方為深藍色半透明斜切色帶，橫排三個賣點（每個配簡約線條圖示），右下為行動呼籲按鈕與資訊列。',
+'台灣房地產':'全版建築或生活攝影為主視覺；左上角為品牌文字；上方放大標題與副標題；下方為深藍色半透明斜切色帶，橫排三個賣點（每個配簡約線條圖示），右下為行動呼籲按鈕與資訊列。',
+'飲料':'產品或人物為主視覺置中偏下；上方為粗體大標題，其下為手寫風副標題；底部橫排三個賣點（每個配簡約線條圖示）；右下為膠囊形行動呼籲按鈕；左上角為品牌文字；色彩清爽、留白乾淨。',
+'各國美食':'料理為主視覺置中；上方為大標題與手寫風副標題；底部橫排三個賣點（每個配簡約線條圖示）；右下為膠囊形行動呼籲按鈕；左上角為品牌文字；色調帶有當地特色。',
+'零食':'產品與零食碎屑為主視覺；高飽和對比色背景；上方為粗體大標題，其下為活潑副標題；底部橫排三個賣點圖示；右下為行動呼籲貼紙樣式按鈕；左上角為品牌文字。',
+'餐廳':'美食或用餐情境為主視覺；溫暖色調；上方為大標題與副標題；底部為半透明深色色帶，橫排三個賣點（每個配簡約線條圖示）與行動呼籲按鈕；左上角為餐廳品牌文字。',
+'口紅':'高級時尚雜誌廣告版面；深色或奶油色極簡背景；標題用優雅的襯線體置於留白處；三個賣點以細線條小圖示排列於底部；行動呼籲為細框按鈕；品牌文字置於左上或底部中央。',
+'植萃居家與健康好物':'清新自然的白與綠色配色；產品或情境為主視覺；上方為標題與副標題；底部橫排三個賣點（每個配葉片或水滴線條圖示）；行動呼籲為綠色圓角按鈕；左上角為品牌文字。',
+'課程與講座':'左側為文字區、右側為人物或情境主視覺；上方為品牌文字與小標；中央為超大粗體標題與副標題；下方列出三個賣點（每個配簡約線條圖示）與資訊列；行動呼籲為藍色圓角按鈕；整體乾淨、科技感。',
+'Ken IP 形象':'人物為主視覺（約占畫面右側或中央三分之二）；雙色霓虹或科技感背景；上方為品牌文字；左側或下方為超大粗體標題與副標題；下方橫排三個賣點（每個配簡約線條圖示）；行動呼籲為發光按鈕。',
+'Alice IP 形象':'人物為主視覺（占畫面右側或中央三分之二）；明亮清爽的柔光背景；上方為品牌文字；左側或下方為標題與手寫風副標題；下方橫排三個賣點（每個配簡約線條圖示）；行動呼籲為圓角按鈕。',
+}
+DESIGN={'馬來西亞海外房地產':'高端房地產廣告海報','台灣房地產':'高端房地產廣告海報','飲料':'清爽商業廣告海報','各國美食':'美食雜誌風廣告海報','零食':'多巴胺風格商業廣告海報','餐廳':'餐廳活動宣傳海報','口紅':'精品美妝雜誌廣告海報','植萃居家與健康好物':'自然系居家好物廣告海報','課程與講座':'線上課程與講座招生海報','Ken IP 形象':'個人品牌 IP 形象海報','Alice IP 形象':'個人品牌 IP 形象海報'}
+TX=[l.split('|') for l in open('docs/poster-gen/poster_text.txt',encoding='utf8').read().strip().splitlines()]
 entries=[];sub=None;k=0
 for line in RAW.strip().splitlines():
     if line.startswith('#'): sub=line[1:]; continue
     f=line.split('|'); assert len(f)==8, line
     title,subj,story,shot,light,m,p,copy=f
+    t=TX[k]; assert len(t)==6 and t[0]==title,(k,t[0],title)
+    hl,sb,pt,ct,inf=t[1],t[2],t[3].split('/'),t[4],t[5]; assert len(pt)==3,(k,t)
     style,qual=STYLE[sub]
     who='K' if subj.startswith('K:') else ('A' if subj.startswith('A:') else '')
     if who=='K': subj=KEN+subj[2:]
     if who=='A': subj=ALICE+subj[2:]
     n=929+k
-    gpt=not k%2 or n in REDO
-    model='GPT Image 2' if gpt else 'Nano Banana Pro'
-    if n in REDO: story='單一完整滿版畫面，沒有白邊或色帶，留白區以畫面內的自然背景呈現，'+story
-    prompt='\n'.join([f'【主題】{title}',f'【主角】{subj}',f'【動作構圖】{story}。',f'【鏡頭運鏡】{shot}。',f'【光線色調】{light}。',f'【拍攝風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
-    entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':'文案概念：'+copy,
-      'image':f'/media/prompt-examples/example-{n}'+('-v2' if n in REDO else '')+'.jpg','model':model,'imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':bool(who),
-      'source':'AK Wealth Global 原創提示詞','tags':[sub,model,style,'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','行銷海報']+(['Ken'] if who=='K' else ['Alice'] if who=='A' else []),'maslow':M[m],'pestle':P[p],'_ref':who})
+    model='Nano Banana Pro' if k%2 else 'GPT Image 2'
+    prod=sub in ('飲料','各國美食','零食','餐廳','口紅','植萃居家與健康好物')
+    brand=inf if prod else 'AK Wealth Global'
+    info='' if prod else ('、資訊列：「'+inf+'」' if sub.endswith('房地產') else '')
+    text=[f'主標題：「{hl}」',f'副標題：「{sb}」','三個賣點（各配一個簡約線條圖示）：'+'、'.join(f'「{x}」' for x in pt),f'行動呼籲按鈕：「{ct}」',f'品牌文字：「{brand}」'+info]
+    prompt='\n'.join([f'【主題】{title}',f'【海報類型】直式商業行銷海報（成品海報，含完整版面設計與文字）',f'【主視覺】{subj}；{story}',f'【版面配置】{LAYOUT[sub]}','【海報文字】以下文字必須以繁體中文清晰、正確地呈現在海報上：','\n'.join(text),f'【鏡頭視角】{shot}',f'【光線色調】{light}',f'【設計風格】{DESIGN[sub]}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
+    entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':f'海報文案：{hl}。{sb}。',
+      'image':f'/media/prompt-examples/example-{n}-poster.jpg','model':model,'imageModel':'Nano Banana 2' if k%2 else 'GPT Image 2.5','requiresReference':bool(who),
+      'source':'AK Wealth Global 原創提示詞','tags':[sub,model,DESIGN[sub],'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','行銷海報']+(['Ken'] if who=='K' else ['Alice'] if who=='A' else []),'maslow':M[m],'pestle':P[p],'_ref':who})
     k+=1
 from collections import Counter
-assert len(entries)==100, len(entries)
+assert len(entries)==100 and k==100, len(entries)
 dup=[t for t,c in Counter(e['title'] for e in entries).items() if c>1]; assert not dup, dup
 refs={e['slug']:e.pop('_ref') for e in entries}
 json.dump(refs,open(sys.argv[1].replace('.json','-refs.json'),'w'),indent=1)
 json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
-print(Counter(e['subcategory'] for e in entries)); print(Counter(e['maslow'] for e in entries)); print(Counter(e['pestle'] for e in entries))
+print(Counter(e['subcategory'] for e in entries))
