@@ -45,6 +45,7 @@ Ken IP 形象|Ken 的深夜研究週報|K:穿著黑色 T 恤|獨自在深夜辦�
 講師團隊|講師們的線上直播室|KA:Ken、Alice 與一位講師坐在直播桌前，面對麥克風與螢幕|三人在簡潔的直播間，面前是筆電與麥克風，環形補光燈在眼中形成高光|正面中景|環形補光與藍色背景光|尊|技|三位講師 同步開講|免費線上直播公開課|直播互動/即時問答/錄影回放|預約直播|線上免費
 講師團隊|結業典禮的講師合照|KA:Ken、Alice 與四位講師站在舞台上，與兩位手持結業證書的學員合影|大家微笑看向鏡頭，後方是簡單的舞台背景與氣球|平視廣角|舞台暖光|尊|社|你的努力 被看見|結業典禮 一起慶祝|結業證書/作品展示/校友社群|加入下一期|下期招生中
 '''
+REDO={936}  # 多出一行不在提示詞內的文字，改用 GPT 重生成（-poster2 檔名）
 entries=[];k=0
 for line in RAW.strip().splitlines():
     f=line.split('|'); assert len(f)==13,(k,len(f),line)
@@ -56,13 +57,13 @@ for line in RAW.strip().splitlines():
     else: subj=desc+'（Ken：約 40 歲台灣男性，短黑髮與細金屬方框眼鏡；Alice：約 30 歲台灣女性，烏黑長直髮與溫暖笑容）'
     style,qual=STYLE[sub]
     n=929+k
-    gpt=(k%2==0)
+    gpt=(k%2==0) or n in REDO
     model='GPT Image 2' if gpt else 'Nano Banana Pro'
-    text=[f'主標題：「{hl}」',f'副標題：「{sb}」','三個賣點（各配一個簡約線條圖示）：'+'、'.join(f'「{x}」' for x in pt),f'行動呼籲按鈕：「{cta}」',f'品牌標誌：在左上角放置參考圖中的 AK Wealth Global 圓形標誌（原樣呈現、不改色不重畫，約占畫面寬度 12%），標誌旁不另加文字；資訊小字：「{inf}」']
+    text=[f'主標題：「{hl}」',f'副標題：「{sb}」','三個賣點（各配一個簡約線條圖示）：'+'、'.join(f'「{x}」' for x in pt),f'行動呼籲按鈕：「{cta}」',f'品牌標誌：在左上角放置參考圖中的 AK Wealth Global 圓形標誌（原樣呈現、不改色不重畫，約占畫面寬度 12%），標誌旁不另加文字；除上述文字外不要在畫面中加入其他任何文字；資訊小字：「{inf}」']
     prompt='\n'.join([f'【主題】{title}','【海報類型】直式商業行銷海報（成品海報，含完整版面設計與文字）',f'【主視覺】{subj}；{story}',f'【版面配置】{LAYOUT[sub]}','【海報文字】以下文字必須以繁體中文清晰、正確地呈現在海報上：','\n'.join(text),f'【鏡頭視角】{shot}',f'【光線色調】{light}',f'【設計風格】{style}',f'【畫質要求】{qual}',f'【注意事項】{NOTE}',f'【避免】{AVOID}','【比例】9:16 直式（--ar 9:16）'])
     tags=[sub,model,style,'9:16',f'馬斯洛：{M[m]}',f'PESTLE：{P[p]}','行銷海報']+(['Ken'] if who=='K' else ['Alice'] if who=='A' else ['Ken','Alice'])
     entries.append({'slug':f'prompt-{n}','title':title,'originalTitle':title,'category':C,'subcategory':sub,'prompt':prompt,'description':f'海報文案：{hl}。{sb}。',
-      'image':f'/media/prompt-examples/example-{n}-poster.jpg','model':model,'imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':True,
+      'image':f'/media/prompt-examples/example-{n}-poster'+('2' if n in REDO else '')+'.jpg','model':model,'imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':True,
       'source':'AK Wealth Global 原創提示詞','tags':tags,'maslow':M[m],'pestle':P[p],'_who':who})
     k+=1
 from collections import Counter
