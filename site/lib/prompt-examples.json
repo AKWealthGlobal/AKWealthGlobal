@@ -3110,7 +3110,7 @@
     "subcategory": "微縮地圖模型",
     "prompt": "創作一個超細緻的微縮模型，直接建構在古董印刷地圖集之上，呈現 Taiwan 作為一座從平面地圖中升起的 3D 微縮地標島嶼。使用 1:1 正方形畫布、溫暖的自然光、淺景深、移軸微距攝影效果、逼真的紙張紋理，以及高級旅遊雜誌的視覺風格。地圖應顯示台灣及周圍海域，並標註雙語（英文與繁體中文）；將主標籤「Taiwan」與「台灣」放置在前景附近，字體大且清晰，並附帶紅色星形標記。包含周圍清晰可讀的地圖標籤：左上角為「Taiwan Strait」與「台灣海峽」，北部為「Taipei」與「台北」，西北側為「Taichung」與「台中」，西南側為「Kaohsiung」與「高雄」，中央偏東為「Central Mountain Range」與「中央山脈」，東側為「Hualien」與「花蓮」，右側廣闊藍色水域上為「Pacific Ocean」與「太平洋」。加入印刷道路、河流、縣市邊界、羅盤玫瑰以及標示 0、50、100、200 公里的比例尺。在島嶼中心與主要城市處，構建密集的台灣微縮城市與自然景觀：核心為高聳的台北101摩天大樓，周圍環繞著現代化天際線與錯落有致的城市街區，點綴豐富的綠樹、河流與橋樑。包含可辨識的微縮地標：台北101、圓山大飯店、高雄85大樓、以及位於中央高聳連綿的雕塑山脈（中央山脈與阿里山森林）。島嶼西側與北側融入印刷地圖中的微型道路與高鐵網絡。保持前景與中心島嶼清晰，地圖邊緣則柔和模糊；使用大地色系的米色地圖色調、深綠色山脈公園、現代玻璃鋼骨塔樓、以及環繞島嶼的蔚藍色水域。畫面中不包含人物，不強調車輛，無浮水印，除地圖文字外不添加額外標籤。9:16",
     "description": "把台灣做成從古董地圖集升起的 3D 微縮島嶼，台北101、中央山脈等地標一次入鏡，適合旅遊主視覺。",
-    "image": "/media/prompt-examples/example-123-v2.jpg",
+    "image": "/media/prompt-examples/example-123-orig.png",
     "model": "Nano Banana Pro",
     "requiresReference": false,
     "source": "使用者提供的提示詞整理",
@@ -3119,7 +3119,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 251650
+    "imageBytes": 121130
   },
   {
     "slug": "prompt-124",
@@ -3129,7 +3129,7 @@
     "subcategory": "90年代課本插畫",
     "prompt": "洛神賦 (The Goddess of the Luo River)\n90年代中國小學語文課本故事插畫，洛神賦情節，9:16 縱向長寬比。美麗空靈的洛神神女身著傳統的漢服飄帶，身姿輕盈地漂浮在波光粼粼的洛水河面上。她有著那一時期教育讀物藝術特有的質樸、溫柔、慈祥的面部開臉與神情。在迷霧繚繞的河岸邊，一位身著古代官服的學者（曹植）正癡癡地仰望著她，眼中滿是驚嘆。畫面色彩明快鮮艷，帶有溫暖的懷舊光線，採用扁平復古的水粉畫風格，線條清晰，水彩暈染柔和。畫面具有老舊教材特有的粗糙不反光膠版紙張紋理，帶有細微的印刷網點顆粒感，完全沒有現代數位繪圖的痕跡，極具童年記憶的懷舊敘事插畫風格。 --ar 9:16",
     "description": "重現 90 年代語文課本的水粉插畫與膠版紙質感，畫出洛神賦的經典場景。",
-    "image": "/media/prompt-examples/example-124-v2.jpg",
+    "image": "/media/prompt-examples/example-124-orig.png",
     "model": "Nano Banana Pro",
     "requiresReference": false,
     "source": "使用者提供的提示詞整理",
@@ -3138,7 +3138,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 304092
+    "imageBytes": 280157
   },
   {
     "slug": "prompt-125",
@@ -3148,7 +3148,7 @@
     "subcategory": "90年代課本插畫",
     "prompt": "大鬧天宮 (Havoc in Heaven)\n90年代中國小學語文課本故事插畫，孫悟空大鬧天宮情節，9:16 縱向長寬比。美猴王孫悟空正處於極具動態的戰鬥姿勢，他身穿經典的黃色僧衣、虎皮短裙與紅色斗篷，高高舉起如意金箍棒。他的周圍環繞著層層翻滾的白色神話祥雲、傾斜的天宮宮殿玉柱，以及神情驚慌失措、身穿傳統盔甲的天兵天將。畫面色彩極其鮮艷飽滿，構圖充滿張力，採用復古的水粉與水彩扁平插畫風格。畫面呈現舊教材特有的低線數印刷質量，帶有粗糙的復古紙張紋理與若隱若現的套色網點，重現90年代連環畫和課本的經典美術風格。 --ar 9:16",
     "description": "孫悟空大鬧天宮的動態構圖，帶有舊課本的套色網點與復古紙張紋理。",
-    "image": "/media/prompt-examples/example-125-v2.jpg",
+    "image": "/media/prompt-examples/example-125-orig.png",
     "model": "Nano Banana Pro",
     "requiresReference": false,
     "source": "使用者提供的提示詞整理",
@@ -3157,7 +3157,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 362155
+    "imageBytes": 213193
   },
   {
     "slug": "prompt-126",
@@ -3167,7 +3167,7 @@
     "subcategory": "90年代課本插畫",
     "prompt": "白蛇傳 (The Legend of the White Snake)\n90年代中國小學語文課本故事插畫，白蛇傳經典情節，9:16 縱向長寬比。白素貞身穿一襲白衣，小青身穿一襲綠衣，兩人共同撐著一把復古的油紙傘，佇立在西湖斷橋之上，周圍縈繞著柔和的垂柳與濛濛細雨。她們的面部五官採用了當年教育美術特有的簡單、質樸且溫婉的畫風。畫面色彩柔和而明亮，帶有懷舊的水粉畫肌理，墨線勾邊，扁平化陰影。畫面完美模擬了新華書店舊課本泛黃的紙張質感，帶有低飽和度的膠印印刷效果與細微的印刷纖維顆粒，充滿故事書的敘事溫情。 --ar 9:16",
     "description": "白素貞與小青撐傘立於斷橋，溫婉水粉畫風與泛黃課本質感。",
-    "image": "/media/prompt-examples/example-126-v2.jpg",
+    "image": "/media/prompt-examples/example-126-orig.png",
     "model": "Nano Banana Pro",
     "requiresReference": false,
     "source": "使用者提供的提示詞整理",
@@ -3176,7 +3176,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 191755
+    "imageBytes": 211681
   },
   {
     "slug": "prompt-127",
@@ -3186,7 +3186,7 @@
     "subcategory": "90年代課本插畫",
     "prompt": "哪吒鬧海 (Nezha Conquers the Dragon King)\n90年代中國小學語文課本故事插畫，少年英雄哪吒鬧海情節，9:16 縱向長寬比。年幼的哪吒光著腳丫，威風凜凜地站在咆哮的藍色大海翻騰的巨浪之上，他身穿紅色肚兜，手持乾坤圈，身上纏繞著在風浪中劈波斬浪、散發著光芒的混天綾。背景的滔天巨浪中若隱若現著一條中國傳統造型的巨龍。畫面色彩對比強烈、鮮豔奪目，採用充滿動感的水粉畫法，線條粗獷有力。畫面具有極其逼真的1990年代中國舊教材印刷紋理，帶有粗糙膠版紙的亞光顆粒感與復古套色網點效果，充滿力量感與童年情懷。 --ar 9:16",
     "description": "少年哪吒踏浪鬧海，粗獷線條與舊教材印刷紋理，充滿童年情懷。",
-    "image": "/media/prompt-examples/example-127-v2.jpg",
+    "image": "/media/prompt-examples/example-127-orig.png",
     "model": "Nano Banana Pro",
     "requiresReference": false,
     "source": "使用者提供的提示詞整理",
@@ -3195,7 +3195,7 @@
       "Nano Banana Pro",
       "9:16"
     ],
-    "imageBytes": 377744
+    "imageBytes": 272372
   },
   {
     "slug": "prompt-128",
@@ -3205,7 +3205,7 @@
     "subcategory": "黑白復古攝影",
     "prompt": "一張黑白照片，畫面中有一名年輕男子坐在教室裡。他身穿深色圓領毛衣、淺色長褲、襪子以及高筒運動鞋。雙腿交疊，一隻腳踩在他所坐的椅子上。椅子為木製結構，配有金屬椅腳。他的右側是一張老式課桌，桌上堆疊著書籍。身後的牆面上釘滿了各式物品：手寫筆記、建築與風景的照片，以及一塊醒目的「AK Wealth Global」標語牌。陽光從窗外（位於畫面右側邊框外）傾瀉而入，在場景中投射出清晰的光影。",
     "description": "黑白紀實風格的教室人像，窗光投影、老式課桌與牆上筆記，帶出書卷氣的個人形象。",
-    "image": "/media/prompt-examples/example-128-v2.jpg",
+    "image": "/media/prompt-examples/example-128-orig.png",
     "model": "Nano Banana Pro",
     "requiresReference": false,
     "source": "使用者提供的提示詞整理",
@@ -3213,6 +3213,6 @@
       "黑白復古攝影",
       "Nano Banana Pro"
     ],
-    "imageBytes": 212141
+    "imageBytes": 197275
   }
 ]
