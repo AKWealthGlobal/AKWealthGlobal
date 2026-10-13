@@ -43,3 +43,4 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-art img{border-radius:28px}
 .alice-track-heading{background:#2b261b}
 @media(max-width:700px){.hero-art{inset:0 -15px 0 52%}.hero-art img{border-radius:20px}}
+.hero{grid-template-columns:1fr;min-height:0}.hero-copy{max-width:760px}
