@@ -1,0 +1,41 @@
+name: Fetch prompt example images
+# 讀取 site/docs/image-fetch.json（[{ "url": ..., "out": "site/public/media/..." }]），
+# 下載生成好的示範圖、轉成 JPG（長邊最多 1600px），提交回同一個分支。
+on:
+  push:
+    paths:
+      - site/docs/image-fetch.json
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow==11.0.0
+      - name: Download and convert
+        run: |
+          python - <<'PY'
+          import json, io, urllib.request
+          from PIL import Image
+          items = json.load(open('site/docs/image-fetch.json', encoding='utf8'))
+          for it in items:
+              assert it['out'].startswith('site/public/media/'), it['out']
+              data = urllib.request.urlopen(it['url'], timeout=120).read()
+              im = Image.open(io.BytesIO(data)).convert('RGB')
+              im.thumbnail((1600, 1600), Image.LANCZOS)
+              im.save(it['out'], 'JPEG', quality=86, optimize=True, progressive=True)
+              print('saved', it['out'], im.size)
+          PY
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add site/public/media
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "Add example images fetched by workflow"
+          git push
