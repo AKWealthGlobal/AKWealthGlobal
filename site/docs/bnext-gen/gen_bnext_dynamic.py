@@ -38,6 +38,9 @@ for k,e in enumerate(ENT):
       'image':f'/media/prompt-examples/example-{n}.jpg','model':'Gemini 動態檢視（Labs）','imageModel':'GPT Image 2.5' if gpt else 'Nano Banana 2','requiresReference':False,
       'source':'AK Wealth Global 原創提示詞','tags':[SUB,'文字提示詞','Gemini',f'馬斯洛：{ {"生":"生理需求","安":"安全需求","愛":"愛與歸屬","尊":"尊重需求","自":"自我實現"}[e["maslow"]] }',f'PESTLE：{ {"技":"科技","社":"社會"}[e["pestle"]] }','Alice'],'maslow':{"生":"生理需求","安":"安全需求","愛":"愛與歸屬","尊":"尊重需求","自":"自我實現"}[e['maslow']],'pestle':{"技":"科技","社":"社會"}[e['pestle']]})
     imgs[f'prompt-{n}']='\n'.join([f'【主題】Alice 的提示詞圖卡：{e["hl"]}','【海報類型】直式教學資訊圖卡（成品圖卡，含完整版面設計與文字）',f'【主視覺】{ALICE_REF}；穿著白色西裝外套，微笑看向鏡頭，單手比出「重點」手勢；明亮清爽的柔光背景','【版面配置】人物在畫面右側三分之二；左上角放置參考圖中的 AK Wealth Global 圓形標誌（原樣呈現、不改色不重畫，約占畫面寬度 12%）；左側為大標題與副標題；下方橫排三個重點（各配一個簡約線條圖示）',f'【畫面文字】以下文字必須以繁體中文清晰正確呈現：主標題「{e["hl"]}」、副標題「Gemini 動態檢視 × Alice」、三個重點「{pt[0]}」「{pt[1]}」「{pt[2]}」','【鏡頭視角】齊眼平視','【光線色調】蝶形光，眼睛有明亮高光','【設計風格】個人品牌教學圖卡','【畫質要求】真實商業攝影質感：保留自然的皮膚毛孔與細紋，不磨皮，色溫自然中性、不偏黃、不蠟黃、沒有塑膠感；文字必須清晰正確、沒有錯字或亂碼','【注意事項】除指定文字外不要加入其他文字、電話、網址或二維碼','【避免】錯字與亂碼、文字被切掉、五官變形、多出來的手指、塑膠蠟黃皮膚、浮水印','【比例】9:16 直式（--ar 9:16）'])
-json.dump(imgs,open(sys.argv[1].replace('.json','-img.json'),'w',encoding='utf8'),ensure_ascii=False,indent=1)
-json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
+try:
+    json.dump(imgs,open(sys.argv[1].replace('.json','-img.json'),'w',encoding='utf8'),ensure_ascii=False,indent=1)
+    json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
+except OSError as err:
+    sys.exit(f'無法寫入輸出檔：{err}')
 print(len(entries))

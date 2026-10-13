@@ -252,6 +252,9 @@ for k,e in enumerate(E):
       '【鏡頭視角】齊眼平視','【光線色調】蝶形光，眼睛有明亮高光','【設計風格】個人品牌教學圖卡',
       '【畫質要求】真實商業攝影質感：保留自然的皮膚毛孔與細紋，不磨皮，色溫自然中性、不偏黃、不蠟黃、沒有塑膠感；文字必須清晰正確、沒有錯字或亂碼',
       '【注意事項】除指定文字外不要加入其他文字、電話、網址或二維碼','【避免】錯字與亂碼、文字被切掉、五官變形、多出來的手指、塑膠蠟黃皮膚、浮水印','【比例】9:16 直式（--ar 9:16）'])
-json.dump(imgs,open(sys.argv[1].replace('.json','-img.json'),'w',encoding='utf8'),ensure_ascii=False,indent=1)
-json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
+try:
+    json.dump(imgs,open(sys.argv[1].replace('.json','-img.json'),'w',encoding='utf8'),ensure_ascii=False,indent=1)
+    json.dump(entries,open(sys.argv[1],'w',encoding='utf8'),ensure_ascii=False,indent=2)
+except OSError as err:
+    sys.exit(f'無法寫入輸出檔：{err}')
 print(len(entries))
