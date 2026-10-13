@@ -1048,5 +1048,85 @@
     "source": "擴充主題",
     "status": "漫畫已完成",
     "href": "/learn/disclose-ai-use/"
+  },
+  {
+    "key": "added-n32",
+    "code": "N32",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "家裡藏了幾個 AI？",
+    "focus": "從家中常見設備找出 AI，分辨「照固定規則」和「從資料找規律」。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/civics-find-ai/"
+  },
+  {
+    "key": "added-e8",
+    "code": "E8",
+    "group": "中老年人｜樂齡學堂",
+    "title": "五十年前沒拍的婚紗照",
+    "focus": "用生成式影像完成一張金婚紀念照，先取得同意，也保護臉部照片。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-golden-wedding-photo/"
+  },
+  {
+    "key": "added-e9",
+    "code": "E9",
+    "group": "中老年人｜樂齡學堂",
+    "title": "寫一封信給老伴",
+    "focus": "陪伴長輩整理思念，分清 AI 生成的話與逝者真正說過的話。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-letter-to-late-spouse/"
+  },
+  {
+    "key": "added-e10",
+    "code": "E10",
+    "group": "中老年人｜樂齡學堂",
+    "title": "網路上的溫柔醫生",
+    "focus": "認識網路交友詐騙的金錢要求警訊，練習先停下來、和家人一起查證。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-romance-scam/"
+  },
+  {
+    "key": "added-e11",
+    "code": "E11",
+    "group": "中老年人｜樂齡學堂",
+    "title": "阿公的人生錦囊",
+    "focus": "把阿公親口說的人生建議錄下來，經本人確認後交由家人保管。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-life-advice-capsule/"
+  },
+  {
+    "key": "added-e12",
+    "code": "E12",
+    "group": "中老年人｜樂齡學堂",
+    "title": "當年沒走的那條路",
+    "focus": "用夢想照回顧長輩年輕時的夢想，也看見真實走過的路。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-dream-career-photo/"
+  },
+  {
+    "key": "added-e13",
+    "code": "E13",
+    "group": "中老年人｜樂齡學堂",
+    "title": "點點老歌房",
+    "focus": "用語音搜尋老歌，再邀請老朋友一起分享回憶。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-oldies-room/"
+  },
+  {
+    "key": "added-e14",
+    "code": "E14",
+    "group": "中老年人｜樂齡學堂",
+    "title": "我的專屬旋律",
+    "focus": "把心情、地方和樂器變成原創音樂的靈感，再依自己的感覺調整。",
+    "source": "追加主題",
+    "status": "漫畫已完成",
+    "href": "/learn/oasis-my-melody/"
   }
 ]
