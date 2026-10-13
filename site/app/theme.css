@@ -52,3 +52,5 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:700px){.about-principles,.about-certs{grid-template-columns:1fr}.about-free{padding:22px}}
 .about-ip{width:140px;height:140px;margin:0 0 18px;border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.85),rgba(232,223,205,.6));border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}.about-ip img{width:128px;height:128px;object-fit:contain}
 @media(max-width:700px){.about-ip{width:120px;height:120px}.about-ip img{width:110px;height:110px}}
+.brand-ip-head{display:flex;align-items:center;gap:16px;margin-bottom:12px}.brand-ip-head h3{margin:0}.brand-ip{flex:0 0 auto;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.9),rgba(232,223,205,.65));border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}.brand-ip img{width:88px;height:88px;object-fit:contain}
+@media(max-width:700px){.brand-ip{width:80px;height:80px}.brand-ip img{width:72px;height:72px}}
