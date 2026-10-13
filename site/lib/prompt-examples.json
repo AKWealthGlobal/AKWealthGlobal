@@ -426,7 +426,8 @@
     "style": "posed",
     "maslow": "生理需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 96358
   },
   {
     "slug": "prompt-24",
@@ -452,7 +453,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 73772
   },
   {
     "slug": "prompt-25",
@@ -478,7 +480,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "科技",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 79031
   },
   {
     "slug": "prompt-26",
@@ -504,7 +507,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 94577
   },
   {
     "slug": "prompt-27",
@@ -530,7 +534,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 103514
   },
   {
     "slug": "prompt-28",
@@ -556,7 +561,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 75152
   },
   {
     "slug": "prompt-29",
@@ -582,7 +588,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 55198
   },
   {
     "slug": "prompt-30",
@@ -608,7 +615,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "科技",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 71925
   },
   {
     "slug": "prompt-31",
@@ -634,7 +642,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 87691
   },
   {
     "slug": "prompt-32",
@@ -660,7 +669,8 @@
     "style": "posed",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 84442
   },
   {
     "slug": "prompt-33",
@@ -686,7 +696,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "法律",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 94244
   },
   {
     "slug": "prompt-34",
@@ -712,7 +723,8 @@
     "style": "posed",
     "maslow": "安全需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 95125
   },
   {
     "slug": "prompt-35",
@@ -738,7 +750,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "科技",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 82092
   },
   {
     "slug": "prompt-36",
@@ -764,7 +777,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "科技",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 86210
   },
   {
     "slug": "prompt-37",
@@ -790,7 +804,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "法律",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 103945
   },
   {
     "slug": "prompt-38",
@@ -816,7 +831,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 53042
   },
   {
     "slug": "prompt-39",
@@ -842,7 +858,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "經濟",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 78597
   },
   {
     "slug": "prompt-40",
@@ -868,7 +885,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 86232
   },
   {
     "slug": "prompt-41",
@@ -894,7 +912,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 96828
   },
   {
     "slug": "prompt-42",
@@ -920,7 +939,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 88541
   },
   {
     "slug": "prompt-43",
@@ -946,7 +966,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 94508
   },
   {
     "slug": "prompt-44",
@@ -972,7 +993,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 84849
   },
   {
     "slug": "prompt-45",
@@ -998,7 +1020,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 94205
   },
   {
     "slug": "prompt-46",
@@ -1024,7 +1047,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 132773
   },
   {
     "slug": "prompt-47",
@@ -1050,7 +1074,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 89735
   },
   {
     "slug": "prompt-48",
@@ -1076,7 +1101,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "政治",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 93828
   },
   {
     "slug": "prompt-49",
@@ -1102,7 +1128,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "政治",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 107491
   },
   {
     "slug": "prompt-50",
@@ -1128,7 +1155,8 @@
     "style": "posed",
     "maslow": "安全需求",
     "pestle": "政治",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 126036
   },
   {
     "slug": "prompt-51",
@@ -1154,7 +1182,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 139716
   },
   {
     "slug": "prompt-52",
@@ -1180,7 +1209,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 80433
   },
   {
     "slug": "prompt-53",
@@ -1206,7 +1236,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 119950
   },
   {
     "slug": "prompt-54",
@@ -1232,7 +1263,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 123859
   },
   {
     "slug": "prompt-55",
@@ -1258,7 +1290,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "經濟",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 104384
   },
   {
     "slug": "prompt-56",
@@ -1284,7 +1317,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 118902
   },
   {
     "slug": "prompt-57",
@@ -1310,7 +1344,8 @@
     "style": "posed",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 91780
   },
   {
     "slug": "prompt-58",
@@ -1336,7 +1371,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 120554
   },
   {
     "slug": "prompt-59",
@@ -1362,7 +1398,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 120469
   },
   {
     "slug": "prompt-60",
@@ -1388,7 +1425,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 100531
   },
   {
     "slug": "prompt-61",
@@ -1414,7 +1452,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 93246
   },
   {
     "slug": "prompt-62",
@@ -1440,7 +1479,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 113850
   },
   {
     "slug": "prompt-63",
@@ -1466,7 +1506,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 135215
   },
   {
     "slug": "prompt-64",
@@ -1492,7 +1533,8 @@
     "style": "posed",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 167338
   },
   {
     "slug": "prompt-65",
@@ -1518,7 +1560,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 145878
   },
   {
     "slug": "prompt-66",
@@ -1544,7 +1587,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 130920
   },
   {
     "slug": "prompt-67",
@@ -1570,7 +1614,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 132982
   },
   {
     "slug": "prompt-68",
@@ -1596,7 +1641,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 122826
   },
   {
     "slug": "prompt-69",
@@ -1622,7 +1668,8 @@
     "style": "posed",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 93825
   },
   {
     "slug": "prompt-70",
@@ -1648,7 +1695,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 135440
   },
   {
     "slug": "prompt-71",
@@ -1674,7 +1722,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 136077
   },
   {
     "slug": "prompt-72",
@@ -1700,7 +1749,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 125126
   },
   {
     "slug": "prompt-73",
@@ -1726,7 +1776,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 139388
   },
   {
     "slug": "prompt-74",
@@ -1752,7 +1803,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 134619
   },
   {
     "slug": "prompt-75",
@@ -1778,7 +1830,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 112814
   },
   {
     "slug": "prompt-76",
@@ -1804,7 +1857,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 147628
   },
   {
     "slug": "prompt-77",
@@ -1830,7 +1884,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 129831
   },
   {
     "slug": "prompt-78",
@@ -1856,7 +1911,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 136064
   },
   {
     "slug": "prompt-79",
@@ -1882,7 +1938,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 110141
   },
   {
     "slug": "prompt-80",
@@ -1908,7 +1965,8 @@
     "style": "posed",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 190852
   },
   {
     "slug": "prompt-81",
@@ -1934,7 +1992,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 98420
   },
   {
     "slug": "prompt-82",
@@ -1960,7 +2019,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 104196
   },
   {
     "slug": "prompt-83",
@@ -1986,7 +2046,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 151784
   },
   {
     "slug": "prompt-84",
@@ -2012,7 +2073,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 107462
   },
   {
     "slug": "prompt-85",
@@ -2038,7 +2100,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 114993
   },
   {
     "slug": "prompt-86",
@@ -2064,7 +2127,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 152474
   },
   {
     "slug": "prompt-87",
@@ -2090,7 +2154,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 89316
   },
   {
     "slug": "prompt-88",
@@ -2116,7 +2181,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 85564
   },
   {
     "slug": "prompt-89",
@@ -2142,7 +2208,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 84134
   },
   {
     "slug": "prompt-90",
@@ -2168,7 +2235,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "經濟",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 90431
   },
   {
     "slug": "prompt-91",
@@ -2194,7 +2262,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 136834
   },
   {
     "slug": "prompt-92",
@@ -2220,7 +2289,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 115569
   },
   {
     "slug": "prompt-93",
@@ -2246,7 +2316,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 100607
   },
   {
     "slug": "prompt-94",
@@ -2272,7 +2343,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 98624
   },
   {
     "slug": "prompt-95",
@@ -2298,7 +2370,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 88656
   },
   {
     "slug": "prompt-96",
@@ -2324,7 +2397,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 104564
   },
   {
     "slug": "prompt-97",
@@ -2350,7 +2424,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 95709
   },
   {
     "slug": "prompt-98",
@@ -2376,7 +2451,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "經濟",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 106937
   },
   {
     "slug": "prompt-99",
@@ -2402,7 +2478,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 95325
   },
   {
     "slug": "prompt-100",
@@ -2428,7 +2505,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 96584
   },
   {
     "slug": "prompt-101",
@@ -2454,7 +2532,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 74812
   },
   {
     "slug": "prompt-102",
@@ -2480,7 +2559,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 121928
   },
   {
     "slug": "prompt-103",
@@ -2506,7 +2586,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 78232
   },
   {
     "slug": "prompt-104",
@@ -2532,7 +2613,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 144547
   },
   {
     "slug": "prompt-105",
@@ -2558,7 +2640,8 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 130668
   },
   {
     "slug": "prompt-106",
@@ -2584,7 +2667,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 145512
   },
   {
     "slug": "prompt-107",
@@ -2610,7 +2694,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "環境",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 104681
   },
   {
     "slug": "prompt-108",
@@ -2636,7 +2721,8 @@
     "style": "posed",
     "maslow": "愛與歸屬",
     "pestle": "經濟",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 127403
   },
   {
     "slug": "prompt-109",
@@ -2662,7 +2748,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 102350
   },
   {
     "slug": "prompt-110",
@@ -2688,7 +2775,8 @@
     "style": "candid",
     "maslow": "生理需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 109837
   },
   {
     "slug": "prompt-111",
@@ -2714,7 +2802,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "政治",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 75723
   },
   {
     "slug": "prompt-112",
@@ -2740,7 +2829,8 @@
     "style": "posed",
     "maslow": "生理需求",
     "pestle": "經濟",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 123280
   },
   {
     "slug": "prompt-113",
@@ -2766,7 +2856,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 116089
   },
   {
     "slug": "prompt-114",
@@ -2792,7 +2883,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 107339
   },
   {
     "slug": "prompt-115",
@@ -2818,7 +2910,8 @@
     "style": "candid",
     "maslow": "尊重需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 100197
   },
   {
     "slug": "prompt-116",
@@ -2844,7 +2937,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 135585
   },
   {
     "slug": "prompt-117",
@@ -2870,7 +2964,8 @@
     "style": "candid",
     "maslow": "愛與歸屬",
     "pestle": "科技",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 113833
   },
   {
     "slug": "prompt-118",
@@ -2896,7 +2991,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "社會",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 106495
   },
   {
     "slug": "prompt-119",
@@ -2922,7 +3018,8 @@
     "style": "posed",
     "maslow": "尊重需求",
     "pestle": "科技",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 110304
   },
   {
     "slug": "prompt-120",
@@ -2948,7 +3045,8 @@
     "style": "candid",
     "maslow": "安全需求",
     "pestle": "經濟",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 103974
   },
   {
     "slug": "prompt-121",
@@ -2974,7 +3072,8 @@
     "style": "posed",
     "maslow": "自我實現",
     "pestle": "環境",
-    "person": "alice"
+    "person": "alice",
+    "imageBytes": 139371
   },
   {
     "slug": "prompt-122",
@@ -3000,6 +3099,7 @@
     "style": "candid",
     "maslow": "自我實現",
     "pestle": "科技",
-    "person": "ken"
+    "person": "ken",
+    "imageBytes": 98940
   }
 ]
