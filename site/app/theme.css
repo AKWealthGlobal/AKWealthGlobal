@@ -66,9 +66,3 @@ em{color:#0a5a48}.eyebrow.gold{color:#5c4010}
 @media(max-width:700px){.learn-resources-entry{flex-direction:column;align-items:flex-start;padding:22px}.learn-resources-entry img{width:80px}}
 
 /* 首頁主視覺：讓訪客選擇 Alice 或 Ken */
-.hero-choices{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.hero-choice{border:1.5px solid transparent;font-weight:700}
-.hero-choice-alice{background:#0c6b57;color:#f6f0e2}
-.hero-choice-ken{background:#6f4f12;color:#f6f0e2}
-.hero-choice:hover{filter:brightness(1.08)}
-@media (max-width:700px){.hero-choices{flex-direction:column;align-items:flex-start}.hero-choice{font-size:15px}}
