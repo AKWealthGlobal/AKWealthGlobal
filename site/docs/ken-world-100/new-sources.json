@@ -1,0 +1,78 @@
+{
+ "blsCpi": {
+  "name": "美國勞工統計局：消費者物價指數（CPI）首頁",
+  "url": "https://www.bls.gov/cpi/"
+ },
+ "blsSchedule": {
+  "name": "美國勞工統計局：2026年10月發布時程",
+  "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+ },
+ "investorDiversification": {
+  "name": "SEC Investor.gov：分散投資（Diversification）",
+  "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/diversification"
+ },
+ "whoAgeing": {
+  "name": "世界衛生組織：高齡化與健康（Ageing and health）",
+  "url": "https://www.who.int/news-room/fact-sheets/detail/ageing-and-health"
+ },
+ "wgcGoldhub": {
+  "name": "世界黃金協會：Goldhub 黃金數據與研究（產業組織資料）",
+  "url": "https://www.gold.org/goldhub"
+ },
+ "cbcTw": {
+  "name": "臺灣中央銀行",
+  "url": "https://www.cbc.gov.tw/tw/mp-1.html"
+ },
+ "fscTw": {
+  "name": "臺灣金融監督管理委員會",
+  "url": "https://www.fsc.gov.tw/"
+ },
+ "bnm": {
+  "name": "馬來西亞國家銀行（Bank Negara Malaysia）",
+  "url": "https://www.bnm.gov.my/"
+ },
+ "dosm": {
+  "name": "馬來西亞統計局（DOSM）",
+  "url": "https://www.dosm.gov.my/"
+ },
+ "ilo": {
+  "name": "國際勞工組織（ILO）",
+  "url": "https://www.ilo.org/"
+ },
+ "iea": {
+  "name": "國際能源署（IEA）",
+  "url": "https://www.iea.org/"
+ },
+ "ipcc": {
+  "name": "政府間氣候變遷專門委員會（IPCC）",
+  "url": "https://www.ipcc.ch/"
+ },
+ "wipo": {
+  "name": "世界智慧財產權組織（WIPO）",
+  "url": "https://www.wipo.int/"
+ },
+ "fao": {
+  "name": "聯合國糧食及農業組織（FAO）",
+  "url": "https://www.fao.org/"
+ },
+ "bis": {
+  "name": "國際清算銀行（BIS）",
+  "url": "https://www.bis.org/"
+ },
+ "fsb": {
+  "name": "金融穩定委員會（FSB）",
+  "url": "https://www.fsb.org/"
+ },
+ "wto": {
+  "name": "世界貿易組織（WTO）",
+  "url": "https://www.wto.org/"
+ },
+ "scMy": {
+  "name": "馬來西亞證券委員會（SC）",
+  "url": "https://www.sc.com.my/"
+ },
+ "unWpp": {
+  "name": "聯合國：世界人口展望（World Population Prospects）",
+  "url": "https://population.un.org/wpp/"
+ }
+}
