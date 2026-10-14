@@ -122,5 +122,193 @@
   "insuranceBasics": {
     "name": "美國密蘇里州保險局：如何讀懂保單（保障與除外條款）",
     "url": "https://insurance.mo.gov/understanding-your-automobile-insurance-policy"
+  },
+  "blsCpi": {
+    "name": "美國勞工統計局：消費者物價指數（CPI）首頁",
+    "url": "https://www.bls.gov/cpi/"
+  },
+  "blsSchedule": {
+    "name": "美國勞工統計局：2026年10月發布時程",
+    "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+  },
+  "investorDiversification": {
+    "name": "SEC Investor.gov：分散投資（Diversification）",
+    "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/diversification"
+  },
+  "whoAgeing": {
+    "name": "世界衛生組織：高齡化與健康（Ageing and health）",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/ageing-and-health"
+  },
+  "wgcGoldhub": {
+    "name": "世界黃金協會：Goldhub 黃金數據與研究（產業組織資料）",
+    "url": "https://www.gold.org/goldhub"
+  },
+  "cbcTw": {
+    "name": "臺灣中央銀行",
+    "url": "https://www.cbc.gov.tw/tw/mp-1.html"
+  },
+  "fscTw": {
+    "name": "臺灣金融監督管理委員會",
+    "url": "https://www.fsc.gov.tw/"
+  },
+  "bnm": {
+    "name": "馬來西亞國家銀行（Bank Negara Malaysia）",
+    "url": "https://www.bnm.gov.my/"
+  },
+  "dosm": {
+    "name": "馬來西亞統計局（DOSM）",
+    "url": "https://www.dosm.gov.my/"
+  },
+  "ilo": {
+    "name": "國際勞工組織（ILO）",
+    "url": "https://www.ilo.org/"
+  },
+  "iea": {
+    "name": "國際能源署（IEA）",
+    "url": "https://www.iea.org/"
+  },
+  "ipcc": {
+    "name": "政府間氣候變遷專門委員會（IPCC）",
+    "url": "https://www.ipcc.ch/"
+  },
+  "wipo": {
+    "name": "世界智慧財產權組織（WIPO）",
+    "url": "https://www.wipo.int/"
+  },
+  "fao": {
+    "name": "聯合國糧食及農業組織（FAO）",
+    "url": "https://www.fao.org/"
+  },
+  "bis": {
+    "name": "國際清算銀行（BIS）",
+    "url": "https://www.bis.org/"
+  },
+  "fsb": {
+    "name": "金融穩定委員會（FSB）",
+    "url": "https://www.fsb.org/"
+  },
+  "wto": {
+    "name": "世界貿易組織（WTO）",
+    "url": "https://www.wto.org/"
+  },
+  "scMy": {
+    "name": "馬來西亞證券委員會（SC）",
+    "url": "https://www.sc.com.my/"
+  },
+  "unWpp": {
+    "name": "聯合國：世界人口展望（World Population Prospects）",
+    "url": "https://population.un.org/wpp/"
+  },
+  "fedFomc": {
+    "name": "美國聯準會：FOMC 貨幣政策與公開聲明",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm"
+  },
+  "twBliRetirement": {
+    "name": "臺灣勞保局：老年給付與退休金個人專戶",
+    "url": "https://www.bli.gov.tw/0004857.html"
+  },
+  "myEpfRetirement": {
+    "name": "馬來西亞公積金局：退休儲蓄與提繳",
+    "url": "https://www.kwsp.gov.my/en/member/savings"
+  },
+  "twRentalLaw": {
+    "name": "臺灣全國法規資料庫：租賃住宅市場發展及管理條例",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0060125"
+  },
+  "myTenancyGuide": {
+    "name": "馬來西亞司法機關：民事審判指引（房東與租客）",
+    "url": "https://ekss-portal.kehakiman.gov.my/portals/media/others/Civil_Trials_Guidebook.pdf"
+  },
+  "twCivilCode": {
+    "name": "臺灣全國法規資料庫：民法共有規定",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001"
+  },
+  "myLandGuide": {
+    "name": "馬來西亞土地及礦產局：土地移轉與土地權利指引",
+    "url": "https://www.jkptg.gov.my/en/pemilik-tanah"
+  },
+  "myIncomeTax": {
+    "name": "馬來西亞內陸稅收局：個人所得稅說明",
+    "url": "https://www.hasil.gov.my/en/individu/pengenalan-cukai-pendapatan-individu/"
+  },
+  "oecdTaxTreaty2025": {
+    "name": "OECD：2025 所得與資本稅約範本（2026 完整版）",
+    "url": "https://www.oecd.org/en/publications/model-tax-convention-on-income-and-on-capital-2025-full-version_db32e18b-en.html"
+  },
+  "oecdDigitalConsumer": {
+    "name": "OECD：消費者政策與數位科技",
+    "url": "https://www.oecd.org/en/topics/sub-issues/consumer-policy-and-digital-technologies.html"
+  },
+  "myPropertyGuide": {
+    "name": "馬來西亞經濟部：房產取得指引",
+    "url": "https://ekonomi.gov.my/en/resources/guidelines-and-procedures/guideline-acquisition-properties"
+  },
+  "twLandAct": {
+    "name": "臺灣全國法規資料庫：土地法（含外國人取得土地規定）",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060001"
+  },
+  "oecdCrs": {
+    "name": "OECD：稅務金融帳戶資訊自動交換與 CRS",
+    "url": "https://www.oecd.org/en/topics/sub-issues/international-standards-on-tax-transparency/tax-transparency-resource-centre.html"
+  },
+  "myCrs": {
+    "name": "馬來西亞內陸稅收局：共同申報準則 CRS",
+    "url": "https://www.hasil.gov.my/antarabangsa/automatic-exchange-of-information-aeoi/common-reporting-standard-crs/"
+  },
+  "twRentalIncomeTax": {
+    "name": "臺灣財政部稅務入口網：個人出租房屋與土地所得",
+    "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/taxation-scope/which-income/B9Z0L2W"
+  },
+  "myInheritance": {
+    "name": "馬來西亞政府入口網：遺產管理與繼承",
+    "url": "https://www.malaysia.gov.my/en/categories/death--inheritance"
+  },
+  "twInheritanceLaw": {
+    "name": "臺灣全國法規資料庫：遺產及贈與稅法",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072"
+  },
+  "twRentalTemplate": {
+    "name": "臺灣行政院：住宅租賃定型化契約應記載及不得記載事項",
+    "url": "https://www.ey.gov.tw/Page/2285E9A14973DE75?Cate=1b3e6417-0767-47e5-adb8-192b16674889&M=S&page=1"
+  },
+  "myEstateAgents": {
+    "name": "馬來西亞估價師、評估師、房地產代理與物業管理局：註冊",
+    "url": "https://lpeph.gov.my/registration"
+  },
+  "twPersonalDataLaw": {
+    "name": "臺灣全國法規資料庫：個人資料保護法",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0050021"
+  },
+  "myPersonalDataLaw": {
+    "name": "馬來西亞個人資料保護局：個資法與官方指引",
+    "url": "https://www.pdp.gov.my/ppdpv1/en/akta/pdp-act-2010-en/"
+  },
+  "twCarbonFee": {
+    "name": "臺灣全國法規資料庫：碳費收費辦法（2026-09 修正）",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0020139"
+  },
+  "twSustainabilityDisclosure": {
+    "name": "臺灣金管會：IFRS 永續揭露準則適用規定",
+    "url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL004194"
+  },
+  "mySustainabilityDisclosure": {
+    "name": "馬來西亞證券交易所：IFRS 永續揭露準則規範公告",
+    "url": "https://www.bursamalaysia.com/sites/5bb54be15f36ca0af339077a/content_entry5c11a9db758f8d31544574c6/6768e229e6414a4ba0eb9f4d/files/23122024__MEDIA_RELEASE_BURSA_MALAYSIA_REQUIRES_SUSTAINABILITY_REPORTING_USING_THE_IFRS_SUSTAINABILITY_DISCLOSURE_STANDARDS.pdf"
+  },
+  "twTaxPortal": {
+    "name": "臺灣財政部稅務入口網",
+    "url": "https://www.etax.nat.gov.tw/etwmain/"
+  },
+  "twLabour": {
+    "name": "臺灣勞動部",
+    "url": "https://www.mol.gov.tw/"
+  },
+  "myLabour": {
+    "name": "馬來西亞半島勞工局（JTKSM）：服務與勞動規則",
+    "url": "https://jtksm.mohr.gov.my/en/services"
+  },
+  "fscTwSustainability": {
+    "name": "臺灣金管會：永續揭露接軌最新公告",
+    "url": "https://esg.fsc.gov.tw/News/Detail/-%E6%8E%A5%E8%BB%8C%E5%9C%8B%E9%9A%9B-%E8%A1%8C%E7%A9%A9%E8%87%B4%E9%81%A0-%E7%92%B0%E5%A2%83%E9%83%A8-%E9%87%91%E7%AE%A1%E6%9C%83%E5%85%B1%E5%90%8C%E5%84%AA%E5%8C%96%E6%B0%B8%E7%BA%8C%E6%8F%AD%E9%9C%B2%E6%8E%A5%E8%BB%8C%E8%B7%AF-%E5%85%BC%E9%A1%A7%E8%B3%87%E8%A8%8A%E5%93%81%E8%B3%AA%E8%88%87%E7%94%A2%E6%A5%AD%E7%AB%B6%E7%88%AD%E5%8A%9B/"
   }
 }
