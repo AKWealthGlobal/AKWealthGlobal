@@ -1,6 +1,9 @@
 import json,re,collections,sys
-sys.path.insert(0,'.')
-from part3 import R
+from pathlib import Path
+HERE=Path(__file__).resolve().parent
+LIB=HERE.parent.parent/'lib'
+sys.path.insert(0,str(HERE))
+from part3 import SCRIPTS as R
 SER={"KW":"Ken 看世界","MM":"這跟你的錢有什麼關係？","IF":"如果真的發生了？","AS":"世界變了，你的資產呢？","NT":"下一個10年","SC":"第二個選擇"}
 CAT={"G":"黃金與總體經濟","W":"世界政策與市場","F":"家庭世代與生活成本","T":"科技工作與收入","X":"跨境資產與法律","C":"氣候能源與生活風險","B":"資產配置與風險基礎"}
 newsrc={
@@ -24,8 +27,20 @@ newsrc={
 "scMy":("馬來西亞證券委員會（SC）","https://www.sc.com.my/"),
 "unWpp":("聯合國：世界人口展望（World Population Prospects）","https://population.un.org/wpp/"),
 }
-ex=json.load(open('/home/user/AKWealthGlobal/site/lib/ken-episodes.json',encoding='utf-8'))
-exsrc=json.load(open('/home/user/AKWealthGlobal/site/lib/ken-sources.json',encoding='utf-8'))
+def read_json(path):
+    try:
+        return json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError) as err:
+        sys.exit(f'cannot read {path}: {err}')
+
+def write_json(path, data):
+    try:
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
+    except OSError as err:
+        sys.exit(f'cannot write {path}: {err}')
+
+ex=read_json(LIB/'ken-episodes.json')
+exsrc=read_json(LIB/'ken-sources.json')
 known=set(exsrc)|set(newsrc)
 extitles={e['title'] for e in ex}
 errs=[]
@@ -64,5 +79,5 @@ print(collections.Counter(CAT[r['category']] for r in R))
 print(collections.Counter(SER[r['series']] for r in R))
 print(collections.Counter(r['timeliness'] for r in R))
 print('no verified source:',[r['n'] for r in R if not r['source']])
-json.dump(out,open('ken-world-100-scripts.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
-json.dump({k:dict(name=v[0],url=v[1]) for k,v in newsrc.items()},open('ken-world-100-new-sources.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
+write_json(HERE/'scripts.json',out)
+write_json(HERE/'new-sources.json',{k:dict(name=v[0],url=v[1]) for k,v in newsrc.items()})
