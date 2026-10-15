@@ -36,8 +36,11 @@ const entries=[
 {code:'N30',group:'9–12 歲｜AI 公民課',title:'AI 也會口渴？',slug:'ai-resource-footprint',focus:'AI 運算會使用電力，資料中心散熱與供電也可能涉及水資源。',lesson:'AI 服務在資料中心運算，需要電力；資料中心的冷卻和能源供應也可能牽涉用水。不同服務、地點與工作量差異很大，因此不要把單一數字套用到每次提問。按需要使用工具、避免無目的大量生成，是容易實踐的小行動。',practice:'開始生成前先想清楚要解決什麼問題，設定數量和修改方向，完成後停止不必要的重複生成。',caveat:'漫畫不估算單次提問的用電或用水量；實際環境影響因設備、能源來源、冷卻方式和使用量而異。',supports:[{label:'國際能源總署：AI 與資料中心能源需求',href:'https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai'}]},
 {code:'N31',group:'成年人｜AI 公民課',title:'這是 AI 做的，要說嗎？',slug:'disclose-ai-use',focus:'交作業、交案子或發布內容前，先看學校、公司與平台的 AI 使用規定。',lesson:'AI 使用揭露方式會因學校、雇主、平台和作品用途而不同。先查明適用規定，再誠實說明 AI 協助了哪些部分；對外發布時也要避免讓讀者誤以為生成內容是未經工具協助的真人紀錄。',practice:'為一份作品寫下 AI 協助的環節、自己負責的部分，以及需要遵守的規範，發布前逐項檢查。',caveat:'本篇不引用特定法條或宣稱所有情境都有相同規定；請以所屬單位與平台最新要求為準。'}
 ];
-const topics=JSON.parse(fs.readFileSync(topicsPath,'utf8'));
-let lessons=JSON.parse(fs.readFileSync(lessonsPath,'utf8'));
+function fail(action,file,error){console.error(`無法${action} ${path.relative(root,file)}：${error.message}`);process.exit(1);}
+function readJson(file){try{return JSON.parse(fs.readFileSync(file,'utf8'));}catch(error){fail('讀取',file,error);}}
+function writeJson(file,data){try{fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');}catch(error){fail('寫入',file,error);}}
+const topics=readJson(topicsPath);
+let lessons=readJson(lessonsPath);
 for(const e of entries){
  const image=path.join(root,'public/media/alice','alice-'+e.slug+'.webp');
  if(!fs.existsSync(image)) continue;
@@ -47,6 +50,6 @@ for(const e of entries){
  lessons=lessons.filter(x=>x.slug!==e.slug);
  lessons.push({slug:e.slug,code:e.code,title:e.title,group:e.group,focus:e.focus,lesson:e.lesson,practice:e.practice,caveat:e.caveat,...(e.supports?{supports:e.supports}:{})});
 }
-fs.writeFileSync(topicsPath,JSON.stringify(topics,null,2)+'\n');
-fs.writeFileSync(lessonsPath,JSON.stringify(lessons,null,2)+'\n');
+writeJson(topicsPath,topics);
+writeJson(lessonsPath,lessons);
 console.log(JSON.stringify({published:entries.filter(e=>fs.existsSync(path.join(root,'public/media/alice','alice-'+e.slug+'.webp'))).map(e=>e.code),total:entries.length}));
