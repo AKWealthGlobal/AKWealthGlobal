@@ -3,10 +3,21 @@ const path = require('node:path');
 
 const topicsPath = path.resolve('lib/alice-topics.json');
 const lessonsPath = path.resolve('lib/alice-lessons.json');
-const newTopics = require('../docs/alice-ai-academy-25-topics.json');
-const newLessons = require('../docs/alice-ai-academy-25-scripts.json');
-const topics = JSON.parse(fs.readFileSync(topicsPath, 'utf8'));
-const lessons = JSON.parse(fs.readFileSync(lessonsPath, 'utf8'));
+function fail(action, file, error) {
+  console.error(`Could not ${action} ${path.relative(process.cwd(), file)}: ${error.message}`);
+  process.exit(1);
+}
+function readJson(file) {
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch (error) { fail('read', file, error); }
+}
+function writeJson(file, data) {
+  try { fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`); } catch (error) { fail('write', file, error); }
+}
+
+const newTopics = readJson(path.resolve(__dirname, '../docs/alice-ai-academy-25-topics.json'));
+const newLessons = readJson(path.resolve(__dirname, '../docs/alice-ai-academy-25-scripts.json'));
+const topics = readJson(topicsPath);
+const lessons = readJson(lessonsPath);
 
 for (const lesson of newLessons) {
   const image = path.resolve(`public/media/alice/alice-${lesson.slug}.webp`);
@@ -23,6 +34,6 @@ for (const lesson of newLessons) {
   else lessons[index] = publishedLesson;
 }
 
-fs.writeFileSync(topicsPath, `${JSON.stringify(topics, null, 2)}\n`);
-fs.writeFileSync(lessonsPath, `${JSON.stringify(lessons, null, 2)}\n`);
+writeJson(topicsPath, topics);
+writeJson(lessonsPath, lessons);
 console.log(JSON.stringify({ addedLessons: newLessons.length, totalLessons: lessons.length, totalTopics: topics.length }));
