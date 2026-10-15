@@ -1,10 +1,10 @@
 [
- {
-  "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3IxbdQHPn9de13wtgGvP6TicSKB/hf_20261013_232858_6c41f6ad-daaf-4b72-81aa-3bd5830e5636.png",
-  "out": "site/public/media/prompt-examples/example-1045-v2.jpg"
- },
- {
-  "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3IxbdQHPn9de13wtgGvP6TicSKB/hf_20261013_232858_4029f60e-b300-4ec5-8812-f88fcf865f1d.png",
-  "out": "site/public/media/prompt-examples/example-1071-v2.jpg"
- }
+  {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3IxbdQHPn9de13wtgGvP6TicSKB/hf_20261013_232858_6c41f6ad-daaf-4b72-81aa-3bd5830e5636.png",
+    "out": "site/public/media/prompt-examples/example-1045-v2.webp"
+  },
+  {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3IxbdQHPn9de13wtgGvP6TicSKB/hf_20261013_232858_4029f60e-b300-4ec5-8812-f88fcf865f1d.png",
+    "out": "site/public/media/prompt-examples/example-1071-v2.webp"
+  }
 ]

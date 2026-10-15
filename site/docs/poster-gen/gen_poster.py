@@ -1,6 +1,6 @@
 # 行銷海報影像 20 組提示詞產生器（Alice IP、Ken IP、講師團隊）
 # 成品海報：含完整版面設計與繁體中文文案（主標、副標、三賣點、行動呼籲、品牌標誌）。
-# 品牌標誌使用 site/public/media/brand/ak-wealth-global-logo.jpg 作為參考圖。
+# 品牌標誌使用 site/public/media/brand/ak-wealth-global-logo.webp 作為參考圖。
 import json, sys
 C='行銷海報影像'
 M={'生':'生理需求','安':'安全需求','愛':'愛與歸屬','尊':'尊重需求','自':'自我實現'}
