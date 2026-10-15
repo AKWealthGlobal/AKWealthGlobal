@@ -1,0 +1,252 @@
+[
+  {
+    "key": "added-c33",
+    "code": "C33",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "AI 會替大家一樣回答嗎？",
+    "focus": "認識資料偏差，換不同角度提問並核對結果。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-bias-classroom/"
+  },
+  {
+    "key": "added-c34",
+    "code": "C34",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "有人用 AI 假扮同學？",
+    "focus": "遇到可疑聲音或影像，先用另一個已知管道確認。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/classmate-deepfake-check/"
+  },
+  {
+    "key": "added-c35",
+    "code": "C35",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "推薦影片一直停不下來",
+    "focus": "了解推薦系統會依觀看互動排序，主動設定休息和搜尋選擇。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/recommendation-loop/"
+  },
+  {
+    "key": "added-c36",
+    "code": "C36",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "AI 幫我寫作業，算我的嗎？",
+    "focus": "遵守老師規則，標出 AI 協助範圍，答案用自己的理解完成。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-homework-credit/"
+  },
+  {
+    "key": "added-c37",
+    "code": "C37",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "照片上傳前先問誰？",
+    "focus": "取得照片中每個人的同意，留意背景個資與工具隱私。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/photo-consent-ai/"
+  },
+  {
+    "key": "added-c38",
+    "code": "C38",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "AI 算出的分數一定對嗎？",
+    "focus": "自動評分可能有誤，請求說明並讓老師依作品與標準複核。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-score-fairness/"
+  },
+  {
+    "key": "added-c39",
+    "code": "C39",
+    "group": "9–12 歲｜AI 公民課",
+    "title": "AI 想法不是命令",
+    "focus": "AI 可提供選項，涉及安全與重要決定時找大人一起判斷。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-human-choice/"
+  },
+  {
+    "key": "added-f33",
+    "code": "F33",
+    "group": "成年人｜未來職場",
+    "title": "把會議紀錄變成待辦",
+    "focus": "讓 AI 整理決議草稿，逐項由與會者確認責任人與期限。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/meeting-to-actions/"
+  },
+  {
+    "key": "added-f34",
+    "code": "F34",
+    "group": "成年人｜未來職場",
+    "title": "履歷要寫得真，不是寫得滿",
+    "focus": "用 AI 改寫表達，不虛構技能、成果或工作經歷。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/resume-fact-check/"
+  },
+  {
+    "key": "added-f35",
+    "code": "F35",
+    "group": "成年人｜未來職場",
+    "title": "客戶資料能貼進 AI 嗎？",
+    "focus": "輸入前依公司政策分級，去識別化仍需確認工具獲准使用。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/workplace-data-boundary/"
+  },
+  {
+    "key": "added-f36",
+    "code": "F36",
+    "group": "成年人｜未來職場",
+    "title": "AI 面試評分公平嗎？",
+    "focus": "招聘工具需可說明、可複核，決策者要檢查偏差並保留人工判斷。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-hiring-review/"
+  },
+  {
+    "key": "added-f37",
+    "code": "F37",
+    "group": "成年人｜未來職場",
+    "title": "客服機器人答錯，誰接手？",
+    "focus": "設計清楚轉真人流程，重要承諾和例外由人確認。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-customer-service-escalation/"
+  },
+  {
+    "key": "added-f38",
+    "code": "F38",
+    "group": "成年人｜未來職場",
+    "title": "用 AI 做報表，數字先對帳",
+    "focus": "核對來源、期間、單位和公式，再讓 AI 協助敘述趨勢。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-report-reconcile/"
+  },
+  {
+    "key": "added-i33",
+    "code": "I33",
+    "group": "成年人｜靈感工作室",
+    "title": "把生活小事變成短篇故事",
+    "focus": "用真實細節發想虛構故事，改寫成自己的觀察與語氣。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/everyday-story-spark/"
+  },
+  {
+    "key": "added-i34",
+    "code": "I34",
+    "group": "成年人｜靈感工作室",
+    "title": "一張照片，三種新構圖",
+    "focus": "尊重照片權利與肖像同意，用 AI 草擬構圖再自行選擇。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/photo-to-storyboard/"
+  },
+  {
+    "key": "added-i35",
+    "code": "I35",
+    "group": "成年人｜靈感工作室",
+    "title": "品牌名稱先查再喜歡",
+    "focus": "AI 可發想名稱，商標、網域與既有品牌需自行檢索。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/brand-name-check/"
+  },
+  {
+    "key": "added-i36",
+    "code": "I36",
+    "group": "成年人｜靈感工作室",
+    "title": "卡住時，請 AI 當反方",
+    "focus": "用反方問題找盲點，最後由創作者判斷哪些批評有用。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/creative-devils-advocate/"
+  },
+  {
+    "key": "added-i37",
+    "code": "I37",
+    "group": "成年人｜靈感工作室",
+    "title": "把訪談變成有溫度的文章",
+    "focus": "先取得訪談同意，核對引言與脈絡，不讓 AI 補造受訪者說法。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/interview-to-article/"
+  },
+  {
+    "key": "added-i38",
+    "code": "I38",
+    "group": "成年人｜靈感工作室",
+    "title": "舊點子，長出新企劃",
+    "focus": "融合自己的素材與 AI 提案，記錄來源並檢查相似作品。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/idea-remix-workshop/"
+  },
+  {
+    "key": "added-s06",
+    "code": "S06",
+    "group": "中老年人｜心靈小站",
+    "title": "今天想找誰說說話？",
+    "focus": "用 AI 提醒或草擬問候，真正的陪伴來自真人聯繫。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/today-call-a-friend/"
+  },
+  {
+    "key": "added-s07",
+    "code": "S07",
+    "group": "中老年人｜心靈小站",
+    "title": "回憶相簿，由我來說故事",
+    "focus": "AI 可協助整理本人分享的回憶，照片和故事由本人決定是否保存分享。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/memory-album-my-voice/"
+  },
+  {
+    "key": "added-s08",
+    "code": "S08",
+    "group": "中老年人｜心靈小站",
+    "title": "給孫子的語音祝福",
+    "focus": "錄音前取得同意，文字整理不仿聲、不補上未說過的話。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/voice-message-grandchild/"
+  },
+  {
+    "key": "added-s09",
+    "code": "S09",
+    "group": "中老年人｜心靈小站",
+    "title": "傳來的養生偏方先查一查",
+    "focus": "健康訊息先查官方來源，症狀與治療決定請教醫療人員。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/health-rumor-family-check/"
+  },
+  {
+    "key": "added-s10",
+    "code": "S10",
+    "group": "中老年人｜心靈小站",
+    "title": "AI 說我不舒服，該聽誰的？",
+    "focus": "AI 可協助整理感受，身心困擾由本人與醫療專業人員評估。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/ai-wellbeing-boundary/"
+  },
+  {
+    "key": "added-s11",
+    "code": "S11",
+    "group": "中老年人｜心靈小站",
+    "title": "替重要日子留一個提醒",
+    "focus": "用 AI 整理生活提醒時保護帳號隱私，重要行程與藥物依專業指示確認。",
+    "source": "追加主題",
+    "status": "腳本已完成，漫畫製作中",
+    "href": "/learn/gentle-routine-reminder/"
+  }
+]

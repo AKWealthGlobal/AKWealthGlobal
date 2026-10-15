@@ -8,9 +8,7 @@ async function main(){
  if(boxes.length!==6)throw new Error('expected six panel crops');
  const dest=path.resolve('public/media/alice');fs.mkdirSync(dest,{recursive:true});
  const meta=await sharp(src).metadata();
- await sharp(src).jpeg({quality:95}).toFile(path.join(dest,'alice-'+slug+'.jpg'));
- for(let i=0;i<6;i++){const [x,y,w,h]=boxes[i];await sharp(src).extract({left:Math.round(x*meta.width/1024),top:Math.round(y*meta.height/1536),width:Math.round(w*meta.width/1024),height:Math.round(h*meta.height/1536)}).webp({quality:94}).toFile(path.join(dest,'alice-'+slug+'-'+(i+1)+'.webp'));}
- const archive=path.resolve('../../Alice-D1-20261008/output/batch');fs.mkdirSync(archive,{recursive:true});
- for(const ext of ['jpg',...Array.from({length:6},(_,i)=>`${i+1}.webp`)]){const srcName=ext==='jpg'?'alice-'+slug+'.jpg':'alice-'+slug+'-'+ext;fs.copyFileSync(path.join(dest,srcName),path.join(archive,srcName));}
- console.log(JSON.stringify({slug,width:meta.width,height:meta.height,files:7,archive}));
+ await sharp(src).webp({quality:82}).toFile(path.join(dest,'alice-'+slug+'.webp'));
+ for(let i=0;i<6;i++){const [x,y,w,h]=boxes[i];await sharp(src).extract({left:Math.round(x*meta.width/1024),top:Math.round(y*meta.height/1536),width:Math.round(w*meta.width/1024),height:Math.round(h*meta.height/1536)}).webp({quality:82}).toFile(path.join(dest,'alice-'+slug+'-'+(i+1)+'.webp'));}
+ console.log(JSON.stringify({slug,width:meta.width,height:meta.height,files:7,format:'webp',quality:82}));
 }main().catch(e=>{console.error(e);process.exit(1)});

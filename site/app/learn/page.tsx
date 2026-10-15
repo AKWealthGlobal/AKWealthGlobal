@@ -4,7 +4,7 @@ import topics from '@/lib/alice-topics.json';
 import '../money/ken.css';
 import AiBuddyNote from '@/components/ai-buddy-note';
 
-export const metadata={title:'Alice AI學院',description:'Alice AI學院完整主題目錄：105 個 AI 入門、生活實作、創作與樂齡學習主題。',alternates:{canonical:'/learn/'}};
+export const metadata={title:'Alice AI學院',description:`Alice AI學院完整主題目錄：${topics.length} 個 AI 入門、生活實作、創作與樂齡學習主題。`,alternates:{canonical:'/learn/'}};
 
 const ageSections=[
  {id:'age-5-8',title:'5–8 歲',subtitle:'從認識 AI 與生活金錢開始',groups:['5–8 歲｜魔法學院']},
