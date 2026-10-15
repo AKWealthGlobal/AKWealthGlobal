@@ -114,5 +114,5 @@ for (const [subcategory, rows] of Object.entries(fantasy)) rows.forEach(([name, 
 });
 if(all.length!==200) throw new Error(`Expected 200 prompts, received ${all.length}`);
 const file=path.resolve(__dirname,'../lib/maslow-pestle-prompts.json');
-fs.writeFileSync(file,`${JSON.stringify(all,null,2)}\n`);
+try{fs.writeFileSync(file,`${JSON.stringify(all,null,2)}\n`);}catch(error){console.error(`Could not write ${path.relative(process.cwd(),file)}: ${error.message}`);process.exit(1);}
 console.log(JSON.stringify({prompts:all.length,morning:morning.length,holidays:holidays.length,fantasy:Object.fromEntries(Object.entries(fantasy).map(([k,v])=>[k,v.length])),path:file}));
