@@ -140,7 +140,17 @@ function styleOf(entry: PromptEntry): Style {
   return '寫實攝影';
 }
 
-export function classifyPrompt(entry: PromptEntry): Taxonomy {
+// 影片封面（YouTube 縮圖、Shorts／Reels 封面）不論原本放在哪個分類，都歸到同一個細分類。
+const VIDEO_COVER = /縮圖|短影片|短影音|Shorts|Reels/i;
+
+function isVideoCover(entry: PromptEntry & {title?: string}): boolean {
+  if (entry.category === 'AI 文字提示詞（Alice 版）') return false;
+  const declared = entry.prompt.match(/【拍攝風格】([^\n【]+)/)?.[1] ?? '';
+  return VIDEO_COVER.test(`${entry.title ?? ''} ${declared}`);
+}
+
+export function classifyPrompt(entry: PromptEntry & {title?: string}): Taxonomy {
+  if (isVideoCover(entry)) return {theme: '實用設計與圖卡', subtheme: '短影片封面', style: '海報與圖文設計'};
   const [theme, subtheme] = THEME_BY_SUBCATEGORY[`${entry.category}|${entry.subcategory}`] ?? THEME_BY_CATEGORY[entry.category] ?? ['實用設計與圖卡'];
   return {theme, subtheme: subtheme || entry.subcategory, style: styleOf(entry)};
 }
