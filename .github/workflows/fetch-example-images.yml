@@ -20,20 +20,31 @@ jobs:
       - name: Download and convert
         run: |
           python - <<'PY'
-          import json, io, urllib.request
+          import json, io, sys, urllib.request
           from PIL import Image
           items = json.load(open('site/docs/image-fetch.json', encoding='utf8'))
+          failed = []
           for it in items:
-              assert it['out'].startswith('site/public/media/'), it['out']
-              if not it['out'].lower().endswith('.webp'):
-                  raise ValueError(f"Output must use .webp: {it['out']}")
-              data = urllib.request.urlopen(it['url'], timeout=120).read()
-              im = Image.open(io.BytesIO(data)).convert('RGB')
-              im.thumbnail((1600, 1600), Image.LANCZOS)
-              im.save(it['out'], 'WEBP', quality=82, method=6)
-              print('saved', it['out'], im.size)
+              out = it.get('out', '')
+              try:
+                  if not out.startswith('site/public/media/'):
+                      raise ValueError('Output must be under site/public/media/')
+                  if not out.lower().endswith('.webp'):
+                      raise ValueError('Output must use .webp')
+                  data = urllib.request.urlopen(it['url'], timeout=120).read()
+                  im = Image.open(io.BytesIO(data)).convert('RGB')
+                  im.thumbnail((1600, 1600), Image.LANCZOS)
+                  im.save(out, 'WEBP', quality=82, method=6)
+                  print('saved', out, im.size)
+              except Exception as error:
+                  failed.append(out)
+                  print(f'::error::Could not fetch {out}: {error}')
+          if failed:
+              print(f'{len(failed)} of {len(items)} images failed; the others are still committed.')
+              sys.exit(1)
           PY
       - name: Commit images
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
