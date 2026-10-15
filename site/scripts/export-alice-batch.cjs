@@ -3,7 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 async function main(){
  const [src,slug,geometry]=process.argv.slice(2);
- if(!src||!slug||!geometry)throw new Error('usage: node scripts/export-alice-batch.cjs image.png slug geometry.json');
+ if(!src||!slug||!geometry)throw new Error('usage: node scripts/export-alice-batch.cjs source-image slug geometry.json');
  const boxes=JSON.parse(fs.readFileSync(geometry,'utf8'));
  if(boxes.length!==6)throw new Error('expected six panel crops');
  const dest=path.resolve('public/media/alice');fs.mkdirSync(dest,{recursive:true});

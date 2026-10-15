@@ -1,6 +1,6 @@
 name: Fetch prompt example images
 # 讀取 site/docs/image-fetch.json（[{ "url": ..., "out": "site/public/media/..." }]），
-# 下載生成好的示範圖、轉成 JPG（長邊最多 1600px），提交回同一個分支。
+# 下載生成好的示範圖、轉成 WebP（長邊最多 1600px，品質 82），提交回同一個分支。
 on:
   push:
     paths:
@@ -25,10 +25,12 @@ jobs:
           items = json.load(open('site/docs/image-fetch.json', encoding='utf8'))
           for it in items:
               assert it['out'].startswith('site/public/media/'), it['out']
+              if not it['out'].lower().endswith('.webp'):
+                  raise ValueError(f"Output must use .webp: {it['out']}")
               data = urllib.request.urlopen(it['url'], timeout=120).read()
               im = Image.open(io.BytesIO(data)).convert('RGB')
               im.thumbnail((1600, 1600), Image.LANCZOS)
-              im.save(it['out'], 'JPEG', quality=86, optimize=True, progressive=True)
+              im.save(it['out'], 'WEBP', quality=82, method=6)
               print('saved', it['out'], im.size)
           PY
       - name: Commit images
