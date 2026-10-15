@@ -39,7 +39,7 @@ const entries=[
 const topics=JSON.parse(fs.readFileSync(topicsPath,'utf8'));
 let lessons=JSON.parse(fs.readFileSync(lessonsPath,'utf8'));
 for(const e of entries){
- const image=path.join(root,'public/media/alice','alice-'+e.slug+'.jpg');
+ const image=path.join(root,'public/media/alice','alice-'+e.slug+'.webp');
  if(!fs.existsSync(image)) continue;
  let t=topics.find(x=>x.code===e.code&&x.source==='擴充主題');
  if(!t){t={key:'expansion-'+e.code.toLowerCase(),code:e.code,group:e.group,title:e.title,focus:e.focus,source:'擴充主題',status:'漫畫已完成',href:'/learn/'+e.slug+'/'};topics.push(t);}
@@ -49,4 +49,4 @@ for(const e of entries){
 }
 fs.writeFileSync(topicsPath,JSON.stringify(topics,null,2)+'\n');
 fs.writeFileSync(lessonsPath,JSON.stringify(lessons,null,2)+'\n');
-console.log(JSON.stringify({published:entries.filter(e=>fs.existsSync(path.join(root,'public/media/alice','alice-'+e.slug+'.jpg'))).map(e=>e.code),total:entries.length}));
+console.log(JSON.stringify({published:entries.filter(e=>fs.existsSync(path.join(root,'public/media/alice','alice-'+e.slug+'.webp'))).map(e=>e.code),total:entries.length}));
