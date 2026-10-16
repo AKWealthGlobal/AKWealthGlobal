@@ -17,18 +17,30 @@ export const THEME_GROUPS = [
 
 export const THEMES = THEME_GROUPS.flatMap(group => group.themes);
 
-// 風格：畫面看起來像什麼。
-export const STYLES = [
-  '寫實攝影',
-  '電影感與概念美術',
-  '3D 動畫與公仔',
-  '插畫與繪本',
-  '動漫與動畫',
-  '東方傳統藝術',
-  '復古懷舊',
-  '海報與圖文設計',
-  '純文字（無圖像風格）',
-] as const;
+// 風格：畫面看起來像什麼。依每組提示詞實際要求的畫面分成四類。
+const REAL = '寫實攝影與復古懷舊'; // 看起來像真實拍攝的照片，含復古、黑白與年代造型照
+const ART = '電影感、插畫與動畫藝術'; // 電影感與概念美術、3D 動畫與公仔、插畫與繪本、動漫與動畫、東方傳統藝術
+const DESIGN = '海報與圖文設計';
+const TEXT = 'AI工具提示詞'; // 純文字提示詞，沒有圖像風格
+export const STYLES = [REAL, ART, DESIGN, TEXT] as const;
+
+// 舊版網址（?style=）用過的風格名稱，轉成現在的名稱。
+const LEGACY_STYLES: Record<string, Style> = {
+  '寫實攝影': REAL,
+  '復古懷舊': REAL,
+  '電影感與概念美術': ART,
+  '3D 動畫與公仔': ART,
+  '插畫與繪本': ART,
+  '動漫與動畫': ART,
+  '東方傳統藝術': ART,
+  '純文字（無圖像風格）': TEXT,
+};
+
+export function resolveStyle(name: string | null): Style | undefined {
+  if (!name) return undefined;
+  if ((STYLES as readonly string[]).includes(name)) return name as Style;
+  return LEGACY_STYLES[name];
+}
 
 export type Theme = (typeof THEME_GROUPS)[number]['themes'][number];
 export type Style = (typeof STYLES)[number];
@@ -116,41 +128,41 @@ const THEME_BY_CATEGORY: Record<string, [Theme, string?]> = {
 
 // 風格關鍵字：依序比對，先命中者優先（較明確的放前面）。
 const STYLE_RULES: [Style, RegExp][] = [
-  ['海報與圖文設計', /海報|封面|圖卡|資訊圖|圖解|簡報|縮圖|模板|菜單|貼圖|語錄卡|比較表|月曆|社群貼文|輪播|電子報|部落格首圖|App icon|Logo|介面風|筆記頁|商品頁|官網形象照|公司介紹|廣告風視覺|傳單/],
-  ['3D 動畫與公仔', /3D|公仔|黏土|毛絨|盲盒|鉤織|微縮|低多邊形/],
-  ['動漫與動畫', /漫畫|賽璐璐|像素|動畫電影劇照|國潮插畫/],
-  ['東方傳統藝術', /工筆|水墨|年畫|皮影|剪紙|敦煌|仕女畫|山水畫|彩墨|木刻|浮世繪|木版畫/],
-  ['復古懷舊', /90 ?年代|復古|懷舊|老照片|Y2K|拍貼/],
-  ['電影感與概念美術', /電影|劇照|概念藝術|概念美術|擬真合成|微縮夢境/],
-  ['插畫與繪本', /插畫|繪畫|水彩|手繪|塗鴉|速寫/],
-  ['寫實攝影', /攝影|抓拍|擺拍|紀實|寫真|手作工藝|照片/],
+  [DESIGN, /海報|封面|圖卡|資訊圖|圖解|簡報|縮圖|模板|菜單|貼圖|語錄卡|比較表|月曆|社群貼文|輪播|電子報|部落格首圖|App icon|Logo|介面風|筆記頁|商品頁|官網形象照|公司介紹|廣告風視覺|傳單/],
+  [ART, /3D|公仔|黏土|毛絨|盲盒|鉤織|微縮|低多邊形/],
+  [ART, /漫畫|賽璐璐|像素|動畫電影劇照|國潮插畫/],
+  [ART, /工筆|水墨|年畫|皮影|剪紙|敦煌|仕女畫|山水畫|彩墨|木刻|浮世繪|木版畫/],
+  [REAL, /90 ?年代|復古|懷舊|老照片|Y2K|拍貼/],
+  [ART, /電影|劇照|概念藝術|概念美術|擬真合成|微縮夢境/],
+  [ART, /插畫|繪畫|水彩|手繪|塗鴉|速寫/],
+  [REAL, /攝影|抓拍|擺拍|紀實|寫真|手作工藝|照片/],
 ];
 
 // 沒有「拍攝風格」欄位時，依分類（或細分類）判斷。
 const STYLE_BY_GROUP: Record<string, Style> = {
-  '祝福圖與生活靈感': '海報與圖文設計',
-  '原創奇幻故事系列': '插畫與繪本',
-  '熟齡人生影像|老照片修復與青春回憶': '復古懷舊',
-  '熟齡人生影像': '寫實攝影',
-  '皮克斯3D故事插畫': '3D 動畫與公仔',
-  '行銷海報影像': '海報與圖文設計',
-  '懷舊插畫風格': '復古懷舊',
-  '商業與社群設計': '海報與圖文設計',
-  '婚紗與情感海報': '海報與圖文設計',
-  '形象與穿搭分析': '海報與圖文設計',
-  '旅遊與雜誌封面': '海報與圖文設計',
-  '角色與貼圖設計': '3D 動畫與公仔',
-  '寫實人像攝影|黑白復古攝影': '復古懷舊',
-  '寫實人像攝影': '寫實攝影',
-  '古風與歷史人物': '寫實攝影',
-  '年代造型': '復古懷舊',
-  'AI 文字提示詞（Alice 版）': '純文字（無圖像風格）',
-  '人像與角色設計': '寫實攝影',
-  '海報與社群設計': '海報與圖文設計',
-  '資訊圖表與教育卡': '海報與圖文設計',
-  '分鏡與廣告腳本': '電影感與概念美術',
-  '風格轉換與場景設計': '插畫與繪本',
-  '電商與產品攝影': '寫實攝影',
+  '祝福圖與生活靈感': DESIGN,
+  '原創奇幻故事系列': ART,
+  '熟齡人生影像|老照片修復與青春回憶': REAL,
+  '熟齡人生影像': REAL,
+  '皮克斯3D故事插畫': ART,
+  '行銷海報影像': DESIGN,
+  '懷舊插畫風格': ART,
+  '商業與社群設計': DESIGN,
+  '婚紗與情感海報': DESIGN,
+  '形象與穿搭分析': DESIGN,
+  '旅遊與雜誌封面': DESIGN,
+  '角色與貼圖設計': ART,
+  '寫實人像攝影|黑白復古攝影': REAL,
+  '寫實人像攝影': REAL,
+  '古風與歷史人物': REAL,
+  '年代造型': REAL,
+  'AI 文字提示詞（Alice 版）': TEXT,
+  '人像與角色設計': REAL,
+  '海報與社群設計': DESIGN,
+  '資訊圖表與教育卡': DESIGN,
+  '分鏡與廣告腳本': ART,
+  '風格轉換與場景設計': ART,
+  '電商與產品攝影': REAL,
 };
 
 const seenStyle = (entry: PromptEntry): Style | undefined => (entry.slug ? (VISUAL_STYLES as Record<string, Style>)[entry.slug] : undefined);
@@ -164,7 +176,7 @@ function styleOf(entry: PromptEntry): Style {
   if (declared) for (const [style, pattern] of STYLE_RULES) if (pattern.test(declared)) return style;
   if (group) return group;
   for (const [style, pattern] of STYLE_RULES) if (pattern.test(entry.prompt)) return style;
-  return '寫實攝影';
+  return REAL;
 }
 
 // 影片封面（YouTube 縮圖、Shorts／Reels 封面）不論原本放在哪個分類，都歸到同一個細分類。
@@ -177,7 +189,7 @@ function isVideoCover(entry: PromptEntry & {title?: string}): boolean {
 }
 
 export function classifyPrompt(entry: PromptEntry & {title?: string}): Taxonomy {
-  if (isVideoCover(entry)) return {theme: '設計圖卡與社群素材', subtheme: '短影片封面', style: seenStyle(entry) ?? '海報與圖文設計'};
+  if (isVideoCover(entry)) return {theme: '設計圖卡與社群素材', subtheme: '短影片封面', style: seenStyle(entry) ?? DESIGN};
   const [theme, subtheme] = THEME_BY_SUBCATEGORY[`${entry.category}|${entry.subcategory}`] ?? THEME_BY_CATEGORY[entry.category] ?? ['設計圖卡與社群素材'];
   return {theme, subtheme: subtheme || entry.subcategory, style: styleOf(entry)};
 }
