@@ -3,7 +3,8 @@ import {useEffect,useId,useMemo,useState} from 'react';
 import {groups,tools,toolDefaults,MIN_INFLATION,type Tool,type Vals,type Row,type Field,type GroupId} from '@/lib/ken-tools';
 
 const STORE='ak-ken-tools-v1';
-function load():{inflation?:number;vals?:Record<string,Vals>}{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}}
+const INFL_VERSION=2; // 通膨下限改為 5% 後，舊的通膨設定不再沿用
+function load():{inflation?:number;inflationVersion?:number;vals?:Record<string,Vals>}{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}}
 function save(d:object){try{localStorage.setItem(STORE,JSON.stringify(d))}catch{}}
 
 function Input({f,value,onChange,compact=false}:{f:Field;value:unknown;onChange:(x:string|number)=>void;compact?:boolean}){
@@ -47,8 +48,8 @@ export default function KenToolkit(){
  const [draft,setDraft]=useState(String(MIN_INFLATION));
  const [vals,setValsAll]=useState<Record<string,Vals>>({});
  const [ready,setReady]=useState(false);
- useEffect(()=>{const d=load();if(d.inflation&&d.inflation>=MIN_INFLATION){setInflation(d.inflation);setDraft(String(d.inflation))}if(d.vals)setValsAll(d.vals);const h=location.hash.slice(1),t=tools.find(x=>x.id===h),g=groups.find(x=>x.id===h);if(t){setGroup(t.group);setOpen(t.id)}else if(g){setGroup(g.id);setOpen(tools.find(x=>x.group===g.id)!.id)}setReady(true)},[]);
- useEffect(()=>{if(ready)save({inflation,vals})},[inflation,vals,ready]);
+ useEffect(()=>{const d=load();if(d.inflationVersion===INFL_VERSION&&d.inflation&&d.inflation>=MIN_INFLATION){setInflation(d.inflation);setDraft(String(d.inflation))}if(d.vals)setValsAll(d.vals);const h=location.hash.slice(1),t=tools.find(x=>x.id===h),g=groups.find(x=>x.id===h);if(t){setGroup(t.group);setOpen(t.id)}else if(g){setGroup(g.id);setOpen(tools.find(x=>x.group===g.id)!.id)}setReady(true)},[]);
+ useEffect(()=>{if(ready)save({inflation,inflationVersion:INFL_VERSION,vals})},[inflation,vals,ready]);
  const g=groups.find(x=>x.id===group)!,list=tools.filter(t=>t.group===group);
  const commitInflation=()=>{const n=Number(draft);const ok=Number.isFinite(n)?Math.min(50,Math.max(MIN_INFLATION,n)):MIN_INFLATION;setInflation(ok);setDraft(String(ok))};
  return <div className="ken-toolkit">
