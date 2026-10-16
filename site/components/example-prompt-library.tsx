@@ -2,12 +2,12 @@
 import {useEffect, useMemo, useState} from 'react';
 import Link from 'next/link';
 import entries from '@/lib/prompt-examples.json';
-import {classifyPrompt, STYLES} from '@/lib/prompt-taxonomy';
+import {classifyPrompt, resolveStyle, STYLES} from '@/lib/prompt-taxonomy';
 const ALL='全部';
 const classified=entries.map(e=>({...e,...classifyPrompt(e)}));
 const styleCounts=classified.reduce<Record<string,number>>((acc,e)=>{acc[e.style]=(acc[e.style]||0)+1;return acc},{});
 export default function ExamplePromptLibrary(){const [query,setQuery]=useState(''),[style,setStyle]=useState(ALL),[model,setModel]=useState(ALL);
-useEffect(()=>{const params=new URLSearchParams(window.location.search);const q=params.get('q'),s=params.get('style');if(q)setQuery(q);if(s&&(STYLES as readonly string[]).includes(s))setStyle(s);},[]);
+useEffect(()=>{const params=new URLSearchParams(window.location.search);const q=params.get('q'),s=params.get('style');if(q)setQuery(q);const resolved=resolveStyle(s);if(resolved)setStyle(resolved);},[]);
 const words=query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
 const ordered=useMemo(()=>[...classified].sort((a,b)=>Number(b.slug.startsWith('alice-pestle-'))-Number(a.slug.startsWith('alice-pestle-'))||Number(b.subcategory==='早安圖')-Number(a.subcategory==='早安圖')),[classified]);
 const results=ordered.filter(e=>(style===ALL||e.style===style)&&(model===ALL||e.model===model)&&words.every(word=>[e.title,e.theme,e.subtheme,e.style,e.prompt,e.description,...e.tags].join(' ').toLocaleLowerCase().includes(word)));
