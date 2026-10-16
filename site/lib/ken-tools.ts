@@ -16,15 +16,15 @@ export type Ctx={inflation:number;today:Date};
 export type Tool={id:string;group:GroupId;title:string;need:string;source?:string;fields:Field[];rows?:RowSpec[];compute:(v:Vals,c:Ctx)=>Result};
 export type GroupId='basics'|'seniors'|'white'|'blue'|'business'|'sales';
 
-export type Group={id:GroupId;title:string;short:string;core:string;maslow:string;pestle:string;tier:string;file:string;sheets:string[]};
+export type Group={id:GroupId;title:string;short:string;core:string;maslow:string;pestle:string;tier:string};
 
 export const groups:Group[]=[
- {id:'basics',title:'財商基礎｜先看懂自己的位置',short:'財商基礎',core:'時間換金錢的真相、個人通膨、預算比例與開支縮減',maslow:'安全需求：先確認自己撐得了多久，再談成長與自我實現。',pestle:'經濟：物價與房租上漲侵蝕購買力；社會：比較心理推高生活開銷。',tier:'用淨資產對照十個財富等級，找到現在的位置與下一個目標。',file:'ken-basics.xlsx',sheets:['時薪真相','財務階段','個人通膨','薪資分配','開支縮減','存款vs資產','行動計畫']},
- {id:'seniors',title:'熟齡退休｜資產保全與醫療風險',short:'熟齡退休',core:'資產保全、穩定現金流、醫療與長照風險控管',maslow:'聚焦「安全需求」（健康、財務穩定）與「自我實現／超越需求」（資產傳承、人生圓滿）。',pestle:'經濟：通膨侵蝕購買力；社會：高齡化與少子化造成照護人力短缺；法律：遺產稅法與長照法規。',tier:'多希望晚年維持在「小康（第五等）」至「普通（第六等）」，避免因重大傷病落入「中低產（第七等）」以下。',file:'ken-seniors.xlsx',sheets:['退休提領','長照醫療','保單總表','簡易收支','遺產贈與稅']},
- {id:'white',title:'白領上班族｜薪資放大與資產累積',short:'白領上班族',core:'薪資放大、債務清償、資產累積與節稅',maslow:'遊走於「安全需求」（財務獨立）與「尊重／社交需求」（職場晉升、同儕生活品質比較）。',pestle:'經濟：利率影響房貸、股市波動；科技：遠距與 AI 提高生產力標準；社會：晚婚與雙薪無孩（DINK）趨勢。',tier:'多為「小康（第五等）」的專業人士或雙薪家庭，目標晉升「中高產（第四等）」。',file:'ken-white-collar.xlsx',sheets:['FIRE路徑','XIRR報酬','貸款還本','綜所稅','再平衡']},
- {id:'blue',title:'藍領職人｜權益保障與緊急預備金',short:'藍領職人',core:'加班權益、生存底線、技能轉型',maslow:'核心在「生理需求」（基本溫飽）與「安全需求」（工作保障、職災防護、緊急預備金）。',pestle:'經濟：物價上漲、實質薪資停滯；法律：勞基法工時與工安法規；科技：AI 與自動化取代基層勞動的風險。',tier:'多處於「普通（第六等）」至「低收入（第八等）」，面臨房貸或租屋壓力。',file:'ken-blue-collar.xlsx',sheets:['加班費','預備金水庫','證照投資']},
- {id:'business',title:'企業公司｜現金流與利潤',short:'企業公司',core:'現金流健康、利潤極大化、營運成本與碳費衝擊',maslow:'組織視角：底層是生存（正向現金流），中層是歸屬與尊重（文化與市佔），頂層是自我實現（ESG 與產業領導）。',pestle:'政治：關稅與貿易戰；經濟：供應鏈成本；環境：淨零碳排；法律：勞動與資安法規。',tier:'創辦人或大股東多為「富豪（第二等）」至「富裕（第三等）」。',file:'ken-business.xlsx',sheets:['滾動現金流','損益兩平','多維度損益','員工產值','碳費試算']},
- {id:'sales',title:'直銷經營｜獎金、回購與真實利潤',short:'直銷經營',core:'獎金試算、客戶回購、庫存與行銷成本',maslow:'集中在「尊重需求」（晉升聘階、團隊認可）與「自我實現」（財富自由）。',pestle:'社會：人際網絡與社群信任；科技：社群演算法與線上工具；經濟：獎金制度與消費降級。',tier:'多從「中低產（第七等）」或「低收入（第八等）」起步，期望躍升「中高產（第四等）」以上。',file:'ken-direct-sales.xlsx',sheets:['獎金晉升','回購CRM','進銷存','行銷ROI','組織成長']},
+ {id:'basics',title:'財商基礎｜先看懂自己的位置',short:'財商基礎',core:'時間換金錢的真相、個人通膨、預算比例與開支縮減',maslow:'安全需求：先確認自己撐得了多久，再談成長與自我實現。',pestle:'經濟：物價與房租上漲侵蝕購買力；社會：比較心理推高生活開銷。',tier:'用淨資產對照十個財富等級，找到現在的位置與下一個目標。'},
+ {id:'seniors',title:'熟齡退休｜資產保全與醫療風險',short:'熟齡退休',core:'資產保全、穩定現金流、醫療與長照風險控管',maslow:'聚焦「安全需求」（健康、財務穩定）與「自我實現／超越需求」（資產傳承、人生圓滿）。',pestle:'經濟：通膨侵蝕購買力；社會：高齡化與少子化造成照護人力短缺；法律：遺產稅法與長照法規。',tier:'多希望晚年維持在「小康（第五等）」至「普通（第六等）」，避免因重大傷病落入「中低產（第七等）」以下。'},
+ {id:'white',title:'白領上班族｜薪資放大與資產累積',short:'白領上班族',core:'薪資放大、債務清償、資產累積與節稅',maslow:'遊走於「安全需求」（財務獨立）與「尊重／社交需求」（職場晉升、同儕生活品質比較）。',pestle:'經濟：利率影響房貸、股市波動；科技：遠距與 AI 提高生產力標準；社會：晚婚與雙薪無孩（DINK）趨勢。',tier:'多為「小康（第五等）」的專業人士或雙薪家庭，目標晉升「中高產（第四等）」。'},
+ {id:'blue',title:'藍領職人｜權益保障與緊急預備金',short:'藍領職人',core:'加班權益、生存底線、技能轉型',maslow:'核心在「生理需求」（基本溫飽）與「安全需求」（工作保障、職災防護、緊急預備金）。',pestle:'經濟：物價上漲、實質薪資停滯；法律：勞基法工時與工安法規；科技：AI 與自動化取代基層勞動的風險。',tier:'多處於「普通（第六等）」至「低收入（第八等）」，面臨房貸或租屋壓力。'},
+ {id:'business',title:'企業公司｜現金流與利潤',short:'企業公司',core:'現金流健康、利潤極大化、營運成本與碳費衝擊',maslow:'組織視角：底層是生存（正向現金流），中層是歸屬與尊重（文化與市佔），頂層是自我實現（ESG 與產業領導）。',pestle:'政治：關稅與貿易戰；經濟：供應鏈成本；環境：淨零碳排；法律：勞動與資安法規。',tier:'創辦人或大股東多為「富豪（第二等）」至「富裕（第三等）」。'},
+ {id:'sales',title:'直銷經營｜獎金、回購與真實利潤',short:'直銷經營',core:'獎金試算、客戶回購、庫存與行銷成本',maslow:'集中在「尊重需求」（晉升聘階、團隊認可）與「自我實現」（財富自由）。',pestle:'社會：人際網絡與社群信任；科技：社群演算法與線上工具；經濟：獎金制度與消費降級。',tier:'多從「中低產（第七等）」或「低收入（第八等）」起步，期望躍升「中高產（第四等）」以上。'},
 ];
 
 export const tiers:{rank:string;name:string;min:number;life:string}[]=[
@@ -152,7 +152,7 @@ export const tools:Tool[]=[
  compute(v,c){const L=rows(v,'list'),cats:[string,number][]=[['日常基本開銷',num(v,'b1')],['醫療保健',num(v,'b2')],['休閒娛樂',num(v,'b3')]],sum=(k:string)=>L.filter(r=>r.cat===k).reduce((s,r)=>s+rn(r,'amt'),0),tot=L.reduce((s,r)=>s+rn(r,'amt'),0),budget=cats.reduce((s,x)=>s+x[1],0);
   return {outs:[{label:'本月已花',value:money(tot),tone:'key'},{label:'本月還可以花',value:money(budget-tot),tone:budget-tot<0?'bad':'good'},{label:'明年同樣預算需要',value:money(budget*(1+effectiveInflation(c))),tone:'warn'}],
    tables:[{caption:'三類花費',head:['類別','已花','預算','剩餘','占比'],rows:cats.map(([k,b])=>{const s=sum(k);return [k,money(s),money(b),money(b-s),pct(tot?s/tot:0,0)]}),tones:cats.map(([k,b])=>sum(k)>b?'bad':undefined)}],
-   notes:['列印時建議用 A4 橫式；Excel 版已設定大字體與下拉選單。',inflNote(c)]}}},
+   notes:['列印時建議用 A4 橫式。',inflNote(c)]}}},
 {id:'estate',group:'seniors',title:'遺產稅與贈與稅節稅試算',need:'針對房地產與現金，比較「一次繼承」與「分年贈與」的稅務成本（115 年／2026 年發生案件適用標準）。',
  fields:[{key:'land',label:'土地（公告土地現值）',def:12000000,unit:'元',hint:'遺產以公告現值計，通常低於市價'},{key:'house',label:'房屋（評定標準價格）',def:1500000,unit:'元'},{key:'cash',label:'現金、存款',def:8000000,unit:'元'},{key:'stock',label:'股票、基金（時價）',def:6000000,unit:'元'},{key:'other',label:'其他財產',def:0,unit:'元'},{key:'debt',label:'未償債務',def:0,unit:'元'},{key:'spouse',label:'配偶在世（1＝是，0＝否）',def:1,min:0,max:1},{key:'kids',label:'直系血親卑親屬人數',def:2,unit:'人'},{key:'parents',label:'在世父母人數',def:0,unit:'人'},{key:'disabled',label:'身心障礙繼承人數',def:0,unit:'人'},{key:'transfer',label:'打算生前贈與的總額',def:10000000,unit:'元'},{key:'donors',label:'贈與人數（父母各自贈與＝2）',def:2,unit:'人'},{key:'gyears',label:'分幾年贈與',def:3,unit:'年'}],
  compute(v,c){const gross=['land','house','cash','stock','other'].reduce((s,k)=>s+num(v,k),0),ded=13330000+num(v,'spouse')*5530000+num(v,'kids')*560000+num(v,'parents')*1380000+1380000+num(v,'disabled')*6930000+num(v,'debt'),netE=Math.max(0,gross-ded);
@@ -180,7 +180,7 @@ export const tools:Tool[]=[
   let lo=-.99,hi=10,x=NaN;if(f(lo)*f(hi)<0){for(let k=0;k<200;k++){const m=(lo+hi)/2;if(f(lo)*f(m)<=0)hi=m;else lo=m}x=(lo+hi)/2}
   const inv=fl.filter(q=>q.a<0).reduce((s,q)=>s-q.a,0),out=fl.filter(q=>q.a>0).reduce((s,q)=>s+q.a,0),i=effectiveInflation(c);
   return {outs:[{label:'XIRR 年化報酬',value:pct(x,2),tone:'key'},{label:'扣除通膨後實質年報酬',value:pct((1+x)/(1+i)-1,2),tone:(1+x)/(1+i)<1?'bad':'good'},{label:'累計投入',value:money(inv)},{label:'市值＋已領回',value:money(out)},{label:'總損益',value:money(out-inv),tone:out>=inv?'good':'bad'},{label:'簡單報酬率（不看時間）',value:pct(inv?out/inv-1:NaN)}],
-   notes:['XIRR 把每筆錢投入的時間長短算進去，比「總報酬率」更能比較不同帳戶與策略。','Excel 版可直接用 =XIRR(金額範圍, 日期範圍)。',inflNote(c)]}}},
+   notes:['XIRR 把每筆錢投入的時間長短算進去，比「總報酬率」更能比較不同帳戶與策略。',inflNote(c)]}}},
 {id:'loan',group:'white',title:'貸款攤還與提前還本',need:'比較房貸或信貸在不同利率下的月付金，並試算每月多還本金能縮短幾年、省下多少利息。',
  fields:[{key:'p',label:'貸款金額',def:10000000,unit:'元'},{key:'rate',label:'年利率',def:2.2,unit:'%',step:.01},{key:'years',label:'貸款年數',def:30,unit:'年'},{key:'extra',label:'每月額外多還本金',def:5000,unit:'元'}],
  compute(v,c){const P=num(v,'p'),r=num(v,'rate')/100/12,n=num(v,'years')*12,m=pmt(r,n,P),E=num(v,'extra');let B=P,k=0,interest=0;while(B>0.5&&k<n){const it=B*r;interest+=it;B=B+it-(m+E);k++}
