@@ -1,8 +1,11 @@
 // 提示詞資料庫的「主題 × 風格」分類。
 // 原始資料（prompt-examples.json）的 category／subcategory 保留為來源紀錄，
 // 網站顯示與篩選一律以這裡算出的 theme／subtheme／style 為準，新增提示詞不必手動改分類。
+// 風格以 prompt-styles.json 為準：逐張檢視示範圖後判定的畫面風格；沒有紀錄的新提示詞才用下方規則推斷。
 
-type PromptEntry = {category: string; subcategory: string; prompt: string};
+import VISUAL_STYLES from './prompt-styles.json';
+
+type PromptEntry = {slug?: string; category: string; subcategory: string; prompt: string};
 
 // 主題：畫面在講什麼（題材），依使用情境分成四組。順序即網站顯示順序。
 export const THEME_GROUPS = [
@@ -150,7 +153,11 @@ const STYLE_BY_GROUP: Record<string, Style> = {
   '電商與產品攝影': '寫實攝影',
 };
 
+const seenStyle = (entry: PromptEntry): Style | undefined => (entry.slug ? (VISUAL_STYLES as Record<string, Style>)[entry.slug] : undefined);
+
 function styleOf(entry: PromptEntry): Style {
+  const seen = seenStyle(entry);
+  if (seen) return seen;
   const group = STYLE_BY_GROUP[`${entry.category}|${entry.subcategory}`] ?? STYLE_BY_GROUP[entry.category];
   if (entry.category === 'AI 文字提示詞（Alice 版）' || entry.category === '年代造型' || entry.category === '懷舊插畫風格') return group!;
   const declared = entry.prompt.match(/【拍攝風格】([^\n【]+)/)?.[1];
@@ -170,7 +177,7 @@ function isVideoCover(entry: PromptEntry & {title?: string}): boolean {
 }
 
 export function classifyPrompt(entry: PromptEntry & {title?: string}): Taxonomy {
-  if (isVideoCover(entry)) return {theme: '設計圖卡與社群素材', subtheme: '短影片封面', style: '海報與圖文設計'};
+  if (isVideoCover(entry)) return {theme: '設計圖卡與社群素材', subtheme: '短影片封面', style: seenStyle(entry) ?? '海報與圖文設計'};
   const [theme, subtheme] = THEME_BY_SUBCATEGORY[`${entry.category}|${entry.subcategory}`] ?? THEME_BY_CATEGORY[entry.category] ?? ['設計圖卡與社群素材'];
   return {theme, subtheme: subtheme || entry.subcategory, style: styleOf(entry)};
 }
