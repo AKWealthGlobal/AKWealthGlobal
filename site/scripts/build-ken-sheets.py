@@ -1,8 +1,9 @@
 """產生 Ken 財商教室 Excel 試算表（含即時公式）到 public/downloads/ken/。
 
 用法：python3 scripts/build-ken-sheets.py
-黃色格子為輸入，綠色格子為公式結果。通膨一律以 10% 起跳（資料驗證＋MAX(0.1, x)）。
+黃色格子為輸入，綠色格子為公式結果。通膨一律以 5% 起跳（資料驗證＋MAX(0.05, x)）。
 """
+import sys
 from datetime import date
 from pathlib import Path
 from openpyxl import Workbook
@@ -22,7 +23,7 @@ THIN = Side(style='thin', color='C3B89F')
 BOX = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
 FMT = {'money': '#,##0', 'pct': '0.0%', 'num': '#,##0.0', 'int': '#,##0', 'date': 'yyyy-mm-dd', 'text': '@', 'gen': 'General'}
 DISCLAIMER = f'本試算表為教育用途的估算工具，不構成投資、稅務、法律、保險或收入的建議與保證；法規數字以主管機關最新公告為準。資料檢視日：{REVIEWED}。'
-INFL_NOTE = '個人／家庭通膨（10% 起跳）'
+INFL_NOTE = '個人／家庭通膨（5% 起跳）'
 
 
 def f(size=12, bold=False, color='17160F'):
@@ -76,12 +77,12 @@ class Sheet:
         return self.a[key]
 
     def inflation(self, key='i'):
-        addr = self.inp(key, INFL_NOTE, 0.10, 'pct', '不可低於 10%')
-        dv = DataValidation(type='decimal', operator='greaterThanOrEqual', formula1='0.1', showErrorMessage=True,
-                            errorTitle='通膨假設', error='本工具假設台灣個人通膨每年 10% 起跳，請輸入 10% 以上。')
+        addr = self.inp(key, INFL_NOTE, 0.05, 'pct', '不可低於 5%')
+        dv = DataValidation(type='decimal', operator='greaterThanOrEqual', formula1='0.05', showErrorMessage=True,
+                            errorTitle='通膨假設', error='本工具假設台灣個人通膨每年 5% 起跳，請輸入 5% 以上。')
         self.ws.add_data_validation(dv)
         dv.add(addr.replace('$', ''))
-        self.a[key + 'x'] = f'MAX(0.1,{addr})'
+        self.a[key + 'x'] = f'MAX(0.05,{addr})'
         return addr
 
     def out(self, key, label, formula, kind='money', note='', bold=True):
@@ -139,7 +140,7 @@ def intro(wb, title, purpose, sheets):
     ws.row_dimensions[2].height = 40
     r = 4
     for k, v in [('使用方式', '黃色格子填入自己的數字，綠色格子會自動計算；範例數字可直接覆蓋。'),
-                 ('通膨假設', '台灣個人／家庭通膨每年 10% 起跳。官方 CPI 約 2% 左右，但房租、外食、醫療與照護的實際漲幅常遠高於 CPI；本工具採保守的 10% 起跳假設，讓規劃留足安全邊際。通膨格子設有驗證，低於 10% 會被拒絕，公式也以 MAX(10%, 輸入值) 計算。'),
+                 ('通膨假設', '台灣個人／家庭通膨每年 5% 起跳。官方 CPI 約 2% 左右，但房租、外食、醫療與照護的實際漲幅常遠高於 CPI；本工具採保守的 5% 起跳假設，讓規劃留足安全邊際。通膨格子設有驗證，低於 5% 會被拒絕，公式也以 MAX(5%, 輸入值) 計算。'),
                  ('線上版', 'https://ak-wealth-global.vercel.app/resources/ken/'),
                  ('免責聲明', DISCLAIMER)]:
         ws.cell(row=r, column=1, value=k).font = f(12, True)
@@ -253,7 +254,7 @@ def basics():
     s.validate_list(f'A{start}:A{end}', ['食物雜貨', '交通', '生活必需', '娛樂社交'])
     s.r += 1
     s.out('avg', '你的個人通膨（平均年化）', f'=IFERROR(AVERAGE(F{start}:F{end}),0)', 'pct')
-    s.out('used', '規劃採用通膨（實測與 10% 取高）', '=MAX({ix},{avg})', 'pct')
+    s.out('used', '規劃採用通膨（實測與 5% 取高）', '=MAX({ix},{avg})', 'pct')
     s.section('月薪購買力時間表')
     s.header(['第幾年', '實質購買力', '維持生活所需月薪'])
     for y in [1, 2, 3, 5, 10, 15, 20]:
@@ -510,12 +511,12 @@ def white():
     s.ws.cell(row=st, column=5, value='XIRR 年化報酬').font = f(12, True)
     c = s.cell(st, 6, f'=XIRR(C{st}:C{en},A{st}:A{en})', 'pct', OUT_FILL, True)
     s.ws.cell(row=st + 1, column=5, value=INFL_NOTE).font = f(12)
-    s.cell(st + 1, 6, 0.10, 'pct', IN_FILL)
-    dv = DataValidation(type='decimal', operator='greaterThanOrEqual', formula1='0.1', showErrorMessage=True, error='本工具假設台灣個人通膨每年 10% 起跳，請輸入 10% 以上。')
+    s.cell(st + 1, 6, 0.05, 'pct', IN_FILL)
+    dv = DataValidation(type='decimal', operator='greaterThanOrEqual', formula1='0.05', showErrorMessage=True, error='本工具假設台灣個人通膨每年 5% 起跳，請輸入 5% 以上。')
     s.ws.add_data_validation(dv)
     dv.add(f'F{st + 1}')
     s.ws.cell(row=st + 2, column=5, value='扣除通膨後實質年報酬').font = f(12, True)
-    s.cell(st + 2, 6, f'=(1+F{st})/(1+MAX(0.1,F{st + 1}))-1', 'pct', OUT_FILL, True)
+    s.cell(st + 2, 6, f'=(1+F{st})/(1+MAX(0.05,F{st + 1}))-1', 'pct', OUT_FILL, True)
     s.ws.cell(row=st + 3, column=5, value='累計投入').font = f(12)
     s.cell(st + 3, 6, f'=-SUMIF(C{st}:C{en},"<0")', 'money', OUT_FILL)
     s.ws.cell(row=st + 4, column=5, value='市值＋已領回').font = f(12)
@@ -885,7 +886,10 @@ def sales():
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
+    try:
+        OUT.mkdir(parents=True, exist_ok=True)
+    except OSError as e:
+        sys.exit(f'建立 {OUT} 失敗：{e}')
     for name, build in [('ken-basics.xlsx', basics), ('ken-seniors.xlsx', seniors), ('ken-white-collar.xlsx', white),
                         ('ken-blue-collar.xlsx', blue), ('ken-business.xlsx', business), ('ken-direct-sales.xlsx', sales)]:
         wb = build()
@@ -897,7 +901,10 @@ def main():
             ws.page_setup.fitToHeight = 0
         wb.properties.creator = 'AK Wealth Global'
         wb.properties.title = name
-        wb.save(OUT / name)
+        try:
+            wb.save(OUT / name)
+        except OSError as e:
+            sys.exit(f'寫入 {OUT / name} 失敗：{e}')
         print('wrote', OUT / name)
 
 

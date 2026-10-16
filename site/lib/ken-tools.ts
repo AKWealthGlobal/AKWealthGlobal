@@ -1,7 +1,7 @@
 // Ken 財商教室試算表：欄位定義與計算邏輯（純函式，網頁與測試共用）
-// 通膨假設：台灣個人／家庭通膨每年 10% 起跳，低於 10% 一律以 10% 計算。
+// 通膨假設：台灣個人／家庭通膨每年 5% 起跳，低於 5% 一律以 5% 計算。
 
-export const MIN_INFLATION=10;
+export const MIN_INFLATION=5;
 export const REVIEWED='2026-10-16';
 
 export type Cell=number|string;
@@ -61,7 +61,7 @@ function progressive(x:number,brackets:[number,number][]){let tax=0,prev=0;for(c
 const day=86400000;
 function parseDate(s:Cell){const d=new Date(String(s)+'T00:00:00');return isNaN(d.getTime())?null:d}
 const fmtDate=(d:Date)=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-const inflNote=(c:Ctx)=>`通膨以每年 ${pct(infl(c),0)} 計算（本工具假設台灣個人通膨 10% 起跳）。`;
+const inflNote=(c:Ctx)=>`通膨以每年 ${pct(infl(c),0)} 計算（本工具假設台灣個人通膨 5% 起跳）。`;
 
 const nameRow=(label='項目'):Field=>({key:'name',label,def:'',type:'text',wide:true});
 const valRow=(label='金額',unit='元'):Field=>({key:'value',label,def:0,unit});
@@ -91,7 +91,7 @@ export const tools:Tool[]=[
  rows:[{key:'items',label:'常買品項（食、行、必需、娛樂各挑幾樣）',fields:[{key:'cat',label:'類別',def:'食物雜貨',type:'select',options:['食物雜貨','交通','生活必需','娛樂社交']},nameRow('品項'),{key:'old',label:'當年價格',def:0,unit:'元'},{key:'now',label:'現在價格',def:0,unit:'元'}],defaults:[{cat:'食物雜貨',name:'便當',old:80,now:120},{cat:'食物雜貨',name:'雞蛋一盒',old:60,now:85},{cat:'交通',name:'機車加滿油',old:150,now:190},{cat:'生活必需',name:'套房月租',old:12000,now:16000},{cat:'生活必需',name:'電費（月）',old:900,now:1200},{cat:'娛樂社交',name:'外帶咖啡',old:50,now:70},{cat:'娛樂社交',name:'電影票',old:280,now:350}],addLabel:'新增品項'}],
  compute(v,c){const span=Math.max(1,num(v,'span')),items=rows(v,'items').filter(r=>rn(r,'old')>0&&rn(r,'now')>0),g=(r:Row)=>Math.pow(rn(r,'now')/rn(r,'old'),1/span)-1;
   const cats=['食物雜貨','交通','生活必需','娛樂社交'],avg=(a:Row[])=>a.length?a.reduce((s,r)=>s+g(r),0)/a.length:NaN,all=avg(items),used=Math.max(infl(c),Number.isFinite(all)?all:0),S=num(v,'salary');
-  return {outs:[{label:'你的個人通膨（年化）',value:pct(all),tone:'key'},{label:'本工具採用的通膨',value:pct(used),tone:'warn',hint:'取「實測值」與「10% 起跳」的較高者'},{label:'10 年後薪水的實質購買力',value:money(S/Math.pow(1+used,10)),tone:'bad'},{label:'10 年後要維持同樣生活需要月薪',value:money(S*Math.pow(1+used,10)),tone:'key'}],
+  return {outs:[{label:'你的個人通膨（年化）',value:pct(all),tone:'key'},{label:'本工具採用的通膨',value:pct(used),tone:'warn',hint:'取「實測值」與「5% 起跳」的較高者'},{label:'10 年後薪水的實質購買力',value:money(S/Math.pow(1+used,10)),tone:'bad'},{label:'10 年後要維持同樣生活需要月薪',value:money(S*Math.pow(1+used,10)),tone:'key'}],
    tables:[{caption:'各類別年化漲幅',head:['類別','品項數','年化通膨'],rows:cats.map(k=>{const a=items.filter(r=>r.cat===k);return [k,String(a.length),pct(avg(a))]})},{caption:'月薪購買力時間表',head:['第幾年','實質購買力','維持生活所需月薪'],rows:[1,2,3,5,10,15,20].map(y=>[`第 ${y} 年`,money(S/Math.pow(1+used,y)),money(S*Math.pow(1+used,y))])}],
    notes:['年化通膨＝（現價 ÷ 當年價格）^(1/間隔年數) − 1。','購買力受影響最大的類別，就是最該優先處理的開支。']}}},
 {id:'budget',group:'basics',title:'薪資自動分配（6 罐／631／532）',need:'發薪日輸入總薪資，自動拆出生活開銷、投資理財、緊急預備金等絕對金額，並對照目前實際花費。',
@@ -129,7 +129,7 @@ export const tools:Tool[]=[
  compute(v,c){const i=infl(c),r=num(v,'ret')/100,age=num(v,'age'),n=Math.max(1,num(v,'to')-age),A0=num(v,'assets'),ins=num(v,'insured'),sen=num(v,'seniority'),est=Math.max(ins*sen*.00775+3000,ins*sen*.0155),labor=num(v,'labor')||est,fixed=(labor+num(v,'pension'))*12+num(v,'div');
   let A=A0,dead=0,pv=0;const tbl:string[][]=[];for(let t=0;t<n;t++){const exp=num(v,'monthly')*12*Math.pow(1+i,t),w=Math.max(0,exp-fixed);pv+=w/Math.pow(1+r,t);const start=A;A=(A-w)*(1+r);if(A<0&&!dead)dead=age+t;if(t%5===0||t===n-1)tbl.push([`${age+t} 歲`,short(exp),short(fixed),short(w),short(Math.max(0,start)),A<0?'已耗盡':short(A)])}
   let sum=0;for(let t=0;t<n;t++)sum+=Math.pow((1+i)/(1+r),t);const W=A0/sum;
-  return {outs:[{label:'資產耗盡年齡',value:dead?`約 ${dead} 歲`:`撐得過 ${age+n} 歲`,tone:dead?'bad':'good'},{label:'首年安全提領額（逐年隨通膨調升）',value:money(W),tone:'key',hint:`安全提領率 ${pct(W/A0)}`},{label:'4% 法則首年可提領',value:money(A0*.04),hint:'4% 法則以 2–3% 通膨為前提，10% 通膨下明顯偏樂觀'},{label:'每月安全總支出（固定收入＋提領）',value:money((fixed+W)/12),tone:'key'},{label:'勞保年金估算（月）',value:money(est),hint:'第一式 ×0.775%＋3,000 與第二式 ×1.55% 取高'},{label:'資金缺口（今日需補足）',value:money(Math.max(0,pv-A0)),tone:pv>A0?'bad':'good'}],
+  return {outs:[{label:'資產耗盡年齡',value:dead?`約 ${dead} 歲`:`撐得過 ${age+n} 歲`,tone:dead?'bad':'good'},{label:'首年安全提領額（逐年隨通膨調升）',value:money(W),tone:'key',hint:`安全提領率 ${pct(W/A0)}`},{label:'4% 法則首年可提領',value:money(A0*.04),hint:'4% 法則以 2–3% 通膨為前提，5% 通膨下仍偏樂觀'},{label:'每月安全總支出（固定收入＋提領）',value:money((fixed+W)/12),tone:'key'},{label:'勞保年金估算（月）',value:money(est),hint:'第一式 ×0.775%＋3,000 與第二式 ×1.55% 取高'},{label:'資金缺口（今日需補足）',value:money(Math.max(0,pv-A0)),tone:pv>A0?'bad':'good'}],
    tables:[{caption:'逐年現金流（每 5 年列一次）',head:['年齡','年支出','固定收入','需提領','期初資產','期末資產'],rows:tbl}],
    notes:['固定收入以不調整計算；勞保年金實際會依 CPI 累計成長 5% 調整，請以勞保局試算為準。','缺口的解方：延後退休、降低開銷、提高穩健收入，或把部分資產轉為終身年金。',inflNote(c)]}}},
 {id:'ltc',group:'seniors',title:'長照與重大醫療現金流',need:'估算未來看護費、耗材、自費醫療在通膨下的總額，扣掉保險理賠與政府補助後，還差多少、現在每月要準備多少。',
@@ -145,7 +145,7 @@ export const tools:Tool[]=[
  compute(v,c){const L=rows(v,'list'),tot=L.reduce((s,r)=>s+rn(r,'premium'),0),inc=num(v,'income'),types=[...new Set(L.map(r=>String(r.type)))],soon=L.filter(r=>{const d=parseDate(r.payEnd);return d&&d.getTime()-c.today.getTime()<365*day&&d>=c.today});
   return {outs:[{label:'每年保費合計',value:money(tot),tone:'key'},{label:'保費占家庭年收入',value:pct(inc?tot/inc:NaN),tone:tot/inc>.15?'warn':'good',hint:'常見參考：10–15% 以內'},{label:'一年內繳費期滿',value:soon.length?soon.map(r=>`${r.who}・${r.name}`).join('、'):'無'},{label:'保單數',value:String(L.length)}],
    tables:[{caption:'依類型統計',head:['類型','張數','年繳保費'],rows:types.map(t=>{const a=L.filter(r=>r.type===t);return [t,String(a.length),money(a.reduce((s,r)=>s+rn(r,'premium'),0))]})},{caption:'依被保險人統計',head:['被保險人','張數','年繳保費'],rows:[...new Set(L.map(r=>String(r.who)))].map(w=>{const a=L.filter(r=>r.who===w);return [w||'未填',String(a.length),money(a.reduce((s,r)=>s+rn(r,'premium'),0))]})}],
-   notes:['保額多為固定金額：20 年後在 10% 通膨下，同樣保額的購買力只剩約 15%。','保單正本、要保人與受益人資料請另存於家人知道的位置。']}}},
+   notes:['保額多為固定金額：20 年後在 5% 通膨下，同樣保額的購買力只剩約 38%。','保單正本、要保人與受益人資料請另存於家人知道的位置。']}}},
 {id:'simple',group:'seniors',title:'簡易生活收支表（長輩版）',need:'只分三類：日常基本開銷、醫療保健、休閒娛樂。每次花錢記一筆，月底一眼看出哪一類超支。',
  fields:[{key:'b1',label:'日常基本開銷預算（月）',def:25000,unit:'元'},{key:'b2',label:'醫療保健預算（月）',def:6000,unit:'元'},{key:'b3',label:'休閒娛樂預算（月）',def:5000,unit:'元'}],
  rows:[{key:'list',label:'記帳',fields:[{key:'date',label:'日期',def:'',type:'date'},{key:'cat',label:'類別',def:'日常基本開銷',type:'select',options:['日常基本開銷','醫療保健','休閒娛樂']},{key:'note',label:'說明',def:'',type:'text',wide:true},{key:'amt',label:'金額',def:0,unit:'元'}],defaults:[{date:'2026-10-01',cat:'日常基本開銷',note:'菜市場',amt:1200},{date:'2026-10-02',cat:'醫療保健',note:'門診與藥',amt:450},{date:'2026-10-05',cat:'休閒娛樂',note:'和老同學聚餐',amt:800},{date:'2026-10-06',cat:'日常基本開銷',note:'水電瓦斯',amt:2100}],addLabel:'記一筆'}],
@@ -171,7 +171,7 @@ export const tools:Tool[]=[
   const rate=num(v,'income')?1-num(v,'expense')/num(v,'income'):NaN;
   return {outs:[{label:'財務獨立年齡',value:hit>=0?`${age+hit} 歲（${hit} 年後）`:'50 年內無法達成',tone:hit>=0?'good':'bad'},{label:'目前儲蓄率',value:pct(rate),tone:rate<.3?'warn':'good'},{label:'今天的 FIRE 目標本金',value:money(num(v,'expense')/wr),hint:'年支出 ÷ 提領率'},{label:'實質報酬率',value:pct((1+r)/(1+i)-1),tone:r<i?'bad':'good',hint:'報酬低於通膨時，資產實質上在縮水'}],
    tables:[{caption:'每 5 年進度',head:['年齡','年收入','年支出','目標本金','資產','狀態'],rows:tbl}],
-   notes:['在 10% 通膨假設下，支出與目標本金增加很快：提高收入成長與儲蓄率，比追求高報酬更可靠。',inflNote(c)]}}},
+   notes:['在 5% 起跳的通膨假設下，支出與目標本金增加很快：提高收入成長與儲蓄率，比追求高報酬更可靠。',inflNote(c)]}}},
 {id:'xirr',group:'white',title:'資產配置真實年化報酬（XIRR）',need:'把跨帳戶的股票、ETF、外幣、基金每次投入與贖回列出，用 XIRR 算出考慮時間的真實年化報酬，並扣掉通膨。',
  fields:[{key:'value',label:'今日總市值',def:620000,unit:'元'},{key:'date',label:'市值日期',def:'2026-10-16',type:'date'}],
  rows:[{key:'flows',label:'現金流（投入填正數，贖回或配息填負數）',fields:[{key:'date',label:'日期',def:'',type:'date'},{key:'name',label:'帳戶／標的',def:'',type:'text',wide:true},{key:'amt',label:'投入金額',def:0,unit:'元'}],defaults:[{date:'2023-01-10',name:'台股 0050 定期定額',amt:120000},{date:'2023-07-10',name:'美股 VT',amt:100000},{date:'2024-01-10',name:'台股 0050 定期定額',amt:120000},{date:'2024-08-20',name:'0056 配息（領回）',amt:-8000},{date:'2025-01-10',name:'美元定存轉 ETF',amt:100000},{date:'2025-09-01',name:'加密貨幣',amt:50000},{date:'2026-01-10',name:'台股 0050 定期定額',amt:60000}],addLabel:'新增一筆'}],
@@ -187,7 +187,7 @@ export const tools:Tool[]=[
   const base=m*n-P,i=infl(c);
   return {outs:[{label:'每月本息攤還',value:money(m),tone:'key'},{label:'原本總利息',value:money(base)},{label:'多還本金後還清',value:`${Math.floor(k/12)} 年 ${k%12} 個月`,tone:'good'},{label:'縮短期間',value:`${((n-k)/12).toFixed(1)} 年`,tone:'good'},{label:'省下利息',value:money(base-interest),tone:'key'},{label:'最後一期月付的實質負擔',value:money(m/Math.pow(1+i,num(v,'years'))),hint:'高通膨下，固定月付的實質負擔會逐年下降'}],
    tables:[{caption:'不同利率的月付金比較',head:['年利率','月付金','總利息'],rows:[-0.4,-0.2,0,0.2,0.4,0.8].map(d=>{const rr=num(v,'rate')+d,mm=pmt(rr/100/12,n,P);return [rr.toFixed(2)+'%',money(mm),money(mm*n-P)]})}],
-   notes:['在 10% 通膨、2% 房貸利率下，提前還本的「實質報酬」只有房貸利率；先確認緊急預備金與保障足夠，再決定是否多還。','本表以本息平均攤還計；寬限期、指數型房貸請另行計算。']}}},
+   notes:['在 5% 通膨、2% 房貸利率下，提前還本的「實質報酬」只有房貸利率；先確認緊急預備金與保障足夠，再決定是否多還。','本表以本息平均攤還計；寬限期、指數型房貸請另行計算。']}}},
 {id:'tax',group:'white',title:'綜合所得稅節稅試算',need:'精算扶養親屬、列舉扣除、房租、長照與自提勞退的組合，看哪種安排最省稅（115 年度所得、116 年 5 月申報標準）。',
  fields:[{key:'s1',label:'本人薪資收入',def:900000,unit:'元'},{key:'s2',label:'配偶薪資收入（無配偶填 0）',def:0,unit:'元'},{key:'married',label:'有配偶合併申報（1＝是）',def:0,min:0,max:1},{key:'other',label:'其他所得（利息、股利、租金等）',def:50000,unit:'元'},{key:'savings',label:'其中：利息等儲蓄投資所得',def:20000,unit:'元'},{key:'deps',label:'扶養親屬（未滿 70 歲）',def:0,unit:'人'},{key:'deps70',label:'扶養 70 歲以上直系尊親屬',def:0,unit:'人'},{key:'itemized',label:'列舉扣除合計（保險費、醫藥、捐贈、房貸利息）',def:0,unit:'元'},{key:'rent',label:'房屋租金支出（特別扣除上限 18 萬）',def:120000,unit:'元'},{key:'ltc',label:'長照特別扣除人數',def:0,unit:'人'},{key:'kids',label:'6 歲以下子女',def:0,unit:'人'},{key:'self',label:'勞退自提比例（0–6%）',def:6,unit:'%',min:0,max:6},{key:'basic',label:'每人基本生活費（待財政部公告）',def:213000,unit:'元',hint:'114 年度為 21.3 萬'}],
  compute(v,c){const B:[number,number][]=[[610000,.05],[1380000,.12],[2770000,.2],[5190000,.3],[Infinity,.4]],married=num(v,'married')>0;
@@ -236,7 +236,7 @@ export const tools:Tool[]=[
   const avg=L.length?neg/L.length:0,runway=avg<0?cash/-avg:Infinity;
   return {outs:[{label:'期末現金',value:money(cash),tone:cash<0?'bad':'key'},{label:'首次低於安全水位',value:firstLow||'未發生',tone:firstLow?'bad':'good'},{label:'Runway（以虧損月平均估）',value:Number.isFinite(runway)?`${Math.max(0,runway).toFixed(1)} 個月`:'現金流為正',tone:Number.isFinite(runway)&&runway<6?'bad':'good'}],
    tables:[{caption:'逐月現金流',head:['月份','入帳','流出','淨現金流','期末現金','狀態'],rows:tbl,tones}],
-   notes:['每月月初更新一次：已發生的月份換成實際數字，再往後補一個月，維持 6 個月滾動。','成本隨通膨上升時，應付、薪資與固定開銷每月以年 10% 起跳換算的月增幅成長。']}}},
+   notes:['每月月初更新一次：已發生的月份換成實際數字，再往後補一個月，維持 6 個月滾動。','成本隨通膨上升時，應付、薪資與固定開銷每月以年 5% 起跳換算的月增幅成長。']}}},
 {id:'breakeven',group:'business',title:'專案損益兩平（Break-Even）',need:'新產品或大型活動的固定成本、變動成本與售價，推算最低銷售量、損益兩平營收，以及達成目標利潤要賣多少。',
  fields:[{key:'fixed',label:'固定成本（開發、場地、人事、廣告）',def:500000,unit:'元'},{key:'price',label:'單價',def:1200,unit:'元'},{key:'vc',label:'單位變動成本',def:700,unit:'元'},{key:'profit',label:'目標利潤',def:200000,unit:'元'},{key:'expect',label:'預估銷量',def:1200,unit:'件'}],
  compute(v,c){const F=num(v,'fixed'),P=num(v,'price'),V=num(v,'vc'),cm=P-V,be=cm>0?Math.ceil(F/cm):Infinity,i=infl(c),V2=V*(1+i),be2=P-V2>0?Math.ceil(F/(P-V2)):Infinity;
@@ -306,4 +306,4 @@ export const tools:Tool[]=[
 ];
 
 export const toolById=(id:string)=>tools.find(t=>t.id===id);
-export function defaults(t:Tool):Vals{const v:Vals={};t.fields.forEach(f=>v[f.key]=f.def);t.rows?.forEach(r=>v[r.key]=r.defaults.map(x=>({...x})));return v}
+export function toolDefaults(t:Tool):Vals{const v:Vals={};t.fields.forEach(f=>v[f.key]=f.def);t.rows?.forEach(r=>v[r.key]=r.defaults.map(x=>({...x})));return v}

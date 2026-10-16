@@ -1,9 +1,10 @@
 'use client';
 import {useEffect,useId,useMemo,useState} from 'react';
-import {groups,tools,defaults,MIN_INFLATION,type Tool,type Vals,type Row,type Field,type GroupId} from '@/lib/ken-tools';
+import {groups,tools,toolDefaults,MIN_INFLATION,type Tool,type Vals,type Row,type Field,type GroupId} from '@/lib/ken-tools';
 
 const STORE='ak-ken-tools-v1';
-function load():{inflation?:number;vals?:Record<string,Vals>}{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}}
+const INFL_VERSION=2; // 通膨下限改為 5% 後，舊的通膨設定不再沿用
+function load():{inflation?:number;inflationVersion?:number;vals?:Record<string,Vals>}{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}}
 function save(d:object){try{localStorage.setItem(STORE,JSON.stringify(d))}catch{}}
 
 function Input({f,value,onChange,compact=false}:{f:Field;value:unknown;onChange:(x:string|number)=>void;compact?:boolean}){
@@ -36,7 +37,7 @@ function Calculator({tool,vals,setVals,inflation,file}:{tool:Tool;vals:Vals;setV
    {res.tables?.map(t=><div className="ken-table-wrap" key={t.caption}><table><caption>{t.caption}</caption><thead><tr>{t.head.map(h=><th key={h} scope="col">{h}</th>)}</tr></thead><tbody>{t.rows.map((r,i)=><tr key={i} className={t.tones?.[i]||''}>{r.map((c,j)=>j===0?<th scope="row" key={j}>{c}</th>:<td key={j}>{c}</td>)}</tr>)}</tbody></table></div>)}
    {res.notes&&<ul className="ken-notes">{res.notes.map(n=><li key={n}>{n}</li>)}</ul>}
   </section>
-  <div className="ken-calc-actions"><button type="button" className="button secondary" onClick={()=>setVals(defaults(tool))}>恢復範例數字</button><a className="button primary" href={`/downloads/ken/${file}`} download>下載 Excel 試算表</a><button type="button" className="button secondary" onClick={()=>window.print()}>列印本頁</button></div>
+  <div className="ken-calc-actions"><button type="button" className="button secondary" onClick={()=>setVals(toolDefaults(tool))}>恢復範例數字</button><a className="button primary" href={`/downloads/ken/${file}`} download>下載 Excel 試算表</a><button type="button" className="button secondary" onClick={()=>window.print()}>列印本頁</button></div>
  </div>;
 }
 
@@ -47,8 +48,8 @@ export default function KenToolkit(){
  const [draft,setDraft]=useState(String(MIN_INFLATION));
  const [vals,setValsAll]=useState<Record<string,Vals>>({});
  const [ready,setReady]=useState(false);
- useEffect(()=>{const d=load();if(d.inflation&&d.inflation>=MIN_INFLATION){setInflation(d.inflation);setDraft(String(d.inflation))}if(d.vals)setValsAll(d.vals);const h=location.hash.slice(1),t=tools.find(x=>x.id===h),g=groups.find(x=>x.id===h);if(t){setGroup(t.group);setOpen(t.id)}else if(g){setGroup(g.id);setOpen(tools.find(x=>x.group===g.id)!.id)}setReady(true)},[]);
- useEffect(()=>{if(ready)save({inflation,vals})},[inflation,vals,ready]);
+ useEffect(()=>{const d=load();if(d.inflationVersion===INFL_VERSION&&d.inflation&&d.inflation>=MIN_INFLATION){setInflation(d.inflation);setDraft(String(d.inflation))}if(d.vals)setValsAll(d.vals);const h=location.hash.slice(1),t=tools.find(x=>x.id===h),g=groups.find(x=>x.id===h);if(t){setGroup(t.group);setOpen(t.id)}else if(g){setGroup(g.id);setOpen(tools.find(x=>x.group===g.id)!.id)}setReady(true)},[]);
+ useEffect(()=>{if(ready)save({inflation,inflationVersion:INFL_VERSION,vals})},[inflation,vals,ready]);
  const g=groups.find(x=>x.id===group)!,list=tools.filter(t=>t.group===group);
  const commitInflation=()=>{const n=Number(draft);const ok=Number.isFinite(n)?Math.min(50,Math.max(MIN_INFLATION,n)):MIN_INFLATION;setInflation(ok);setDraft(String(ok))};
  return <div className="ken-toolkit">
@@ -65,7 +66,7 @@ export default function KenToolkit(){
    </header>
    <div className="ken-tool-list">{list.map((t,i)=>{const isOpen=open===t.id;return <article className={'ken-tool'+(isOpen?' open':'')} key={t.id} id={t.id}>
     <h3><button type="button" aria-expanded={isOpen} aria-controls={'panel-'+t.id} onClick={()=>{setOpen(isOpen?'':t.id);if(!isOpen)history.replaceState(null,'','#'+t.id)}}><span className="ken-tool-no">{String(i+1).padStart(2,'0')}</span><span className="ken-tool-title">{t.title}<small>{t.need}</small></span><span className="ken-tool-toggle" aria-hidden="true">{isOpen?'收合':'開始試算'}</span></button></h3>
-    {isOpen&&<div id={'panel-'+t.id}>{t.source&&<p className="ken-source">{t.source}，AK Wealth Global 依台灣情境重新設計</p>}<Calculator tool={t} file={g.file} inflation={inflation} vals={vals[t.id]||defaults(t)} setVals={v=>setValsAll(all=>({...all,[t.id]:v}))}/></div>}
+    {isOpen&&<div id={'panel-'+t.id}>{t.source&&<p className="ken-source">{t.source}，AK Wealth Global 依台灣情境重新設計</p>}<Calculator tool={t} file={g.file} inflation={inflation} vals={vals[t.id]||toolDefaults(t)} setVals={v=>setValsAll(all=>({...all,[t.id]:v}))}/></div>}
    </article>})}</div>
   </section>
   <p className="ken-privacy">你輸入的數字只存在這台裝置的瀏覽器，不會上傳。</p>
