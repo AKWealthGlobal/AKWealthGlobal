@@ -3,6 +3,7 @@
 用法：python3 scripts/build-ken-sheets.py
 黃色格子為輸入，綠色格子為公式結果。通膨一律以 10% 起跳（資料驗證＋MAX(0.1, x)）。
 """
+import sys
 from datetime import date
 from pathlib import Path
 from openpyxl import Workbook
@@ -885,7 +886,10 @@ def sales():
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
+    try:
+        OUT.mkdir(parents=True, exist_ok=True)
+    except OSError as e:
+        sys.exit(f'建立 {OUT} 失敗：{e}')
     for name, build in [('ken-basics.xlsx', basics), ('ken-seniors.xlsx', seniors), ('ken-white-collar.xlsx', white),
                         ('ken-blue-collar.xlsx', blue), ('ken-business.xlsx', business), ('ken-direct-sales.xlsx', sales)]:
         wb = build()
@@ -897,7 +901,10 @@ def main():
             ws.page_setup.fitToHeight = 0
         wb.properties.creator = 'AK Wealth Global'
         wb.properties.title = name
-        wb.save(OUT / name)
+        try:
+            wb.save(OUT / name)
+        except OSError as e:
+            sys.exit(f'寫入 {OUT / name} 失敗：{e}')
         print('wrote', OUT / name)
 
 
