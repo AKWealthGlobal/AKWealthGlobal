@@ -7,35 +7,40 @@ import type {Out,Vals} from '@/lib/ken-tools';
 // 只接受 script.google.com 的 /exec 網址，避免設定錯誤時把資料送到別處。設定方式見 docs/ken-google-sheet-setup.md。
 const RAW_ENDPOINT = process.env.NEXT_PUBLIC_KEN_SHEET_URL?.trim() ?? '';
 export const SHEET_ENDPOINT = /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(RAW_ENDPOINT) ? RAW_ENDPOINT : '';
+const KEN_EMAIL = 'peterwang1018@gmail.com';
 
 const MAX_BODY = 20000;
 const TIMEOUT_MS = 15000;
+const validEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 
 type Status = 'idle' | 'sending' | 'ok' | 'unknown' | 'fail' | 'toolarge';
+type ShareLevel = 'summary' | 'full';
 
 export type SharePayload = {tool: string; toolTitle: string; group: string; inflation: number; inputs: Vals; results: Out[]};
 
 export default function KenShareForm({payload}: {payload: SharePayload}) {
   const base = useId();
   const [name, setName] = useState('');
-  const [contact, setContact] = useState('');
+  const [email, setEmail] = useState('');
+  const [topic, setTopic] = useState('');
+  const [shareLevel, setShareLevel] = useState<ShareLevel>('summary');
   const [trap, setTrap] = useState(''); // 給機器人填的隱藏欄位，真人看不到
   const [agree, setAgree] = useState(false);
   const [status, setStatus] = useState<Status>('idle');
-  if (!SHEET_ENDPOINT) return null;
-
   const submit = async () => {
-    if (!agree || status === 'sending') return;
+    if (!SHEET_ENDPOINT || !agree || !validEmail(email) || status === 'sending') return;
     const body = JSON.stringify({
       consent: true,
       website: trap,
+      shareLevel,
       tool: payload.tool,
       toolTitle: payload.toolTitle,
       group: payload.group,
       inflation: payload.inflation,
       name: name.trim(),
-      contact: contact.trim(),
-      inputs: payload.inputs,
+      email: email.trim(),
+      topic: topic.trim(),
+      inputs: shareLevel === 'full' ? payload.inputs : undefined,
       results: payload.results.map(o => ({label: o.label, value: o.value})),
       page: location.origin + location.pathname,
     });
@@ -48,9 +53,9 @@ export default function KenShareForm({payload}: {payload: SharePayload}) {
       const res = await fetch(SHEET_ENDPOINT, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body, signal: ctrl.signal});
       if (!res.ok) { setStatus('fail'); return; }
       const data = await res.json().catch(() => null);
-      setStatus(data?.ok === true ? 'ok' : data ? 'fail' : 'unknown');
+      setStatus(data?.ok === true && data?.notified === true ? 'ok' : data?.ok === true ? 'unknown' : data ? 'fail' : 'unknown');
     } catch {
-      setStatus('fail');
+      setStatus('unknown');
     } finally {
       clearTimeout(timer);
     }
@@ -59,27 +64,43 @@ export default function KenShareForm({payload}: {payload: SharePayload}) {
   const message: Record<Status, string> = {
     idle: '',
     sending: '送出中…',
-    ok: '已收到，謝謝你。',
-    unknown: '已送出，但這個瀏覽器無法確認對方是否收到。若需要回覆，請改用其他聯絡方式。',
+    ok: '已寄出，Ken 已收到通知。請留意 Email；若需要即時聯繫，也可以透過 Ken 的 LINE。',
+    unknown: '寄送狀態無法確認，請先透過 Ken 的 LINE 聯繫確認，避免重複提交。',
     fail: '送出沒有成功，請稍後再試一次。你填寫的內容還在這個頁面。',
     toolarge: '這張試算表的內容太多，無法送出。請減少列數後再試。',
   };
 
   const done = status === 'ok';
-  const label = status === 'sending' ? '送出中…' : done ? '已送出 ✓' : '送出給 AK';
+  const mailto = () => {
+    const summary = payload.results.map(o => `${o.label}：${o.value}`).join('\n');
+    const subject = `Ken 財商諮詢｜${payload.toolTitle}`;
+    const body = [`Ken 您好，`, '', `我想討論：${topic || '這份試算結果'}`, `試算表：${payload.toolTitle}（${payload.group}）`, `通膨假設：${payload.inflation}%`, '', '試算摘要：', summary, '', `稱呼：${name.trim() || '（未填）'}`, `回覆 Email：${email.trim()}`, '', '我同意 AK Wealth Global 使用以上內容回覆這次諮詢。'].join('\n');
+    window.location.href = `mailto:${KEN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+  const label = status === 'sending' ? '送出中…' : done ? '已寄出 ✓' : '寄送試算摘要給 Ken';
   return (
     <section className="ken-share" aria-labelledby={base + 't'}>
-      <h4 id={base + 't'}>想請 AK 看看你的結果？</h4>
-      <p>送出後 AK Wealth Global 會收到這張試算表的內容，方便給你更貼近的建議。<strong>不按「送出給 AK」，什麼都不會上傳。</strong></p>
+      <div className="ken-share-intro">
+        <span className="ken-share-kicker">下一步｜和 Ken 討論你的財務問題</span>
+        <h4 id={base + 't'}>想知道這份結果可以怎麼行動？</h4>
+        <p>把試算結果寄給 Ken，諮詢時就能從你最關心的問題開始。只有你同意並按下寄送，資料才會傳出。</p>
+      </div>
+      <fieldset className="ken-share-choice" disabled={done || status === 'sending'}>
+        <legend>選擇要分享的內容</legend>
+        <label><input type="radio" name={base + 'level'} value="summary" checked={shareLevel === 'summary'} onChange={() => setShareLevel('summary')} /><span><strong>只寄送摘要</strong><small>試算表名稱、分類與結果摘要；不含你輸入的財務數字</small></span></label>
+        <label><input type="radio" name={base + 'level'} value="full" checked={shareLevel === 'full'} disabled={!SHEET_ENDPOINT} onChange={() => setShareLevel('full')} /><span><strong>連同完整試算內容</strong><small>{SHEET_ENDPOINT ? '另包含你填寫的數字，方便 Ken 針對細節回覆' : '線上收件服務啟用後可使用；目前 Email 備用方式只傳摘要'}</small></span></label>
+      </fieldset>
       <div className="ken-share-fields">
-        <label className="ken-field" htmlFor={base + 'n'}><span className="ken-field-label">稱呼<small>（選填）</small></span><input id={base + 'n'} type="text" maxLength={40} value={name} onChange={e => setName(e.target.value)} autoComplete="nickname" disabled={done} /></label>
-        <label className="ken-field" htmlFor={base + 'c'}><span className="ken-field-label">聯絡方式<small>（選填：LINE ID、Email 或電話）</small></span><input id={base + 'c'} type="text" maxLength={80} value={contact} onChange={e => setContact(e.target.value)} autoComplete="off" disabled={done} /></label>
+        <label className="ken-field" htmlFor={base + 'n'}><span className="ken-field-label">怎麼稱呼你 <small>（選填）</small></span><input id={base + 'n'} type="text" maxLength={40} value={name} onChange={e => setName(e.target.value)} autoComplete="given-name" disabled={done} /></label>
+        <label className="ken-field" htmlFor={base + 'e'}><span className="ken-field-label">Email <small>（必填，Ken 用來回覆你）</small></span><input id={base + 'e'} type="email" maxLength={120} required value={email} onChange={e => setEmail(e.target.value)} autoComplete="email" disabled={done} /></label>
+        <label className="ken-field ken-share-topic" htmlFor={base + 'topic'}><span className="ken-field-label">你最想和 Ken 討論什麼？ <small>（選填）</small></span><select id={base + 'topic'} value={topic} onChange={e => setTopic(e.target.value)} disabled={done}><option value="">選擇一個主題（可略過）</option><option>退休與現金流</option><option>家庭預算與債務</option><option>投資與資產配置</option><option>稅務與傳承</option><option>企業財務</option><option>其他財商問題</option></select></label>
       </div>
       <label className="ken-share-trap" aria-hidden="true">請勿填寫<input tabIndex={-1} autoComplete="off" value={trap} onChange={e => setTrap(e.target.value)} /></label>
-      <details className="ken-share-scope"><summary>會送出哪些資料？</summary><p>這張試算表的名稱、你填的數字、試算結果、年通膨設定，以及上面你自願填寫的稱呼與聯絡方式。</p></details>
-      <label className="ken-share-consent"><input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} disabled={done} /><span>我同意 AK Wealth Global 蒐集並使用以上資料，用於改善試算表及提供相關資訊與聯繫。詳見<Link href="/privacy/">隱私說明</Link>。</span></label>
-      <button type="button" className={'button primary ken-share-send' + (done ? ' done' : '')} disabled={!agree || status === 'sending' || done} onClick={submit}>{label}</button>
-      {!agree && !done && <small className="ken-share-hint">勾選上方同意後才能送出</small>}
+      <details className="ken-share-scope"><summary>資料會如何使用與保存？</summary><p>摘要模式會傳送試算名稱、分類、結果、通膨設定、Email、稱呼與諮詢主題；完整模式另含你填寫的數字。資料只供 Ken 回覆這次諮詢並改善相關試算服務，存放於限 Ken／授權人員存取的收件表，不公開、不出售。請勿填入身分證字號、帳號或密碼。詳見<Link href="/privacy/">隱私說明</Link>。</p></details>
+      <label className="ken-share-consent"><input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} disabled={done} /><span>我已閱讀上方資料說明，並同意 AK Wealth Global 將所選試算內容與我的 Email 提供給 Ken，用於回覆這次諮詢。這不代表訂閱行銷訊息。</span></label>
+      {SHEET_ENDPOINT ? <button type="button" className={'button primary ken-share-send' + (done ? ' done' : '')} disabled={!agree || !validEmail(email) || status === 'sending' || done || status === 'unknown'} onClick={submit}>{label}</button> : <div className="ken-share-fallback"><p>線上收件服務尚未啟用。你可以改用 Email 傳送摘要；你的原始輸入數字不會自動附加。</p><button type="button" className="button primary ken-share-send ken-share-mail" disabled={!agree || !validEmail(email)} onClick={mailto}>使用 Email 傳送摘要</button></div>}
+      {!validEmail(email) && !done && <small className="ken-share-hint">填寫有效 Email 後，Ken 才能回覆你的問題</small>}
+      {email.trim() && !agree && !done && <small className="ken-share-hint">確認資料使用方式並勾選同意後即可寄送</small>}
       <p role="status" className={'ken-share-status ' + status}>{message[status]}</p>
     </section>
   );

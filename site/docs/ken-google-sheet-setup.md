@@ -1,15 +1,16 @@
-# Ken 財商試算表：串接 Google 試算表收集資料
+# Ken 財商諮詢：Google 試算表收件與 Email 通知設定
 
-訪客在試算表頁面勾選同意並按「送出」後，資料會寫進你的 Google 試算表。沒有設定網址時，表單不會出現，網站也不會傳送任何資料。
+本網站的諮詢卡片讓訪客選擇只分享結果摘要，或另分享完整輸入數字。只有訪客勾選同意並送出後，資料才會傳送。Apps Script 將資料寫到私人收件表，並寄一封新諮詢通知給 Ken。這個文件是部署操作手冊，不會被網站公開提供下載。
 
-## 一、建立收件的 Google 試算表
+## 一、建立私人收件試算表
 
-1. 在 Google 雲端硬碟新增一份空白試算表，命名例如「Ken 試算表收件」。
-2. 選單「擴充功能」→「Apps Script」，把編輯器裡原有的程式碼全部刪掉，貼上下面整段程式碼，按存檔。
+1. 在 Google Drive 建立「Ken 財商諮詢收件」試算表。
+2. 只把這份試算表分享給 Ken 與實際需要處理諮詢的授權人員；一般存取維持「限制」，不要建立任何人可檢視的連結。
+3. 從「擴充功能 → Apps Script」開啟綁定的 Apps Script 專案，貼上以下程式碼並儲存。
 
 ```js
-// 收下網站送來的試算內容，寫成一列。只接受有勾選同意的資料。
-const SHEET_NAME = 'Ken試算';
+const SHEET_NAME = '諮詢收件';
+const KEN_EMAIL = 'peterwang1018@gmail.com';
 const MAX_CHARS = 20000;
 
 function doPost(e) {
@@ -17,34 +18,73 @@ function doPost(e) {
     const raw = (e && e.postData && e.postData.contents) || '';
     if (raw.length > MAX_CHARS) return reply({ok: false, error: 'too_large'});
     const d = JSON.parse(raw);
-    if (d.consent !== true) return reply({ok: false, error: 'no_consent'});
-    if (d.website) return reply({ok: true}); // 機器人才會填的隱藏欄位：假裝成功、不寫入
+    if (d.consent !== true || d.website) return reply({ok: false, error: 'invalid_submission'});
+    if (!['summary', 'full'].includes(d.shareLevel)) return reply({ok: false, error: 'invalid_share_level'});
+    if (!/^\S+@\S+\.\S+$/.test(String(d.email || ''))) return reply({ok: false, error: 'invalid_email'});
+    const emailHash = Utilities.base64EncodeWebSafe(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, String(d.email).toLowerCase())).slice(0, 32);
+    const cache = CacheService.getScriptCache();
+    const rateKey = `submission:${emailHash}`;
+    const count = Number(cache.get(rateKey) || 0);
+    if (count >= 3) return reply({ok: false, error: 'rate_limited'});
+    cache.put(rateKey, String(count + 1), 3600);
 
+    const inputs = d.shareLevel === 'full' ? JSON.stringify(d.inputs || {}) : '';
+    const results = JSON.stringify(Array.isArray(d.results) ? d.results : []);
     const lock = LockService.getScriptLock();
     lock.waitLock(10000);
+    let sheetUrl;
     try {
       const ss = SpreadsheetApp.getActiveSpreadsheet();
       const sh = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
       if (sh.getLastRow() === 0) {
-        sh.appendRow(['時間', '試算表', '身分', '通膨', '稱呼', '聯絡方式', '輸入數字', '結果摘要', '頁面']);
+        sh.appendRow(['時間', '分享範圍', '試算表', '分類', '通膨', '稱呼', 'Email', '諮詢主題', '輸入數字（僅完整分享）', '結果摘要', '來源頁面']);
+        sh.setFrozenRows(1);
       }
       sh.appendRow([
-        new Date(), safe(d.toolTitle, 80), safe(d.group, 40), Number(d.inflation) || '',
-        safe(d.name, 40), safe(d.contact, 80),
-        safe(JSON.stringify(d.inputs), 12000), safe(JSON.stringify(d.results), 4000), safe(d.page, 200),
+        new Date(), d.shareLevel === 'full' ? '完整試算' : '結果摘要', safe(d.toolTitle, 100), safe(d.group, 50),
+        Number(d.inflation) || '', safe(d.name, 60), safe(d.email, 120), safe(d.topic, 100),
+        safe(inputs, 12000), safe(results, 5000), safe(d.page, 300),
       ]);
+      sheetUrl = ss.getUrl();
     } finally {
       lock.releaseLock();
     }
-    return reply({ok: true});
+
+    let notified = false;
+    try {
+      const summary = (Array.isArray(d.results) ? d.results : [])
+        .map(x => `${safe(x.label, 100)}：${safe(x.value, 300)}`).join('\n');
+      const detail = d.shareLevel === 'full' ? `\n\n訪客同意分享完整輸入數字：\n${safe(inputs, 12000)}` : '\n\n訪客只分享結果摘要，未傳送輸入數字。';
+      MailApp.sendEmail({
+        to: KEN_EMAIL,
+        replyTo: safe(d.email, 120),
+        subject: `新財商諮詢｜${safe(d.toolTitle, 100)}`,
+        body: [
+          `稱呼：${safe(d.name, 60) || '未填'}`,
+          `訪客 Email：${safe(d.email, 120)}`,
+          `諮詢主題：${safe(d.topic, 100) || '未選'}`,
+          `分享範圍：${d.shareLevel === 'full' ? '完整試算' : '結果摘要'}`,
+          `試算表：${safe(d.toolTitle, 100)}（${safe(d.group, 50)}）`,
+          `通膨假設：${Number(d.inflation) || 0}%`,
+          '', '試算結果：', summary, detail,
+          '', `收件表：${sheetUrl}`,
+          `來源頁面：${safe(d.page, 300)}`,
+        ].join('\n'),
+      });
+      notified = true;
+    } catch (mailError) {
+      // 資料已寫入收件表；讓前端如實顯示通知未確認，避免訪客重複提交。
+      console.error('Ken notification email failed', mailError);
+    }
+    return reply({ok: true, notified});
   } catch (err) {
+    console.error('Ken consultation submission failed', err);
     return reply({ok: false, error: 'server'});
   }
 }
 
-// 截斷長度，並避免訪客填的文字被試算表當成公式執行（以 = + - @ 開頭時前面加單引號）。
-function safe(v, max) {
-  const s = String(v == null ? '' : v).slice(0, max);
+function safe(value, max) {
+  const s = String(value == null ? '' : value).slice(0, max);
   return /^[=+\-@\t\r]/.test(s) ? "'" + s : s;
 }
 
@@ -53,34 +93,32 @@ function reply(obj) {
 }
 ```
 
-3. 按右上角「部署」→「新增部署作業」→ 類型選「網頁應用程式」。
-   - 執行身分：**我**
-   - 誰可以存取：**所有人**
-4. 第一次會要求授權，依畫面同意。完成後複製「網頁應用程式網址」，格式是 `https://script.google.com/macros/s/....../exec`。
+## 二、部署 Apps Script
 
-之後若修改了程式碼，要再「管理部署作業」→ 編輯 → 版本選「新版本」→ 部署，網址才會套用新程式。
+1. 選「部署 → 新增部署作業」，類型選「網頁應用程式」。
+2. 執行身分選「我」；存取權選「所有人」。訪客只能呼叫程式，不能因此檢視收件試算表。
+3. 首次部署時授權試算表寫入與寄信權限。
+4. 複製網頁應用程式網址，網址格式為 `https://script.google.com/macros/s/.../exec`。
+5. 程式更新後，從「管理部署作業」編輯既有部署並選「新版本」。
 
-## 二、設定到網站
+## 三、啟用網站收件
 
-在 Vercel 專案的 Settings → Environment Variables 新增：
+在 Vercel 專案 Settings → Environment Variables 設定：
 
 - 名稱：`NEXT_PUBLIC_KEN_SHEET_URL`
-- 值：剛才複製的 `/exec` 網址
-- 環境：Production（要先在預覽測試就也勾 Preview）
+- 值：Apps Script `/exec` 網址
+- 環境：Production；驗收時可另啟用 Preview
 
-存檔後，到 Deployments 對最新一次部署按 Redeploy（這個變數在建置時寫進網頁，改了要重新部署才會生效）。
+儲存後重新部署，因為網址會在建置時寫入前端。網站只接受 `script.google.com/macros/s/.../exec` 格式。沒有有效網址時，網站不會送出背景請求，會顯示「使用 Email 傳送摘要」備用方式；備用方式只附上結果摘要，不附原始輸入數字。
 
-網站只接受 `https://script.google.com/macros/s/.../exec` 格式的網址，其他網址會被忽略，表單不會出現。
+## 四、驗收
 
-## 三、測試
+1. 用摘要模式送出測試資料：表格新增一列，輸入數字欄保持空白，Ken 收到通知 Email。
+2. 用完整模式送出測試資料：表格新增一列且只在該列完整分享欄出現數字，Ken 收到通知。
+3. 不勾同意或 Email 無效時，網站不送出。
+4. 暫停 Apps Script 郵件權限或用測試副本確認失敗處理：資料仍收進表格，前端顯示「資料已收進收件表、通知狀態無法確認」，不要顯示通知成功。
+5. 確認收件試算表一般存取仍為「限制」，訪客沒有文件連結。
 
-1. 打開 `/resources/ken/`，任一張試算表下方會出現「把我的試算結果送給 AK（選填）」。
-2. 勾選同意、按「送出」，頁面顯示「已收到，謝謝你。」，Google 試算表出現一列新資料。
-3. 若頁面顯示「已送出，但這個瀏覽器無法確認對方是否收到」，請看試算表有沒有新資料；通常是 Apps Script 回應被瀏覽器擋住，資料本身可能已寫入。
+## 資料處理
 
-## 四、使用時要注意
-
-- 收到的是個人資料（財務數字，加上選填的聯絡方式）。這份 Google 試算表請只分享給需要的人，不要設成「知道連結的任何人」。
-- 網頁應用程式網址會出現在網站的前端程式裡，任何人都能對它送資料（但看不到試算表內容）。程式已限制大小、擋掉機器人欄位與公式注入；若被大量灌垃圾資料，把部署停用或換一個新網址即可。
-- 依個資法，要能回應訪客查詢、更正、刪除的要求。隱私說明頁（`/privacy/`）已加入說明，請確認本站有公布可聯絡的管道。
-- 想停止蒐集：刪除 Vercel 的 `NEXT_PUBLIC_KEN_SHEET_URL` 並重新部署，表單就會消失。
+收件表包含個人聯絡資料，完整分享時另包含財務輸入。限制 Google Sheet 權限，只保留處理諮詢需要的人員；不要把完整財務資料放進公開文件或 Email 群組。依本站公布的聯絡方式受理查詢、更正與刪除要求。若停止收件，移除 Vercel 的 `NEXT_PUBLIC_KEN_SHEET_URL` 並重新部署。
