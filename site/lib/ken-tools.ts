@@ -306,4 +306,4 @@ export const tools:Tool[]=[
 ];
 
 export const toolById=(id:string)=>tools.find(t=>t.id===id);
-export function defaults(t:Tool):Vals{const v:Vals={};t.fields.forEach(f=>v[f.key]=f.def);t.rows?.forEach(r=>v[r.key]=r.defaults.map(x=>({...x})));return v}
+export function toolDefaults(t:Tool):Vals{const v:Vals={};t.fields.forEach(f=>v[f.key]=f.def);t.rows?.forEach(r=>v[r.key]=r.defaults.map(x=>({...x})));return v}
