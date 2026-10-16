@@ -83,7 +83,7 @@ export default function KenShareForm({payload}: {payload: SharePayload}) {
       <div className="ken-share-intro">
         <span className="ken-share-kicker">下一步｜和 Ken 討論你的財務問題</span>
         <h4 id={base + 't'}>想知道這份結果可以怎麼行動？</h4>
-        <p>把試算結果寄給 Ken，諮詢時就能從你最關心的問題開始。只有你同意並按下寄送，資料才會傳出。</p>
+        <p>把試算結果寄給 Ken，諮詢時就能從你最關心的問題開始。只有你同意、開啟 Email 草稿並在郵件程式按下傳送，資料才會寄出。</p>
       </div>
       <fieldset className="ken-share-choice" disabled={done || status === 'sending'}>
         <legend>選擇要分享的內容</legend>
@@ -98,7 +98,7 @@ export default function KenShareForm({payload}: {payload: SharePayload}) {
       <label className="ken-share-trap" aria-hidden="true">請勿填寫<input tabIndex={-1} autoComplete="off" value={trap} onChange={e => setTrap(e.target.value)} /></label>
       <details className="ken-share-scope"><summary>資料會如何使用與保存？</summary><p>摘要模式會傳送試算名稱、分類、結果、通膨設定、Email、稱呼與諮詢主題；完整模式另含你填寫的數字。資料只供 Ken 回覆這次諮詢並改善相關試算服務，存放於限 Ken／授權人員存取的收件表，不公開、不出售。請勿填入身分證字號、帳號或密碼。詳見<Link href="/privacy/">隱私說明</Link>。</p></details>
       <label className="ken-share-consent"><input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} disabled={done} /><span>我已閱讀上方資料說明，並同意 AK Wealth Global 將所選試算內容與我的 Email 提供給 Ken，用於回覆這次諮詢。這不代表訂閱行銷訊息。</span></label>
-      {SHEET_ENDPOINT ? <button type="button" className={'button primary ken-share-send' + (done ? ' done' : '')} disabled={!agree || !validEmail(email) || status === 'sending' || done || status === 'unknown'} onClick={submit}>{label}</button> : <div className="ken-share-fallback"><p>線上收件服務尚未啟用。你可以改用 Email 傳送摘要；你的原始輸入數字不會自動附加。</p><button type="button" className="button primary ken-share-send ken-share-mail" disabled={!agree || !validEmail(email)} onClick={mailto}>使用 Email 傳送摘要</button></div>}
+      {SHEET_ENDPOINT ? <button type="button" className={'button primary ken-share-send' + (done ? ' done' : '')} disabled={!agree || !validEmail(email) || status === 'sending' || done || status === 'unknown'} onClick={submit}>{label}</button> : <div className="ken-share-fallback"><p>線上收件服務尚未啟用。你可以開啟 Email 摘要草稿，再自行檢查並按下傳送；你的原始輸入數字不會自動附加。</p><button type="button" className="button primary ken-share-send ken-share-mail" disabled={!agree || !validEmail(email)} onClick={mailto}>開啟 Email 摘要草稿</button></div>}
       {!validEmail(email) && !done && <small className="ken-share-hint">填寫有效 Email 後，Ken 才能回覆你的問題</small>}
       {email.trim() && !agree && !done && <small className="ken-share-hint">確認資料使用方式並勾選同意後即可寄送</small>}
       <p role="status" className={'ken-share-status ' + status}>{message[status]}</p>
