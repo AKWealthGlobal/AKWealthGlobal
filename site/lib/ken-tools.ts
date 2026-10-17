@@ -46,8 +46,8 @@ const num=(v:Vals,k:string)=>{const x=Number(v[k]);return Number.isFinite(x)?x:0
 const str=(v:Vals,k:string)=>String(v[k]??'');
 const rows=(v:Vals,k:string)=>(Array.isArray(v[k])?v[k]:[]) as Row[];
 const rn=(r:Row,k:string)=>{const x=Number(r[k]);return Number.isFinite(x)?x:0};
-function money(x:number){if(!Number.isFinite(x))return '—';const s=(x<0?'−':'')+'NT$ '+Math.round(Math.abs(x)).toLocaleString('zh-TW');return Math.abs(x)>=1e6?`${s}（約 ${(x/1e4).toLocaleString('zh-TW',{maximumFractionDigits:0})} 萬）`:s}
-function moneyShort(x:number){if(!Number.isFinite(x))return '—';return Math.abs(x)>=1e5?(x/1e4).toLocaleString('zh-TW',{maximumFractionDigits:1})+' 萬':Math.round(x).toLocaleString('zh-TW')}
+function money(x:number){if(!Number.isFinite(x))return '—';const abs=Math.abs(x),sign=x<0?'−':'',s=sign+'NT$ '+Math.round(abs).toLocaleString('zh-TW');return abs>=1e8?`${s}（約 ${sign}${(abs/1e8).toLocaleString('zh-TW',{maximumFractionDigits:2})} 億）`:abs>=1e6?`${s}（約 ${sign}${(abs/1e4).toLocaleString('zh-TW',{maximumFractionDigits:0})} 萬）`:s}
+function moneyShort(x:number){if(!Number.isFinite(x))return '—';const abs=Math.abs(x),sign=x<0?'−':'';return abs>=1e8?sign+(abs/1e8).toLocaleString('zh-TW',{maximumFractionDigits:2})+' 億':abs>=1e5?sign+(abs/1e4).toLocaleString('zh-TW',{maximumFractionDigits:1})+' 萬':sign+Math.round(abs).toLocaleString('zh-TW')}
 const pct=(x:number,d=1)=>Number.isFinite(x)?(x*100).toFixed(d)+'%':'—';
 const yrs=(x:number)=>Number.isFinite(x)?(x>=100?'100 年以上':x.toFixed(1)+' 年'):'無法達成';
 const months=(x:number)=>Number.isFinite(x)?(x>=1200?'超過 100 年':Math.ceil(x)+' 個月'):'無法還清';
@@ -75,7 +75,7 @@ export const tools:Tool[]=[
   {key:'debts',label:'負債：所有還沒還完的錢',fields:[nameRow('負債'),valRow('尚欠金額')],defaults:[{name:'房貸',value:7000000},{name:'車貸',value:200000},{name:'信用卡、分期',value:0},{name:'信貸、學貸、親友借款',value:0}],addLabel:'新增負債'}],
  compute(v,c){const A=rows(v,'assets').reduce((s,r)=>s+rn(r,'value'),0),D=rows(v,'debts').reduce((s,r)=>s+rn(r,'value'),0),net=A-D,h=num(v,'years')*52*num(v,'week'),per=h>0?net/h:NaN,t=tierOf(net),i=effectiveInflation(c),idx=tiers.indexOf(t),next=idx>0?tiers[idx-1]:null;
   return {outs:[{label:'淨資產',value:money(net),tone:'key'},{label:'工作至今總工時',value:Math.round(h).toLocaleString('zh-TW')+' 小時'},{label:'每工作 1 小時留下的淨資產',value:Number.isFinite(per)?money(per):'—',tone:per<196?'bad':'key',hint:'對照 2026 年基本工資時薪 NT$196'},{label:'目前財富等級',value:`${t.rank}：${t.name}`,tone:'key',hint:t.life},{label:next?`距離${next.rank}「${next.name}」`:'已在最高等級',value:next?money(next.min-net):'—'},{label:'若淨資產不增加，10 年後的實質購買力',value:money(net/Math.pow(1+i,10)),tone:'warn'}],
-   tables:[{caption:'台灣財富淨資產 10 等級對照',head:['等級','淨資產範圍','生活樣貌'],rows:tiers.map((x,k)=>[`${x.rank} ${x.name}`,k===0?'> 100 億':k===tiers.length-1?'< 負 500 萬':`${moneyShort(x.min)} ～ ${moneyShort(tiers[k-1].min)}`,x.life]),tones:tiers.map(x=>x===t?'key':undefined)}],
+   tables:[{caption:'台灣財富淨資產 10 等級對照',head:['等級','淨資產範圍','生活樣貌'],rows:tiers.map((x,k)=>[`${x.rank} ${x.name}`,k===0?'> 100 億':k===tiers.length-1?'< 負 500 萬':k===tiers.length-2?'負 500 萬 ～ 0':`${moneyShort(x.min)} ～ ${moneyShort(tiers[k-1].min)}`,x.life]),tones:tiers.map(x=>x===t?'key':undefined)}],
    notes:['只靠時間換金錢，收入會隨體力與工時封頂；這個數字幫你判斷是否需要第二收入或收入型資產。',inflNote(c)]}}},
 {id:'stages',group:'basics',title:'財務階段與資本缺口',need:'假設從今天起不再有工作收入，你的資本能撐多久？從「財務安全」到「財務傳承」，每一階需要多少錢（含通膨）。',source:'改寫自「財務旅程」練習',
  fields:[{key:'monthly',label:'每月基本生活開銷（今日幣值）',def:40000,unit:'元'},{key:'dream',label:'理想生活每月所需',def:80000,unit:'元'},{key:'capital',label:'現在可動用的資本',def:2000000,unit:'元'},{key:'life',label:'預計還會活幾年',def:30,unit:'年'},{key:'save',label:'目前每年能存下',def:200000,unit:'元'},{key:'legacy',label:'想留給家人或公益（今日幣值）',def:5000000,unit:'元'}],
