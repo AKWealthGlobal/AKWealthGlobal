@@ -36,4 +36,153 @@
 .ken-share-status{min-height:1.7em;font-weight:700}.ken-share-status.ok{color:#1f6b36}.ken-share-status.fail,.ken-share-status.toolarge{color:#8f2f1b}.ken-share-status.unknown{color:#7a5410}
 @media(max-width:720px){.ken-actions,.ken-share-choice,.ken-share-mail-actions{grid-template-columns:1fr}}
 @media(max-width:600px){.ken-share{padding:16px 14px}.ken-share-fields,.ken-share-preview-items{grid-template-columns:1fr}}
-@media print{.ken-share,.ken-actions{display:none!important}}
+@media print{.ken-share,.ken-actions,.ken-sub-switch,.antiscam-jump,.antiscam-filter-panel{display:none!important}}
+
+/* ===== Ken推薦防詐工具懶人包 UI/UX ===== */
+.ken-antiscam{display:grid;gap:28px;font-size:17px}
+.antiscam-sos{padding:22px 24px;border:2px solid #b4442c;border-radius:20px;background:linear-gradient(135deg,#fdf1eb,#faece4);box-shadow:0 10px 26px rgba(143,47,27,.07)}
+.antiscam-sos-head{margin-bottom:16px}
+.antiscam-sos-title-wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+.antiscam-sos-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:#8f2f1b;color:#fff;font-size:13px;font-weight:700;letter-spacing:.03em}
+.antiscam-sos-head h2{margin:0;font-size:clamp(21px,2.6vw,26px);color:#6e2010;line-height:1.35}
+.antiscam-sos-head p{margin:0;font-size:16px;line-height:1.65;color:#4a2b24}
+.antiscam-sos-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.antiscam-sos-card{display:flex;flex-direction:column;gap:8px;padding:14px 16px;border:1px solid #dfb9ad;border-radius:14px;background:#fffdf9}
+.antiscam-sos-top{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.antiscam-sos-region{font-size:15px;font-weight:700;color:var(--ink)}
+.antiscam-sos-hours{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:#fbe6de;color:#8f2f1b}
+.antiscam-sos-main{display:flex;flex-direction:column;gap:4px}
+.antiscam-sos-num{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;padding:4px 12px;border-radius:10px;background:#8f2f1b;color:#fff;font-size:22px;font-weight:800;text-decoration:none;font-variant-numeric:tabular-nums;transition:background-color .15s,transform .1s}
+.antiscam-sos-num:hover{background:#6e2010;transform:translateY(-1px)}
+.antiscam-sos-main strong{font-size:15px;line-height:1.4;color:var(--ink)}
+.antiscam-sos-card p{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+
+.antiscam-jump{display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:thin}
+.antiscam-jump a{flex:0 0 auto;display:inline-flex;align-items:center;min-height:42px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(246,240,226,.85);color:var(--ink);font-size:15px;font-weight:600;text-decoration:none;transition:border-color .15s,background-color .15s}
+.antiscam-jump a:hover{border-color:var(--cyan);background:#fff;color:var(--cyan)}
+
+.antiscam-explorer{scroll-margin-top:24px}
+.antiscam-filter-panel{padding:22px 24px;border:1px solid var(--line);border-radius:20px;background:rgba(255,252,244,.9);margin-bottom:18px;display:grid;gap:14px}
+.antiscam-filter-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px}
+.antiscam-filter-header .eyebrow{margin:0 0 4px}
+.antiscam-filter-header h2{margin:0;font-size:clamp(24px,3vw,30px)}
+.antiscam-search{display:flex;align-items:center;gap:10px;flex:1 1 340px;max-width:500px;min-height:50px;padding:6px 14px;border:1.5px solid #a99e84;border-radius:12px;background:#fff}
+.antiscam-search:focus-within{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(49,105,106,.15)}
+.antiscam-search input{flex:1;min-width:0;border:0;background:transparent;font-size:16px;color:var(--ink);outline:none}
+.antiscam-search-clear{padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(246,240,226,.8);color:var(--ink);font-size:13px;font-weight:700;cursor:pointer}
+
+.antiscam-region-tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.antiscam-region-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:68px;padding:10px 8px;border:1px solid var(--line);border-radius:14px;background:rgba(246,240,226,.78);color:var(--ink);cursor:pointer;transition:border-color .15s,background-color .15s,transform .1s}
+.antiscam-region-tab:hover:not(.active){border-color:var(--cyan);background:#fffdf7}
+.antiscam-region-tab.active{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 6px 16px rgba(30,28,24,.14)}
+.antiscam-region-flag{font-size:20px;line-height:1}
+.antiscam-region-name{font-size:16px;font-weight:700}
+.antiscam-region-tab small{font-size:12px;color:var(--muted)}
+.antiscam-region-tab.active small{color:#e2dac7}
+
+.antiscam-scenario-bar{display:flex;flex-wrap:wrap;gap:8px}
+.antiscam-scenario-pill{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:15px;font-weight:600;cursor:pointer;transition:border-color .15s,background-color .15s}
+.antiscam-scenario-pill:hover:not(.active){border-color:var(--cyan);background:#f4f8f5}
+.antiscam-scenario-pill.active{background:var(--cyan);border-color:var(--cyan);color:#fff}
+
+.antiscam-status-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px dashed var(--line);font-size:15px;color:var(--muted)}
+.antiscam-status-bar p{margin:0;max-width:740px;line-height:1.6}
+.antiscam-status-bar strong{color:var(--ink)}
+.antiscam-status-meta{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.antiscam-status-meta b{color:var(--cyan)}
+.antiscam-reset-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;cursor:pointer}
+.antiscam-reset-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+
+.antiscam-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.antiscam-card{display:flex;flex-direction:column;justify-content:space-between;gap:14px;padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,253,247,.92);transition:border-color .15s,box-shadow .15s}
+.antiscam-card:hover{border-color:var(--cyan);background:#fff;box-shadow:0 10px 26px rgba(40,60,50,.07)}
+.antiscam-card-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.antiscam-tag-region{padding:3px 10px;border-radius:999px;background:rgba(246,240,226,.95);border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--ink)}
+.antiscam-tag-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.antiscam-tag-badge.gov,.antiscam-tag-badge.regulator{background:#e1eadb;color:#1e563f}
+.antiscam-tag-badge.police{background:#fbe6de;color:#8f2f1b}
+.antiscam-tag-badge.judicial{background:#e5ebf4;color:#23446e}
+.antiscam-tag-badge.partner{background:#f3ecd8;color:#6e5015}
+.antiscam-tag-scenario{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}
+
+.antiscam-card-body{display:grid;gap:8px}
+.antiscam-card-body h3{margin:0;font-size:20px;line-height:1.38;color:var(--ink)}
+.antiscam-card-org{margin:0;font-size:14px;font-weight:600;color:var(--cyan)}
+.antiscam-card-summary{margin:0;font-size:16px;line-height:1.68;color:var(--text)}
+.antiscam-card-howto{padding:11px 13px;border-radius:12px;background:rgba(246,240,226,.78);border-left:3px solid var(--gold);font-size:15px;line-height:1.6;color:var(--ink)}
+.antiscam-card-howto strong{color:#7a5410}
+
+.antiscam-card-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-top:4px}
+.antiscam-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:8px 16px;border-radius:11px;background:var(--cyan);color:#fff;font-size:15px;font-weight:700;text-decoration:none;transition:opacity .15s,transform .1s}
+.antiscam-btn-primary:hover{opacity:.92;transform:translateY(-1px)}
+.antiscam-btn-secondary,.antiscam-btn-hotline{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:8px 13px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);font-size:14px;font-weight:700;cursor:pointer;text-decoration:none}
+.antiscam-btn-secondary:hover,.antiscam-btn-hotline:hover{border-color:var(--cyan);color:var(--cyan)}
+.antiscam-btn-secondary.copied{border-color:#2f8a4a;background:#eaf5ec;color:#1f6b36}
+.antiscam-btn-hotline{border-color:#dfb9ad;background:#fff8f5;color:#8f2f1b}
+
+.antiscam-empty{padding:36px 24px;text-align:center;border:1px dashed var(--line);border-radius:18px;background:rgba(255,252,244,.8)}
+.antiscam-empty h3{margin:0 0 8px;font-size:21px}
+.antiscam-empty p{margin:0 0 16px;color:var(--muted)}
+
+.antiscam-section{padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:24px}
+.antiscam-section-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+.antiscam-section-no{display:grid;place-items:center;flex:0 0 68px;height:38px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:700}
+.antiscam-section-head .eyebrow{margin:0 0 4px}
+.antiscam-section-head h2{margin:0 0 6px;font-size:clamp(23px,3vw,29px);line-height:1.35}
+.antiscam-section-head p{margin:0;font-size:16px;line-height:1.68;color:var(--muted)}
+
+.antiscam-traits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.antiscam-trait-card{padding:20px 20px 18px;border:1px solid var(--line);border-top:4px solid #b4442c;border-radius:16px;background:rgba(255,253,247,.94)}
+.antiscam-trait-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.antiscam-trait-no{font-size:13px;font-weight:800;color:#8f2f1b;letter-spacing:.04em}
+.antiscam-trait-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:999px;background:#fbe6de;color:#8f2f1b;font-size:12px;font-weight:700}
+.antiscam-trait-card h3{margin:0 0 10px;font-size:19px;line-height:1.4}
+.antiscam-trait-card ul{margin:0;padding-left:18px;display:grid;gap:8px;font-size:15px;line-height:1.65;color:var(--text)}
+
+.antiscam-steps-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.antiscam-step-card{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,253,247,.92)}
+.antiscam-step-num{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:50%;background:var(--cyan);color:#fff;font-size:14px;font-weight:800}
+.antiscam-step-card h3{margin:0 0 6px;font-size:18px;line-height:1.4}
+.antiscam-step-card p{margin:0;font-size:15px;line-height:1.68;color:var(--muted)}
+.antiscam-quick-copy-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;padding:14px 18px;border-radius:14px;background:rgba(246,240,226,.85);font-size:15px;font-weight:700}
+.antiscam-chip-btn{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:14px;font-weight:700;cursor:pointer}
+.antiscam-chip-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.antiscam-chip-btn.copied{border-color:#2f8a4a;background:#eaf5ec;color:#1f6b36}
+
+.antiscam-compare-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+.antiscam-compare-table{width:100%;border-collapse:collapse;font-size:16px}
+.antiscam-compare-table caption{text-align:left;padding:14px 18px 10px;font-size:17px;font-weight:700;color:var(--ink);background:rgba(246,240,226,.6)}
+.antiscam-compare-table th,.antiscam-compare-table td{padding:14px 18px;border-top:1px solid #e5decb;text-align:left;vertical-align:top;line-height:1.7;white-space:pre-line}
+.antiscam-compare-table thead th{background:#e1eadb;color:#1f3b2c;font-size:16px;font-weight:700}
+.antiscam-compare-table tbody th{width:22%;min-width:160px;background:rgba(246,240,226,.45);font-weight:700;color:var(--ink)}
+.antiscam-compare-table tbody td{width:39%;min-width:240px}
+
+.antiscam-domain-list{display:grid;gap:16px}
+.antiscam-domain-card{padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,253,247,.94);scroll-margin-top:24px}
+.antiscam-domain-badge{display:inline-flex;padding:3px 11px;border-radius:999px;background:#e1eadb;color:#245f48;font-size:13px;font-weight:700;margin-bottom:8px}
+.antiscam-domain-card h3{margin:0 0 6px;font-size:22px;line-height:1.38}
+.antiscam-domain-sub{margin:0 0 16px;font-size:16px;color:var(--muted);line-height:1.6}
+.antiscam-domain-tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.antiscam-domain-tip{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-radius:14px;background:rgba(246,240,226,.78)}
+.antiscam-domain-tip>span{display:grid;place-items:center;flex:0 0 32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:700}
+.antiscam-domain-tip strong{display:block;font-size:16px;margin-bottom:4px;color:var(--ink)}
+.antiscam-domain-tip p{margin:0;font-size:15px;line-height:1.65;color:var(--text)}
+
+@media(max-width:960px){
+ .antiscam-sos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .antiscam-region-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .antiscam-traits-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+ .antiscam-grid,.antiscam-steps-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ .antiscam-sos{padding:16px}
+ .antiscam-sos-grid{grid-template-columns:1fr}
+ .antiscam-filter-panel{padding:16px}
+ .antiscam-region-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .antiscam-card{padding:16px}
+ .antiscam-section-head{flex-direction:column;gap:8px}
+ .antiscam-domain-card{padding:16px}
+}
+
