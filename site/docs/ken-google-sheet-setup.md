@@ -9,87 +9,417 @@
 3. 從「擴充功能 → Apps Script」開啟綁定的 Apps Script 專案，貼上以下程式碼並儲存。
 
 ```js
-const SHEET_NAME = '諮詢收件';
-const KEN_EMAIL = 'peterwang1018@gmail.com';
-const MAX_CHARS = 20000;
+/**
+ * AK Wealth Global｜Ken 財商試算表線上收件 Web App
+ */
+const CONFIG = {
+  SHEET_NAME: 'Submissions',
+  NOTIFY_EMAIL: 'peterwang1018@gmail.com',
+  MAX_RAW_BODY_LENGTH: 50000,
+  MAX_TEXT_LENGTH: 300,
+  MAX_URL_LENGTH: 2048,
+  MAX_TOPIC_LENGTH: 2000,
+  MAX_JSON_FIELD_LENGTH: 15000,
+  MAX_INPUT_KEYS: 100,
+  MAX_KEY_LENGTH: 100,
+  MAX_INPUT_ROWS: 200,
+  MAX_ROW_KEYS: 30,
+  MAX_CELL_STRING_LENGTH: 500,
+  DEDUPE_SECONDS: 30, // 盡力而為（best-effort）之短時間防重複快取秒數；快取異常時採 fail-open
+};
+
+const HEADERS = [
+  'timestamp',
+  'shareLevel',
+  'consent',
+  'tool',
+  'toolTitle',
+  'group',
+  'inflation',
+  'name',
+  'email',
+  'topic',
+  'inputsJson',
+  'resultsJson',
+  'page',
+  'notified',
+  'notifyError'
+];
 
 function doPost(e) {
-  try {
-    const raw = (e && e.postData && e.postData.contents) || '';
-    if (raw.length > MAX_CHARS) return reply({ok: false, error: 'too_large'});
-    const d = JSON.parse(raw);
-    if (d.consent !== true || d.website) return reply({ok: false, error: 'invalid_submission'});
-    if (!['summary', 'full'].includes(d.shareLevel)) return reply({ok: false, error: 'invalid_share_level'});
-    if (!/^\S+@\S+\.\S+$/.test(String(d.email || ''))) return reply({ok: false, error: 'invalid_email'});
-    const emailHash = Utilities.base64EncodeWebSafe(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, String(d.email).toLowerCase())).slice(0, 32);
-    const cache = CacheService.getScriptCache();
-    const rateKey = `submission:${emailHash}`;
-    const count = Number(cache.get(rateKey) || 0);
-    if (count >= 3) return reply({ok: false, error: 'rate_limited'});
-    cache.put(rateKey, String(count + 1), 3600);
+  let rowWritten = false;
+  let notified = false;
 
-    const inputs = d.shareLevel === 'full' ? JSON.stringify(d.inputs || {}) : '';
-    const results = JSON.stringify(Array.isArray(d.results) ? d.results : []);
+  try {
+    if (!e || !e.postData || typeof e.postData.contents !== 'string') {
+      return jsonResponse({ ok: false, error: 'INVALID_REQUEST' });
+    }
+
+    const rawBody = e.postData.contents;
+    if (rawBody.length === 0 || rawBody.length > CONFIG.MAX_RAW_BODY_LENGTH) {
+      return jsonResponse({ ok: false, error: 'PAYLOAD_TOO_LARGE' });
+    }
+
+    let data;
+    try {
+      data = JSON.parse(rawBody);
+    } catch (parseErr) {
+      return jsonResponse({ ok: false, error: 'INVALID_JSON' });
+    }
+
+    // 1. 蜜罐欄位檢查（website 非空即拒絕）
+    if (data.website && String(data.website).trim() !== '') {
+      return jsonResponse({ ok: false, error: 'REJECTED' });
+    }
+
+    // 2. 明確同意檢查
+    if (data.consent !== true) {
+      return jsonResponse({ ok: false, error: 'CONSENT_REQUIRED' });
+    }
+
+    // 3. shareLevel 驗證（僅允許 summary 或 full）
+    const shareLevel = String(data.shareLevel || '').trim();
+    if (shareLevel !== 'summary' && shareLevel !== 'full') {
+      return jsonResponse({ ok: false, error: 'INVALID_SHARE_LEVEL' });
+    }
+
+    // 4. Email 必填與格式驗證（禁止包含換行或空白）
+    const email = String(data.email || '').trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || email.length > 254 || !emailRegex.test(email)) {
+      return jsonResponse({ ok: false, error: 'INVALID_EMAIL' });
+    }
+
+    // 5. 基本欄位驗證與長度限制（inflation 為有限數值，單行欄位移除 \t \r \n，topic 允許多行）
+    if (typeof data.inflation !== 'number' || !Number.isFinite(data.inflation)) {
+      return jsonResponse({ ok: false, error: 'INVALID_INFLATION' });
+    }
+    const inflation = data.inflation;
+
+    const tool = clampSingleLineText(data.tool, CONFIG.MAX_TEXT_LENGTH);
+    const toolTitle = clampSingleLineText(data.toolTitle, CONFIG.MAX_TEXT_LENGTH);
+    const group = clampSingleLineText(data.group, CONFIG.MAX_TEXT_LENGTH);
+    const name = clampSingleLineText(data.name, CONFIG.MAX_TEXT_LENGTH); // 選填（單行）
+    const topic = clampMultiLineText(data.topic, CONFIG.MAX_TOPIC_LENGTH); // 選填（允許多行）
+    const page = clampSingleLineText(data.page, CONFIG.MAX_URL_LENGTH);
+
+    // 驗證必填欄位與 results 陣列結構（[{ label, value }]）
+    if (!tool || !toolTitle || !group || !page || !isValidLabelValueArray(data.results)) {
+      return jsonResponse({ ok: false, error: 'MISSING_OR_INVALID_FIELDS' });
+    }
+
+    // 6. summary 模式不寫入 inputs；full 模式逐一驗證 inputs 符合 Vals (Record<string, Cell | Row[]>) 結構
+    let inputsString = '';
+    if (shareLevel === 'full') {
+      if (!isValidInputsVals(data.inputs)) {
+        return jsonResponse({ ok: false, error: 'INVALID_INPUTS_STRUCTURE' });
+      }
+      inputsString = safeStringify(data.inputs, CONFIG.MAX_JSON_FIELD_LENGTH);
+      if (inputsString === null) {
+        return jsonResponse({ ok: false, error: 'INPUTS_TOO_LARGE' });
+      }
+    }
+
+    const resultsString = safeStringify(data.results, CONFIG.MAX_JSON_FIELD_LENGTH);
+    if (resultsString === null) {
+      return jsonResponse({ ok: false, error: 'RESULTS_TOO_LARGE' });
+    }
+
+    // 7. 以完整 SHA-256 雜湊產生固定長度（72 字元）之 Cache Key（含 inflation，避免只改通膨假設被誤判重複）
+    const dedupeKey = buildDedupeKey([
+      email.toLowerCase(),
+      tool,
+      shareLevel,
+      String(inflation),
+      inputsString,
+      resultsString,
+      topic
+    ].join('\u001F'));
+
+    // 8. 取得腳本鎖後，在鎖內進行 best-effort 查重與試算表寫入
     const lock = LockService.getScriptLock();
     lock.waitLock(10000);
-    let sheetUrl;
+
+    let sheet;
+    let rowIndex;
+    const timestamp = new Date().toISOString();
+
     try {
-      const ss = SpreadsheetApp.getActiveSpreadsheet();
-      const sh = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
-      if (sh.getLastRow() === 0) {
-        sh.appendRow(['時間', '分享範圍', '試算表', '分類', '通膨', '稱呼', 'Email', '諮詢主題', '輸入數字（僅完整分享）', '結果摘要', '來源頁面']);
-        sh.setFrozenRows(1);
+      let isDuplicate = false;
+      try {
+        const cache = CacheService.getScriptCache();
+        if (cache.get(dedupeKey)) {
+          isDuplicate = true;
+        }
+      } catch (_) {
+        // CacheService 異常時採取 fail-open，繼續收件以避免漏單
       }
-      sh.appendRow([
-        new Date(), d.shareLevel === 'full' ? '完整試算' : '結果摘要', safe(d.toolTitle, 100), safe(d.group, 50),
-        Number(d.inflation) || '', safe(d.name, 60), safe(d.email, 120), safe(d.topic, 100),
-        safe(inputs, 12000), safe(results, 5000), safe(d.page, 300),
-      ]);
-      sheetUrl = ss.getUrl();
+
+      if (isDuplicate) {
+        return jsonResponse({ ok: false, error: 'RATE_LIMITED' });
+      }
+
+      const ss = SpreadsheetApp.getActiveSpreadsheet();
+      sheet = ss.getSheetByName(CONFIG.SHEET_NAME) || ss.insertSheet(CONFIG.SHEET_NAME);
+      ensureHeaders(sheet);
+
+      const rowValues = [
+        sanitizeCell(timestamp),
+        sanitizeCell(shareLevel),
+        'TRUE',
+        sanitizeCell(tool),
+        sanitizeCell(toolTitle),
+        sanitizeCell(group),
+        inflation,
+        sanitizeCell(name),
+        sanitizeCell(email),
+        sanitizeCell(topic),
+        sanitizeCell(inputsString),
+        sanitizeCell(resultsString),
+        sanitizeCell(page),
+        'PENDING',
+        ''
+      ];
+
+      sheet.appendRow(rowValues);
+      rowWritten = true; // 資料列已寫入，後續任何非核心步驟異常皆不可將結果改為 ok: false
+      rowIndex = sheet.getLastRow();
+
+      try {
+        const cache = CacheService.getScriptCache();
+        cache.put(dedupeKey, '1', CONFIG.DEDUPE_SECONDS);
+      } catch (_) {}
     } finally {
-      lock.releaseLock();
+      try {
+        lock.releaseLock();
+      } catch (_) {}
     }
 
-    let notified = false;
+    // 9. 寄送通知信（即使失敗也必須回傳 ok: true, notified: false）
+    let notifyError = '';
     try {
-      const summary = (Array.isArray(d.results) ? d.results : [])
-        .map(x => `${safe(x.label, 100)}：${safe(x.value, 300)}`).join('\n');
-      const detail = d.shareLevel === 'full' ? `\n\n訪客同意分享完整輸入數字：\n${safe(inputs, 12000)}` : '\n\n訪客只分享結果摘要，未傳送輸入數字。';
-      MailApp.sendEmail({
-        to: KEN_EMAIL,
-        replyTo: safe(d.email, 120),
-        subject: `新財商諮詢｜${safe(d.toolTitle, 100)}`,
-        body: [
-          `稱呼：${safe(d.name, 60) || '未填'}`,
-          `訪客 Email：${safe(d.email, 120)}`,
-          `諮詢主題：${safe(d.topic, 100) || '未選'}`,
-          `分享範圍：${d.shareLevel === 'full' ? '完整試算' : '結果摘要'}`,
-          `試算表：${safe(d.toolTitle, 100)}（${safe(d.group, 50)}）`,
-          `通膨假設：${Number(d.inflation) || 0}%`,
-          '', '試算結果：', summary, detail,
-          '', `收件表：${sheetUrl}`,
-          `來源頁面：${safe(d.page, 300)}`,
-        ].join('\n'),
+      sendPrivacySafeNotification({
+        timestamp: timestamp,
+        shareLevel: shareLevel,
+        toolTitle: toolTitle,
+        group: group,
+        name: name,
+        email: email,
+        topic: topic,
+        page: page
       });
       notified = true;
-    } catch (mailError) {
-      // 資料已寫入收件表；讓前端如實顯示通知未確認，避免訪客重複提交。
-      console.error('Ken notification email failed', mailError);
+    } catch (mailErr) {
+      notified = false;
+      notifyError = String(mailErr && mailErr.message ? mailErr.message : mailErr).slice(0, 300);
     }
-    return reply({ok: true, notified});
+
+    // 10. 回寫通知狀態（獨立保護，失敗不影響回傳結果）
+    try {
+      const lockUpdate = LockService.getScriptLock();
+      if (lockUpdate.tryLock(5000)) {
+        try {
+          sheet.getRange(rowIndex, 14, 1, 2).setValues([[
+            notified ? 'TRUE' : 'FALSE',
+            sanitizeCell(notifyError)
+          ]]);
+        } finally {
+          lockUpdate.releaseLock();
+        }
+      }
+    } catch (_) {}
+
+    return jsonResponse({ ok: true, notified: notified });
   } catch (err) {
-    console.error('Ken consultation submission failed', err);
-    return reply({ok: false, error: 'server'});
+    if (rowWritten) {
+      return jsonResponse({ ok: true, notified: notified });
+    }
+    return jsonResponse({ ok: false, error: 'INTERNAL_ERROR' });
   }
 }
 
-function safe(value, max) {
-  const s = String(value == null ? '' : value).slice(0, max);
-  return /^[=+\-@\t\r]/.test(s) ? "'" + s : s;
+/**
+ * 驗證單一 Cell 值：僅允許有限 number 或長度受限之 string（對應專案 Cell = number | string）
+ */
+function isValidCell(val) {
+  if (typeof val === 'number') return Number.isFinite(val);
+  if (typeof val === 'string') return val.length <= CONFIG.MAX_CELL_STRING_LENGTH;
+  return false;
 }
 
-function reply(obj) {
-  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+/**
+ * 驗證單一 Row 物件：Record<string, Cell>
+ */
+function isValidRow(row) {
+  if (typeof row !== 'object' || row === null || Array.isArray(row)) return false;
+  const keys = Object.keys(row);
+  if (keys.length === 0 || keys.length > CONFIG.MAX_ROW_KEYS) return false;
+  for (let i = 0; i < keys.length; i++) {
+    const k = keys[i];
+    if (!k || k.length > CONFIG.MAX_KEY_LENGTH) return false;
+    if (!isValidCell(row[k])) return false;
+  }
+  return true;
+}
+
+/**
+ * 驗證網站 Vals 結構：Record<string, Cell | Row[]>
+ */
+function isValidInputsVals(inputs) {
+  if (typeof inputs !== 'object' || inputs === null || Array.isArray(inputs)) return false;
+  const keys = Object.keys(inputs);
+  if (keys.length === 0 || keys.length > CONFIG.MAX_INPUT_KEYS) return false;
+
+  for (let i = 0; i < keys.length; i++) {
+    const k = keys[i];
+    if (!k || k.length > CONFIG.MAX_KEY_LENGTH) return false;
+    const val = inputs[k];
+
+    if (Array.isArray(val)) {
+      if (val.length > CONFIG.MAX_INPUT_ROWS) return false;
+      for (let j = 0; j < val.length; j++) {
+        if (!isValidRow(val[j])) return false;
+      }
+    } else if (!isValidCell(val)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * 驗證 results 結構：[{ label: string, value: string | number }]
+ */
+function isValidLabelValueArray(arr) {
+  if (!Array.isArray(arr) || arr.length === 0 || arr.length > 100) return false;
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    if (!item || typeof item !== 'object' || Array.isArray(item)) return false;
+    const keys = Object.keys(item);
+    if (keys.length !== 2) return false;
+    if (typeof item.label !== 'string' || item.label.trim() === '' || item.label.length > CONFIG.MAX_TEXT_LENGTH) {
+      return false;
+    }
+    const v = item.value;
+    const isValidVal =
+      (typeof v === 'string' && v.length <= CONFIG.MAX_CELL_STRING_LENGTH) ||
+      (typeof v === 'number' && Number.isFinite(v));
+    if (!isValidVal) return false;
+  }
+  return true;
+}
+
+function buildDedupeKey(raw) {
+  const digest = Utilities.computeDigest(
+    Utilities.DigestAlgorithm.SHA_256,
+    raw,
+    Utilities.Charset.UTF_8
+  );
+  const hex = digest
+    .map(function(b) {
+      const v = b < 0 ? b + 256 : b;
+      return ('0' + v.toString(16)).slice(-2);
+    })
+    .join('');
+  return 'ken_sub_' + hex;
+}
+
+function ensureHeaders(sheet) {
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(HEADERS);
+    sheet.setFrozenRows(1);
+  }
+}
+
+/**
+ * 單行文字清理：將 \t, \r, \n 與所有控制字元移除／轉為單一空白，確保不會帶入換行
+ */
+function clampSingleLineText(val, maxLen) {
+  if (val === undefined || val === null) return '';
+  const cleaned = String(val)
+    .replace(/[\t\r\n]+/g, ' ')
+    .replace(/[\u0000-\u001F\u007F-\u009F]/g, '')
+    .trim();
+  return cleaned.length > maxLen ? cleaned.slice(0, maxLen) : cleaned;
+}
+
+/**
+ * 多行文字清理（用於 topic）：移除除 \n 外之控制字元
+ */
+function clampMultiLineText(val, maxLen) {
+  if (val === undefined || val === null) return '';
+  const cleaned = String(val)
+    .replace(/\r\n?/g, '\n')
+    .replace(/[\u0000-\u0009\u000B-\u001F\u007F-\u009F]/g, '')
+    .trim();
+  return cleaned.length > maxLen ? cleaned.slice(0, maxLen) : cleaned;
+}
+
+function sanitizeSubject(str) {
+  return String(str || '')
+    .replace(/[\t\r\n\u0000-\u001F\u007F-\u009F]+/g, ' ')
+    .trim()
+    .slice(0, 200);
+}
+
+function safeStringify(val, maxLen) {
+  try {
+    const str = typeof val === 'string' ? val : JSON.stringify(val);
+    if (str.length > maxLen) return null;
+    return str;
+  } catch (_) {
+    return null;
+  }
+}
+
+function sanitizeCell(val) {
+  if (val === undefined || val === null) return '';
+  const str = String(val);
+  const stripped = str.replace(/^[\s\u0000-\u001F\u007F-\u009F\u200B-\u200D\uFEFF]+/, '');
+  if (/^[=+\-@|]/.test(stripped) || /^[\u0000-\u001F\u007F-\u009F\u200B-\u200D\uFEFF]/.test(str)) {
+    return "'" + str;
+  }
+  return str;
+}
+
+function maskEmail(email) {
+  const parts = String(email).split('@');
+  if (parts.length !== 2) return '***';
+  const local = parts[0];
+  const maskedLocal = local.length <= 2
+    ? local.charAt(0) + '*'
+    : local.slice(0, 2) + '***';
+  return maskedLocal + '@' + parts[1];
+}
+
+function sendPrivacySafeNotification(info) {
+  const rawSubject = '[AK Wealth 試算收件] ' + info.toolTitle + '（' + (info.shareLevel === 'full' ? '完整分享' : '摘要分享') + '）';
+  const subject = sanitizeSubject(rawSubject);
+  const lines = [
+    'Ken 您好，網站收到一筆新的財商試算表分享紀錄：',
+    '',
+    '・收件時間：' + info.timestamp,
+    '・試算工具：' + info.toolTitle + (info.group ? '（' + info.group + '）' : ''),
+    '・分享範圍：' + (info.shareLevel === 'full' ? 'full（含試算輸入與結果）' : 'summary（僅試算結果摘要）'),
+    '・訪客稱呼：' + (info.name || '（未填寫）'),
+    '・聯絡信箱（遮罩）：' + maskEmail(info.email),
+    '・想討論主題：' + (info.topic ? info.topic.slice(0, 120) + (info.topic.length > 120 ? '...' : '') : '（未填寫）'),
+    '・來源頁面：' + (info.page || '（未提供）'),
+    '',
+    '※ 為保護訪客財務個資與聯絡隱私，完整試算資料與完整 Email 僅儲存於受權限保護的私人 Google 試算表中，請登入授權帳號至試算表查看。'
+  ];
+
+  MailApp.sendEmail({
+    to: CONFIG.NOTIFY_EMAIL,
+    subject: subject,
+    body: lines.join('\n')
+  });
+}
+
+function jsonResponse(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
@@ -109,14 +439,14 @@ function reply(obj) {
 - 值：Apps Script `/exec` 網址
 - 環境：Production；驗收時可另啟用 Preview
 
-儲存後重新部署，因為網址會在建置時寫入前端。網站只接受 `script.google.com/macros/s/.../exec` 格式。沒有有效網址時，網站不會送出背景請求，會顯示「使用 Email 傳送摘要」備用方式；備用方式只附上結果摘要，不附原始輸入數字。
+儲存後重新部署，因為網址會在建置時寫入前端。網站只接受 `script.google.com/macros/s/.../exec` 格式。沒有有效網址時，網站不會送出背景請求，會顯示「開啟 Email 摘要草稿」備用方式；備用方式只附上結果摘要，不附原始輸入數字。
 
 ## 四、驗收
 
-1. 用摘要模式送出測試資料：表格新增一列，輸入數字欄保持空白，Ken 收到通知 Email。
-2. 用完整模式送出測試資料：表格新增一列且只在該列完整分享欄出現數字，Ken 收到通知。
+1. 用摘要模式送出測試資料：表格新增一列，`inputsJson` 欄保持空白，Ken 收到遮罩隱私保護版通知 Email。
+2. 用完整模式送出測試資料：表格新增一列且只在該列 `inputsJson` 欄出現完整輸入 JSON，Ken 收到通知。
 3. 不勾同意或 Email 無效時，網站不送出。
-4. 暫停 Apps Script 郵件權限或用測試副本確認失敗處理：資料仍收進表格，前端顯示「資料已收進收件表、通知狀態無法確認」，不要顯示通知成功。
+4. 暫停 Apps Script 郵件權限或用測試副本確認失敗處理：資料仍收進表格（`notified` 欄為 `FALSE`），前端顯示「寄送狀態無法確認，請先透過 Ken 的 LINE 聯繫確認，避免重複提交。」，不要顯示通知成功。
 5. 確認收件試算表一般存取仍為「限制」，訪客沒有文件連結。
 
 ## 資料處理

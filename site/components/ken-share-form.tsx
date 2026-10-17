@@ -83,7 +83,7 @@ export default function KenShareForm({payload}: {payload: SharePayload}) {
       <div className="ken-share-intro">
         <span className="ken-share-kicker">下一步｜和 Ken 討論你的財務問題</span>
         <h4 id={base + 't'}>想知道這份結果可以怎麼行動？</h4>
-        <p>把試算結果寄給 Ken，諮詢時就能從你最關心的問題開始。只有你同意、開啟 Email 草稿並在郵件程式按下傳送，資料才會寄出。</p>
+        <p>把試算結果寄給 Ken，諮詢時就能從你最關心的問題開始。{SHEET_ENDPOINT ? '只有你同意並按下寄送，資料才會傳出。' : '只有你同意、開啟 Email 草稿並在郵件程式按下傳送，資料才會寄出。'}</p>
       </div>
       <fieldset className="ken-share-choice" disabled={done || status === 'sending'}>
         <legend>選擇要分享的內容</legend>
